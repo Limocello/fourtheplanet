@@ -53,8 +53,6 @@
             padding: 2rem;
         }
 
-        /* Each side is a column so a panel can sit at the top and another at
-           the bottom. The left side has one panel and stays where it was. */
         .side {
             pointer-events: none;
             display: flex;
@@ -76,8 +74,6 @@
             max-height: 95vh; /* Increased slightly */
             overflow-y: auto;
             flex-shrink: 1;
-            /* The panels still scroll when a window is short, they just do it
-               without a visible bar. Chrome draws one over the content. */
             scrollbar-width: none;          /* Firefox */
             -ms-overflow-style: none;       /* old Edge */
             display: flex;
@@ -136,11 +132,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .stat-note {
-            font-size: 0.58rem; color: var(--accent-danger); letter-spacing: 0.5px;
-            margin-top: 4px; min-height: 0.8em;
-        }
-
         .stat-label { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
 
         .projection-section {
@@ -177,7 +168,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Always shown, so a heading rather than a collapsible control. */
         .methodology-title {
             font-size: 0.8rem;
             color: var(--accent-blue);
@@ -292,7 +282,6 @@
             transition: opacity 0.35s, transform 0.5s cubic-bezier(0.22,1,0.36,1);
         }
         .peacock-figure.swap img { opacity: 0; transform: scale(0.88) translateY(6px); }
-        /* On a short window the chips are the first thing to go, not the bird. */
         @media (max-height: 870px) { .peacock-caption { display: none; } }
         @media (max-height: 840px) { #pk-terms { display: none; } }
         .peacock-caption { font-size: 0.62rem; color: var(--text-muted); line-height: 1.5; }
@@ -393,7 +382,6 @@
                 <div class="search-results"></div>
             </div>
 
-            <!-- METHODOLOGY: open by default, still collapsible -->
             <div class="methodology-section">
 
                 <div>
@@ -420,9 +408,8 @@
                             not reach zero profit within the available 2026&ndash;2100 projections.
                         </p>
                         <p style="margin-top:8px;">
-                            The projection sliders set a resource cost growth rate <em>g</em>. On a straight price
-                            path the cost at any year scales with <em>g</em>, so the horizon scales with
-                            1/(1+<em>g</em>). That is an extrapolation on top of the table, not a figure from it.
+                            The projection sliders are a visual what-if. They shade the tree toward a harsher or
+                            kinder cost outlook. The horizon above stays the computed figure.
                         </p>
                     </div>
                 </div>
@@ -439,7 +426,7 @@
 
             <div class="projection-section">
                 <h2>Projections</h2>
-                <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends.</p>
+                <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends. Shifts the outlook shown by the tree, not the computed horizon.</p>
 
                 <div class="slider-group">
                     <div class="slider-label">
@@ -497,7 +484,6 @@
             <div class="big-stat">
                 <div class="stat-label">Predicted Survival</div>
                 <div class="stat-value"><span id="years-display">0</span> <span style="font-size: 0.8rem;">YRS</span></div>
-                <div class="stat-note" id="years-note"></div>
             </div>
         </div>
 
@@ -577,7 +563,6 @@
         </div>
     </div>
 
-    <!-- Buzzword index, baked out of the Python corpus by make_page_data.py -->
     <script src="peacock-data.js"></script>
 
     <script type="importmap">
@@ -1097,10 +1082,6 @@ ZBH,Zimmer Biomet,250000,113116,1500000,8232000000,7051000000
 ZION,Zions Bancorporation,25000,10000,150000,3400000000,899000000
 ZTS,Zoetis,906361,243598,2599103,9467000000,2673000000`;
 
-        // --- YEARS TO ZERO PROFIT -------------------------------------------
-        // Computed elsewhere and pasted in from data/profit_impact_years.csv.
-        // ">140" means the model ran out of horizon without profit reaching
-        // zero, so it is a floor and not an estimate.
         const profitImpactYears = `Ticker,All,CO2,Water,Electricity
 MMM,110,>140,>140,>140
 AOS,>140,>140,>140,>140
@@ -1812,23 +1793,7 @@ ZTS,>140,>140,>140,>140`;
 
             const c = companies[state.selectedCompanyIndex];
 
-            // Years to zero profit, read from the table rather than modelled
-            // here. A ">140" entry means the horizon ran out before profit
-            // reached zero, so it is shown as a floor: "140+".
-            //
-            // The two sliders move that horizon. The model behind the table is
-            // that the extra annual cost is usage times the rise in resource
-            // price, so on a straight price path the cost at any year scales
-            // with the growth rate and the year at which it overtakes profit
-            // scales with 1/(1+g). The sliders set g, averaged across the two.
-            //
-            // A floor stays a floor under this: if the true horizon is beyond
-            // 140 years, the adjusted one is beyond 140/(1+g), so "140+" at
-            // +10% energy and +5% CO2 becomes "130+" and is still true.
             const HORIZON = 140;
-            const growth = (state.projEnergy + state.projCO2) / 200;
-            const factor = 1 / (1 + growth);
-
             const row = yearsToZero[c.ticker];
             const display = document.getElementById("years-display");
             if (animationTimers["years-display"]) {
@@ -1838,7 +1803,7 @@ ZTS,>140,>140,>140,>140`;
             const raw = row ? row.All : "";
             const capped = raw.startsWith(">");
             const base = raw ? (capped ? HORIZON : parseInt(raw, 10)) : null;
-            const adjusted = base === null ? null : Math.max(0, Math.round(base * factor));
+            const adjusted = base;
 
             if (adjusted === null) {
                 display.innerText = "--";
@@ -1856,24 +1821,10 @@ ZTS,>140,>140,>140,>140`;
                 state.predictedYears = adjusted;
             }
 
-            // Say so when the figure is no longer the table's own number.
-            const note = document.getElementById("years-note");
-            note.innerText = growth === 0 ? ""
-                : `at ${growth > 0 ? "+" : ""}${(growth * 100).toFixed(1)}% resource cost growth`;
-
-            // The tree reads the same number the panel shows. It used to read a
-            // composite of electricity, CO2, water and the random recycling
-            // rate, divided by maxima picked by eye. Across these 501 companies
-            // that composite only ever moved between 0.70 and 0.75, so every
-            // tree looked the same and the only thing that visibly changed it
-            // was the random quarter.
-            //
-            // Years are mapped through a square root because the data is
-            // lopsided: 116 of the 175 companies that do reach zero profit get
-            // there within five years. A straight ratio would leave all of them
-            // on top of each other at the dead end of the scale.
-            const health = adjusted === null ? 0
-                         : Math.sqrt(Math.min(HORIZON, adjusted) / HORIZON);
+            const outlook = adjusted === null ? 0
+                          : Math.sqrt(Math.min(HORIZON, adjusted) / HORIZON);
+            const stress = (state.projEnergy + state.projCO2) / 200;
+            const health = Math.max(0, Math.min(1, outlook * (1 - 6 * stress)));
 
             update3DScene(health);
         }
@@ -1908,9 +1859,6 @@ ZTS,>140,>140,>140,>140`;
             glowLight.intensity += (targetGlowIntensity - glowLight.intensity) * 0.05;
         }
 
-        // Counts over a fixed duration rather than one step per unit. Stepping
-        // by one took 2.8 seconds to cross the 0-to-139 range the years table
-        // now spans, and the figure has to settle before it can be read.
         const animationTimers = {};
         function animateValue(id, start, end, duration) {
             if (start === end) return;
@@ -1929,12 +1877,6 @@ ZTS,>140,>140,>140,>140`;
 
         // --- 6. SEARCH BAR LOGIC ---
 
-        // ============================================================
-        //  PEACOCK INDEX
-        //  Counts come from peacock-data.js, baked out of the 485-document
-        //  corpus. Overlaps between lexicon terms were already resolved when
-        //  that file was written, so each stretch of a report is counted once.
-        // ============================================================
         const PK = window.PEACOCK || null;
 
         const pkState = {
@@ -1993,10 +1935,6 @@ ZTS,>140,>140,>140,>140`;
                 .filter(i => PK.words[i] >= pkState.MIN_WORDS)
                 .sort((a, b) => pkState.density[b] - pkState.density[a]);
 
-            // Which peacock a company gets is decided by where it falls among
-            // the others, in fifths, not by a fixed number. So the drawing keeps
-            // its meaning when terms are added or dropped: every term set still
-            // has a least and a most pompous fifth.
             const sorted = pkState.ranked.map(i => pkState.density[i]).slice().sort((a, b) => a - b);
             pkState.cuts = [0.2, 0.4, 0.6, 0.8].map(f =>
                 sorted.length ? sorted[Math.floor(f * (sorted.length - 1))] : 0);
@@ -2069,10 +2007,8 @@ ZTS,>140,>140,>140,>140`;
                 rankEl.className = 'assessment-value ' + (fromTop < 25 ? 'bad' : fromTop > 75 ? 'good' : 'neutral');
             }
 
-            // the bird
             pkSetBird(pkStage(dens), place);
 
-            // composition
             const tiers = PK.tiers.concat(['added']).filter(t => pkState.tierTotals[t][i] > 0);
             document.getElementById('pk-bar').innerHTML = tiers.map(t =>
                 `<span style="background:${pkTierColor(t)};width:${100 * pkState.tierTotals[t][i] / Math.max(1, hits)}%"></span>`).join('');
@@ -2081,7 +2017,6 @@ ZTS,>140,>140,>140,>140`;
                 `${PK.tierNames?.[t] || t.replace('_', ' ')} ` +
                 `${(1000 * pkState.tierTotals[t][i] / words).toFixed(1)}</span>`).join('');
 
-            // terms doing the work here
             const mine = pkState.terms
                 .filter(t => t.on && t.counts.get(i))
                 .sort((a, b) => b.counts.get(i) - a.counts.get(i))
@@ -2090,9 +2025,6 @@ ZTS,>140,>140,>140,>140`;
                 `<span class="${t.added ? 'added' : ''}" style="${t.added ? '' : 'color:' + pkTierColor(t.tier)}">` +
                 `${t.label}<b>${t.counts.get(i)}</b></span>`).join('');
 
-            // A sentence about the company, not about the drawing: where its
-            // report sits against the others, and what kind of language it
-            // leans on to get there.
             const N = pkState.ranked.length;
             const beats = place === -1 ? 0
                 : Math.round(100 * (N - 1 - place) / Math.max(1, N - 1));
