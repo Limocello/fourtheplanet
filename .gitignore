@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+# scratch written by scan_reports.py while it works
+buzzword-index/data/.buzzword_cache.json
+# build artifact, rebuild with: cd buzzword-index/web && zip -r ../../peacock-website.zip .
+peacock-website.zip

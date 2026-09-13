@@ -1,0 +1,7 @@
+Built from the S&P 500 sustainability report collection in
+Downloads/sp500-sustainability (450 report PDFs downloaded 12-13.09.2026,
+text extracted to raw/reports/txt).
+
+data/index/ was produced by build_index.py from those 450 text files.
+data/buzzword_index.csv and data/buzzword_index_by_company.csv were
+produced by buzzword.py export.

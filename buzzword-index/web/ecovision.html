@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&P 500 Sustainability Assessment</title>
+    <style>
+        :root {
+            /* Natural, Muted Palette */
+            --accent-green: #6da57a;
+            --accent-danger: #c96e6e;
+            --accent-blue: #7d8ca3;
+            --tier-peacock: #c98f6e;
+            --tier-hedge: #b0a06e;
+            --tier-corporate: #7d8ca3;
+            --tier-esg_jargon: #6da57a;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-main);
+            background-color: #0a0a0a;
+            color: var(--text-main);
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #ui-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            padding: 2rem;
+        }
+
+        /* Each side is a column so a panel can sit at the top and another at
+           the bottom. The left side has one panel and stays where it was. */
+        .side {
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            max-height: 100%;
+        }
+
+        .panel {
+            pointer-events: auto;
+            background: transparent;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0;
+            padding: 0.8rem;
+            width: 300px; /* Slightly wider for more data */
+            max-height: 90vh;
+            overflow-y: auto;
+            flex-shrink: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            box-shadow: none;
+        }
+
+        .panel:hover { border-color: rgba(255, 255, 255, 0.25); }
+
+        h2 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-bottom: 0.4rem;
+        }
+
+        .assessment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .assessment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+        }
+
+        .assessment-label { color: var(--text-muted); }
+        .assessment-value { font-weight: 500; color: var(--text-main); }
+        .assessment-value.good { color: var(--accent-green); }
+        .assessment-value.bad { color: var(--accent-danger); }
+        .assessment-value.neutral { color: var(--accent-blue); }
+
+        .big-stat {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(to bottom, #e2e8f0, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+
+        .percentile-bar-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .percentile-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #c96e6e, #d4b483, #6da57a);
+            transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .projection-section {
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 0.8rem;
+        }
+
+        .slider-group { margin-bottom: 0.5rem; }
+        .slider-label { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 2px; }
+
+        input[type="range"] {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            height: 3px;
+            outline: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 10px;
+            background: #cbd5e1;
+            cursor: pointer;
+        }
+
+        .search-container {
+            position: relative;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px 10px;
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .search-input:focus { border-color: var(--accent-green); }
+        .search-input::placeholder { color: rgba(255, 255, 255, 0.3); }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.1);
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            flex-direction: column;
+            margin-top: 2px;
+            border-radius: 0;
+        }
+
+        .search-results.active { display: flex; }
+
+        .result-item {
+            padding: 8px 10px;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .result-item span.ticker { color: var(--text-muted); font-size: 0.7em; }
+        .result-item:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+        header {
+            position: absolute; top: 2rem; left: 50%; transform: translateX(-50%);
+            text-align: center; pointer-events: none; z-index: 5;
+        }
+        h1 { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; }
+        .subtitle { font-size: 0.65rem; color: var(--accent-green); letter-spacing: 2px; }
+
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; z-index: 100; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 0.8s; }
+        .loader-text { font-size: 1.2rem; letter-spacing: 3px; animation: pulse 1.5s infinite; color: var(--accent-green); }
+
+        @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+
+        /* ---- Peacock index ---- */
+        #peacock-panel { width: 330px; gap: 0.45rem; }
+        .peacock-head { display: flex; align-items: baseline; justify-content: space-between; }
+        .peacock-head .edit {
+            pointer-events: auto; background: none; border: none; cursor: pointer;
+            color: var(--text-muted); font: inherit; font-size: 0.6rem;
+            letter-spacing: 1px; text-transform: uppercase; padding: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+        .peacock-head .edit:hover { color: var(--accent-green); border-color: var(--accent-green); }
+
+        .peacock-main { display: flex; align-items: flex-end; gap: 0.7rem; }
+        .peacock-figure { width: 100%; text-align: center; margin: 0 0 0.1rem; }
+        .peacock-figure img {
+            /* As large as the window allows, so the bird stays the hero on a
+               big screen without pushing the numbers out of the panel on a
+               small one. */
+            width: 100%; max-width: clamp(110px, 21vh, 215px);
+            height: auto; display: block; margin: 0 auto;
+            filter: drop-shadow(0 6px 18px rgba(0,0,0,0.7));
+            transition: opacity 0.35s, transform 0.5s cubic-bezier(0.22,1,0.36,1);
+        }
+        .peacock-figure.swap img { opacity: 0; transform: scale(0.88) translateY(6px); }
+        /* On a short window the chips are the first thing to go, not the bird. */
+        @media (max-height: 870px) { .peacock-caption { display: none; } }
+        @media (max-height: 840px) { #pk-terms { display: none; } }
+        .peacock-caption { font-size: 0.62rem; color: var(--text-muted); line-height: 1.5; }
+        .peacock-caption b { color: var(--text-main); font-weight: 600; }
+        .peacock-score {
+            font-size: 2.2rem; font-weight: 700; line-height: 1;
+            font-variant-numeric: tabular-nums; color: var(--accent-green);
+            transition: color 0.4s;
+        }
+        .peacock-score.mid { color: #d4b483; }
+        .peacock-score.high { color: var(--accent-danger); }
+        .peacock-sub { font-size: 0.6rem; color: var(--text-muted);
+                       letter-spacing: 1px; text-transform: uppercase; padding-bottom: 3px; }
+
+        .tier-bar { display: flex; height: 6px; width: 100%; overflow: hidden; background: rgba(255,255,255,0.08); }
+        .tier-bar span { display: block; transition: width 0.5s cubic-bezier(0.22,1,0.36,1); }
+        .tier-key { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.6rem; color: var(--text-muted); }
+        .tier-key i { display: inline-block; width: 6px; height: 6px; margin-right: 4px; }
+
+        .term-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+        .term-chips span {
+            font-size: 0.62rem; padding: 1px 6px; color: var(--text-muted);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .term-chips span b { color: var(--text-main); font-weight: 600; margin-left: 4px; }
+        .term-chips span.added { border-color: var(--accent-green); color: var(--accent-green); }
+
+        .peacock-empty { font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; }
+
+        /* ---- buzzword editor ---- */
+        #bw-modal {
+            position: fixed; inset: 0; z-index: 200; display: none;
+            background: rgba(0,0,0,0.72); pointer-events: auto;
+            justify-content: center; align-items: center; padding: 2rem;
+        }
+        #bw-modal.active { display: flex; }
+        .bw-box {
+            background: #0d0d0d; border: 1px solid rgba(255,255,255,0.16);
+            width: min(620px, 100%); max-height: 82vh; display: flex; flex-direction: column;
+            padding: 1.1rem; gap: 0.7rem;
+        }
+        .bw-row { display: flex; gap: 0.5rem; align-items: center; }
+        .bw-row .search-input { flex: 1; }
+        .bw-btn {
+            pointer-events: auto; background: rgba(255,255,255,0.06); color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.15); padding: 8px 12px;
+            font: inherit; font-size: 0.75rem; cursor: pointer;
+        }
+        .bw-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+        .bw-note { font-size: 0.62rem; color: var(--text-muted); line-height: 1.6; }
+        .bw-note b { color: #d4b483; font-weight: 600; }
+        .bw-list { overflow-y: auto; display: flex; flex-direction: column; gap: 1px; }
+        .bw-term {
+            display: grid; grid-template-columns: 16px 1fr 64px 20px;
+            gap: 8px; align-items: center; font-size: 0.72rem;
+            padding: 3px 2px; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .bw-term.off label { opacity: 0.35; text-decoration: line-through; }
+        .bw-term label { cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .bw-term .n { text-align: right; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+        .bw-term .x { cursor: pointer; color: var(--text-muted); text-align: center; }
+        .bw-term .x:hover { color: var(--accent-danger); }
+        .bw-term.added label { color: var(--accent-green); }
+        .bw-tabs { display: flex; gap: 0.5rem; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1px; }
+        .bw-tabs button {
+            pointer-events: auto; background: none; border: none; border-bottom: 1px solid transparent;
+            color: var(--text-muted); font: inherit; cursor: pointer; padding: 2px 0;
+        }
+        .bw-tabs button.on { color: var(--text-main); border-color: var(--accent-green); }
+
+        @media (max-width: 768px) {
+            #ui-layer { flex-direction: column; padding: 1rem; overflow-y: auto; }
+            .side { max-height: none; }
+            .panel { width: 100%; margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader"><div class="loader-text">LOADING DATASET...</div></div>
+
+    <header>
+        <h1>Eco-Vision <span style="color:var(--accent-green)">AI</span></h1>
+        <div class="subtitle">S&P 500 Sustainability Assessment</div>
+    </header>
+
+    <div id="canvas-container"></div>
+
+    <div id="ui-layer">
+
+        <!-- LEFT SIDE -->
+        <div class="side">
+        <div class="panel">
+            <h2>Company Lookup</h2>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search Name or Ticker...">
+                <div class="search-results"></div>
+            </div>
+
+            <div class="projection-section">
+                <h2>Projections</h2>
+                <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends.</p>
+
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Energy Growth</span>
+                        <span id="proj-energy-val">0%</span>
+                    </div>
+                    <input type="range" id="proj-energy" min="-5" max="10" step="0.5" value="0">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>CO2 Trend</span>
+                        <span id="proj-co2-val">0%</span>
+                    </div>
+                    <input type="range" id="proj-co2" min="-5" max="5" step="0.5" value="0">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="side">
+
+        <!-- TOP RIGHT: ASSESSMENT -->
+        <div class="panel">
+            <h2>Assessment</h2>
+
+            <div class="assessment-list">
+                <div class="assessment-item">
+                    <span class="assessment-label">Sector</span>
+                    <span class="assessment-value" id="ass-sector">--</span>
+                </div>
+                <div class="assessment-item">
+                    <span class="assessment-label">Revenue</span>
+                    <span class="assessment-value" id="ass-revenue">--</span>
+                </div>
+                <div class="assessment-item">
+                    <span class="assessment-label">Profit</span>
+                    <span class="assessment-value" id="ass-profit">--</span>
+                </div>
+                <div class="assessment-item">
+                    <span class="assessment-label">Elec. Usage</span>
+                    <span class="assessment-value" id="ass-energy">--</span>
+                </div>
+                <div class="assessment-item">
+                    <span class="assessment-label">CO2 Emissions</span>
+                    <span class="assessment-value" id="ass-co2">--</span>
+                </div>
+                <div class="assessment-item">
+                    <span class="assessment-label">Water Usage</span>
+                    <span class="assessment-value" id="ass-water">--</span>
+                </div>
+                <div class="assessment-item">
+                    <span class="assessment-label">Waste Recycle</span>
+                    <span class="assessment-value" id="ass-waste">--</span>
+                </div>
+            </div>
+
+            <div class="big-stat">
+                <div class="stat-label">Predicted Survival</div>
+                <div class="stat-value"><span id="years-display">0</span> <span style="font-size: 0.8rem;">YRS</span></div>
+            </div>
+
+            <div style="margin-top: 5px;">
+                <div class="slider-label">
+                    <span>S&P 500 Rank</span>
+                    <span id="percentile-text" style="color: var(--accent-green);">Top 0%</span>
+                </div>
+                <div class="percentile-bar-container">
+                    <div class="percentile-bar" id="percentile-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM RIGHT: PEACOCK INDEX -->
+        <div class="panel" id="peacock-panel">
+            <div class="peacock-head">
+                <h2 style="border:none;padding:0;">Peacock Index</h2>
+                <button class="edit" id="bw-open">Buzzwords</button>
+            </div>
+
+            <div id="peacock-body" style="display:none; flex-direction:column; gap:0.6rem;">
+                <div class="peacock-figure" id="pk-figure">
+                    <img id="pk-bird" alt="">
+                </div>
+
+                <div class="peacock-main">
+                    <span class="peacock-score" id="pk-score">0.0</span>
+                    <span class="peacock-sub">buzzwords<br>per 1 000 words</span>
+                </div>
+                <div class="peacock-caption" id="pk-caption"></div>
+
+                <div class="tier-bar" id="pk-bar"></div>
+                <div class="tier-key" id="pk-key"></div>
+
+                <div class="assessment-list">
+                    <div class="assessment-item">
+                        <span class="assessment-label">Buzzwords</span>
+                        <span class="assessment-value" id="pk-hits">--</span>
+                    </div>
+                    <div class="assessment-item">
+                        <span class="assessment-label">Report Length</span>
+                        <span class="assessment-value" id="pk-words">--</span>
+                    </div>
+                    <div class="assessment-item">
+                        <span class="assessment-label">Per Hard Number</span>
+                        <span class="assessment-value" id="pk-sub">--</span>
+                    </div>
+                    <div class="assessment-item">
+                        <span class="assessment-label">Rank</span>
+                        <span class="assessment-value" id="pk-rank">--</span>
+                    </div>
+                </div>
+
+                <div class="term-chips" id="pk-terms"></div>
+            </div>
+
+            <div class="peacock-empty" id="peacock-empty">Select a company to score its sustainability report.</div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- BUZZWORD EDITOR -->
+    <div id="bw-modal">
+        <div class="bw-box">
+            <div class="peacock-head">
+                <h2 style="border:none;padding:0;">Buzzwords</h2>
+                <button class="edit" id="bw-close">Close</button>
+            </div>
+
+            <div class="bw-row">
+                <input type="text" class="search-input" id="bw-add"
+                       placeholder="Add a word, e.g. stewardship or moonshot">
+                <button class="bw-btn" id="bw-addbtn">Add</button>
+                <button class="bw-btn" id="bw-reset">Reset</button>
+            </div>
+            <div class="bw-note" id="bw-msg">
+                Single words only. Untick a term to drop it from the score, or use the cross to remove one you added.
+            </div>
+
+            <div class="bw-row" style="justify-content:space-between;">
+                <div class="bw-tabs" id="bw-tabs"></div>
+                <input type="text" class="search-input" id="bw-filter" placeholder="Filter..." style="width:150px;">
+            </div>
+
+            <div class="bw-list" id="bw-list"></div>
+        </div>
+    </div>
+
+    <!-- Buzzword index, baked out of the Python corpus by make_page_data.py -->
+    <script src="peacock-data.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // --- 1. DATASET PARSED FROM USER INPUT ---
+        // Note: 'waste' is mocked (randomized 10-95%) as it was not in the source data.
+        const rawData = `Ticker,Company Name,Electricity Usage (MWh),CO2 Emissions (Metric Tons),Water Usage (Cubic Meters),Revenue (USD),Profit (USD)
+MMM,3M,3500000,2500000,30000000,24948000000,3250000000
+AOS,A. O. Smith,179316,143109,1356134,3830200000,546200000
+ABT,Abbott,1267222,876000,2338000,44330000000,6520000000
+ABBV,AbbVie,2218056,380850,27860000,61160000000,4233000000
+ACN,Accenture,340685,711431,1524942,69672977000,7832400000
+ATVI,Activision Blizzard,65000,275300,120000,7528000000,1513000000
+ADM,ADM,3670000,14540000,107800000,80270000000,1080000000
+ADBE,Adobe Inc.,228700,435764,363413,23769000000,7130000000
+ADP,ADP,180000,73220,500000,21950000000,4413500000
+AES,AES Corporation,120000000,29000000,1000000000,12233000000,162000000
+AFL,Aflac,15000,2633,50000,17164000000,3646000000
+A,Agilent Technologies,105339,72291,302140,6950000000,1303000000
+APD,Air Products and Chemicals,75944444,43500000,808000000,12037300000,-354400000
+AKAM,Akamai,1082840,173070,150000,4208000000,452031000
+ALK,Alaska Air Group,120000,10337165,450000,14239000000,100000000
+ALB,Albemarle Corporation,5138889,1113000,24800000,5142700000,-510600000
+ARE,Alexandria Real Estate Equities,480000,312699,3500000,2970717000,-1438000000
+ALGN,Align Technology,5193.6,25115,150000,4000000000,410350000
+ALLE,Allegion,112987,54135,365998,4067300000,643800000
+LNT,Alliant Energy,33129000,13900000,27241890,4400000000,810000000
+ALL,Allstate,145000,73250,350000,67700000000,10200000000
+GOOGL,Alphabet Inc. (Class A),43600000,2900000,41000000,402836000000,132170000000
+GOOG,Alphabet Inc. (Class C),43600000,14470000,41000000,402836000000,132170000000
+MO,Altria,85000,119336,1200000,23279000000,6947000000
+AMZN,Amazon,125000000,80900000,9500000,716924000000,77670000000
+AMCR,Amcor,4972222,10470000,12500000,23506000000,1106000000
+AMD,AMD,299000,42972,1500000,34600000000,4300000000
+AEE,Ameren,35000000,24500000,1500000000,8800000000,1456000000
+AAL,American Airlines Group,1200000,39946681,15000000,54633000000,111000000
+AEP,American Electric Power,200000000,43351137,5390000000,21870000000,3580000000
+AXP,American Express,375939,1901592,450000,72200000000,10800000000
+AIG,American International Group,120000,45000,600000,26770000000,3100000000
+AMT,American Tower,133000,500000,50000,10645000000,2530000000
+AWK,American Water Works,1051498,498267,1261458000,5140000000,1110000000
+AMP,Ameriprise Financial,120000,45000,300000,18480000000,3563000000
+AME,Ametek,272400,123300,745170,7401100000,1480100000
+AMGN,Amgen,878055,155000,2344000,36751000000,7711000000
+APH,Amphenol,1292978,688177,6235569,23094700000,4270300000
+ADI,Analog Devices,780000,2193000,3574600,11000000000,2267342000
+ANSS,Ansys,5000,8291,20000,2544809000,575692000
+AON,Aon,120000,44677,350000,17181000000,3690000000
+APA,APA Corporation,800000,6124000,6693366,7229000000,1400000000
+AAPL,Apple Inc.,40800000,16489100,3030000,416161000000,112010000000
+AMAT,Applied Materials,668509,113985,2612000,28368000000,6998000000
+APTV,Aptiv,1000000,246259,2653000,20400000000,165000000
+ACGL,Arch Capital Group,15000,7399,50000,19929000000,4359000000
+ANET,Arista Networks,113985,5059485,43103,9006000000,3511000000
+AJG,Arthur J. Gallagher & Co.,140000,50767,350000,13778000000,1503000000
+AIZ,Assurant,10500,11518,150000,12800000000,872700000
+T,AT&T,12900000,11666888,9270000,125648000000,23386000000
+ATO,Atmos Energy,120000,750000,500000,4702800000,1198800000
+ADSK,Autodesk,39050,196499,15000,7200000000,1100000000
+AZO,AutoZone,556355,497222,120000,18939000000,2498000000
+AVB,AvalonBay Communities,237016,69144,13542602,3040700000,1056600000
+AVY,Avery Dennison,350000,345000,1158300,8900000000,688000000
+AXON,Axon Enterprise,2500,2825,50000,2779600000,124700000
+BKR,Baker Hughes,2143675,560847,2573900,27733000000,2588000000
+BALL,Ball Corporation,4329000,8046349,8308950,13160000000,912000000
+BAC,Bank of America,1772964,683176,1407000,113100000000,30500000000
+BBWI,Bath & Body Works,286192,96774,196000,7291000000,649000000
+BAX,Baxter International,2900000,501000,14500000,11244000000,-900000000
+BDX,Becton Dickinson,2093980,572539,5399631,21800000000,1680000000
+WRB,Berkley,85000,24591,120000,14707856000,1779000000
+BRK.B,Berkshire Hathaway,165000000,115000000,450000000,371440000000,66968000000
+BBY,Best Buy,1387788,250000,1000000,41691000000,1070000000
+BIO,Bio-Rad,111400,38000,650000,2583200000,759900000
+TECH,Bio-Techne,35000,18512,150000,1215039000,181862000
+BIIB,Biogen,447391,58455,1115000,9891000000,1300000000
+BLK,BlackRock,12000,41816,150000,24220000000,5550000000
+BK,BNY Mellon,120000,45000,500000,20100000000,5300000000
+BA,Boeing,4663892,1300000,5021740,89463000000,2238000000
+BKNG,Booking Holdings,12000,276308,45000,26917000000,5400000000
+BWA,BorgWarner,1063498,251844,1475940,14316000000,335000000
+BXP,Boston Properties,350000,0,4500000,3482279000,276812000
+BSX,Boston Scientific,180000,213282,1500000,20074000000,2898000000
+BMY,Bristol Myers Squibb,1470753,331037,2895286,48194000000,7054000000
+AVGO,Broadcom Inc.,500000,248181,1952600,63887000000,23126000000
+BR,Broadridge Financial Solutions,91774,49266,150000,7476800000,1124300000
+BRO,Brown & Brown,12500.0,5500.0,35000.0,5902000000.0,1054000000.0
+BF.B,Brown–Forman,250000,75000,3900000,3900000000,715000000
+BG,Bunge Limited,1200000,2900000,86390140,70329000000,816000000
+CHRW,C.H. Robinson,15000,25000,50000,16232800000,587081000
+CDNS,Cadence Design Systems,65000,25000,150000,5296800000,1108900000
+CZR,Caesars Entertainment,350000,500000,15000000,11481000000,-502000000
+CPT,Camden Property Trust,125000,55000,4500000,1580000000,384500000
+CPB,Campbell Soup Company,350000,671508,3788175,10253000000,602000000
+COF,Capital One,350000,75000,780000,53434000000,2500000000
+CAH,Cardinal Health,581554,352244,3780000,222600000000,1600000000
+CCL,Carnival,32742983,9297000,25893000,26622000000,2760000000
+CARR,Carrier Global,722158,383530,349000,22500000000,5600000000
+CTLT,Catalent,1200000,500000,2190000,4380000000,-1040000000
+CAT,Caterpillar Inc.,2250000,1380000,19000000,67589000000,8900000000
+CBOE,Cboe Global Markets,41066,15000,3785,2429100000,738800000
+CBRE,CBRE Group,150000,68911,2500000,40600000000,1277000000
+CDW,CDW,60060,4887526,50000,22424100000,1066600000
+CE,Celanese,3500000,5200000,45000000,9544000000,-1165000000
+COR,Cencora,311440,273112,1977509,321300000000,1600000000
+CNC,Centene Corporation,125166,1168959,150000,194777000000,-6674000000
+CNP,CenterPoint Energy,260000,4853990,304879489,9350000000,1100000000
+CDAY,Ceridian,3980,500,12000,1760000000,18100000
+CF,CF Industries,2426389,19446000,141001000,7084000000,1455000000
+CRL,Charles River Laboratories,315330,82825,3500000,4015000000,-144338000
+SCHW,Charles Schwab Corporation,140000,75000,1200000,23900000000,8900000000
+CHTR,Charter Communications,3500000,1450000,5000000,54800000000,5000000000
+CVX,Chevron Corporation,14500000,56500000,75000000,184432000000,12299000000
+CMG,Chipotle Mexican Grill,53641,5137186,8715591,11925600000,1540000000
+CB,Chubb Limited,125000,69874,450000,59402000000,10310000000
+CHD,Church & Dwight,151000,70486,1580000,6203200000,736800000
+CI,Cigna,274700,75000,380000,274900000000,6000000000
+CINF,Cincinnati Financial,15000,20476,100000,12631000000,2393000000
+CTAS,Cintas,1200000,750000,4500000,10341000000,1812300000
+CSCO,Cisco,1400000,24513,2395000,63330000000,13270000000
+C,Citigroup,1082478,370030,2905418,85200000000,14300000000
+CFG,Citizens Financial Group,142773,38395,150000,8240000000,1830000000
+CLX,Clorox,707385,89726,2703000,7100000000,810000000
+CME,CME Group,18840,139421,106509,6520600000,4072200000
+CMS,CMS Energy,35903000,18450920,2020000,8539000000,1002000000
+KO,Coca-Cola Company (The),2500000,5219088,311998000,47941000000,13107000000
+CTSH,Cognizant,172207,61419,864000,21108000000,2230000000
+CL,Colgate-Palmolive,958000,590655,8700000,20382000000,2132000000
+CMCSA,Comcast,4444444,9500000,1200000,123707000000,20000000000
+CMA,Comerica,33471,28101,233812,3240000000,698000000
+CAG,Conagra Brands,2770,778879,16500000,11281600000,-1916200000
+COP,ConocoPhillips,3500000,24307000,10800000,58944000000,7988000000
+ED,Consolidated Edison,50000000.0,3167000.0,11541000.0,16900000000.0,2023000000.0
+STZ,Constellation Brands,760000,381000,22289000,9139000000,1687000000
+CEG,Constellation Energy,916000,9679181,737692000,25533000000,2320000000
+COO,CooperCompanies,208718.6,73846,650000,4092400000,374900000
+CPRT,Copart,60000,12400000,150000,4670000000,1480000000
+GLW,Corning Inc.,6568527,3814831,19965861,15629000000,1596000000
+CTVA,Corteva,250000,853000,27290000,17401000000,1165000000
+CSGP,CoStar Group,12500,5000,45000,3247000000,7000000
+COST,Costco,5000000,182200000,15000000,275235000000,8099000000
+CTRA,Coterra,750000,1606439,6031000,7645000000,1717000000
+CCI,Crown Castle,155665,11374,20629,4264000000,444000000
+CSX,CSX,414491,4551048,2583430,14092000000,2889000000
+CMI,Cummins,1250000,650000,3774000,33700000000,2843000000
+CVS,CVS Health,1800000,676183,6457000,402067000000,1768000000
+DHI,D.R. Horton,120000,55300,450000,34300000000,3600000000
+DHR,Danaher Corporation,1221320,311980,532879.92,24568000000,3600000000
+DRI,Darden Restaurants,3088000,847331,19684132,13210000000,1210000000
+DVA,DaVita Inc.,615375,741861,15286488,13653000000,1078000000
+DE,John Deere,3185300,874500,3500000,45684000000,5027000000
+DAL,Delta Air Lines,1200000,60570033,4500000,63400000000,5000000000
+XRAY,Dentsply Sirona,115000,22960,245670,3680000000,-598000000
+DVN,Devon Energy,2500000,4589573,31797430,17188000000,2681000000
+DXCM,Dexcom,85000,42700,180000,4662000000,836300000
+FANG,Diamondback Energy,3301961,2735330,2400000,15026000000,1664000000
+DLR,Digital Realty,11649837,999920,5586303,5554968000,561766000
+DFS,Discover Financial,120000,34700,250000,17910000000,4440000000
+DIS,Disney,2078435,1510751,45000000,94425000000,12404000000
+DG,Dollar General,3815801.27,1450698,7192279,42724400000,1500000000
+DLTR,Dollar Tree,1483097,656554,2000000,19400000000,861800000
+D,Dominion Energy,117850205,37812642,41247571.75,16500000000,3000000000
+DPZ,Domino's,180000,750000,1200000,4940000000,601700000
+DOV,Dover Corporation,350000,164318,1200000,8092571000,1093900000
+DOW,Dow Inc.,25000000,32000000,113222000,40000000000,-2400000000
+DTE,DTE Energy,35000000,20917000,1200000000,15810000000,1485000000
+DUK,Duke Energy,214148000,79000000,18860000000,31700000000,4970000000
+DD,DuPont,1850000,4696000,45000000,6800000000,880000000
+DXC,DXC Technology,853433,143907,500000,12640000000,18000000
+EMN,Eastman Chemical Company,40555678,6951203,785645000,8752000000,474000000
+ETN,Eaton Corporation,2167296,586706,2649510,27448000000,4090000000
+EBAY,eBay,454465,4238,306668,11100000000,2030000000
+ECL,Ecolab,384462,284943,9111249,16081200000,2075600000
+EIX,Edison International,81841000,7820000,1464000,19276000000,4459000000
+EW,Edwards Lifesciences,110844,38075,842353,6067600000,1073500000
+EA,Electronic Arts,90355,6586,254560,7531000000,887000000
+ELV,Elevance Health,180000,5305061,450000,199130000000,5660000000
+LLY,Eli Lilly and Company,780580,208000,5500000,65179000000,20640000000
+EMR,Emerson Electric,599111,350000,1659000,18016000000,2293000000
+ENPH,Enphase,18500,7500,45000,1470000000,172100000
+ETR,Entergy,85000000,37000000,120000000,11806000000,1758272000
+EOG,EOG Resources,1200000,6406711,15000000,22632000000,4980000000
+EPAM,EPAM Systems,120000,50000,300000,5457056000,377678000
+EQT,EQT,150000,0.0,6478000.0,8640000000.0,2039000000.0
+EFX,Equifax,12000,5000,20000,6074500000,664300000
+EQIX,Equinix,6500000,500000,4600000,9217000000,1350000000
+EQR,Equity Residential,168422,289761,12016347,3094000000,1152000000
+ESS,Essex Property Trust,31915,46016,1892705,1901000000,672500000
+EL,Estée Lauder Companies (The),192200,0,885000,15049000000,182000000
+ETSY,Etsy,4210,333,5000,2883500000,162982000
+EG,Everest Re,12000,86252.2,50000,17210000000,1590000000
+EVRG,Evergy,45514605,25985719,76268266,5961600000,855600000
+ES,Eversource,150000,750000,120000000,13547244000,1692372000
+EXC,Exelon,28800000,9900000,204412,24258000000,2768000000
+EXPE,Expedia Group,15000,407041,50000,14700000000,1301000000
+EXPD,Expeditors International,35000,25000,150000,11069009000,810332000
+EXR,Extra Space Storage,210457,60368,658829,3377500000,1022500000
+XOM,ExxonMobil,38888888,97000000,290000000,332200000000,28800000000
+FFIV,F5,29053,5672,15000,3088100000,692400000
+FDS,FactSet,39367.33,13445,15000,2321700000,597040000
+FICO,Fair Isaac,12000,5000,30000,1990000000,652000000
+FAST,Fastenal,86724,169929,29035,8200500000,1258400000
+FRT,Federal Realty,150000,75000,2000000,1290000000,411100000
+FDX,FedEx,2544522,15790428,1200000,94720000000,4430000000
+FITB,Fifth Third Bank,128272,9449,150000,9900000000,2522000000
+FSLR,First Solar,1782056,942927,4673000,5200000000,1500000000
+FE,FirstEnergy,148452000,14018734,62797000,15100000000,1020000000
+FIS,FIS,120000,50000,300000,10677000000,382000000
+FI,Fiserv,252043,122180,150000,21193000000,3480000000
+FLT,Fleetcor,12000,5500,45000,3970000000,1003700000
+FMC,FMC Corporation,170000,126000,1451000,3467400000,-2238900000
+F,Ford Motor Company,10869498,336389000,14500000,187270000000,-8162000000
+FTNT,Fortinet,74133,17113,100086,6799600000,1853400000
+FTV,Fortive,115000,55565,374900,4159100000,579200000
+FOXA,Fox Corporation (Class A),158020,79328,145640,16300000000,2290000000
+FOX,Fox Corporation (Class B),158020,67750,145640,17130000000,1730000000
+BEN,Franklin Templeton,12000.0,31900.0,50000.0,8770000000.0,524900000.0
+FCX,Freeport-McMoRan,7610086,7352000,1800000000,25910000000,2204000000
+GRMN,Garmin,120000,1166956,450000,7245500000,1663900000
+IT,Gartner,15000,25000,50000,6500000000,700000000
+GEHC,GE HealthCare,185000,221000,1200000,20625000000,2084000000
+GEN,Gen Digital,52835,5839,245424,5000000000,973000000
+GNRC,Generac,65629,71023,118537,4209147000,159554000
+GD,General Dynamics,1300000,885277,2500000,52550000000,4200000000
+GE,General Electric,1342537,751183,8353805,45900000000,10000000000
+GIS,General Mills,2435000,319000,9177000,18420000000,-2000000000
+GM,General Motors,12490707,3458581,16976302,185019000000,2697000000
+GPC,Genuine Parts Company,105000,374826,240000,24300000000,65950000
+GILD,Gilead Sciences,424797,50391,526000,29443000000,8510000000
+GL,Globe Life,15150,6780,76000,5990000000,1161238000
+GPN,Global Payments,110000,45000,165000,9320000000,1070000000
+GS,Goldman Sachs,441570,14447,60566,58260000000,17180000000
+HAL,Halliburton,1200000,3022264,7500000,22184000000,1292000000
+HIG,Hartford (The),38940,53264,89360,28368000000,3836000000
+HAS,Hasbro,16286,7884,65400,47013000000,-318200000
+HCA,HCA Healthcare,3500000,2500000,15000000,75600000000,6784000000
+PEAK,Healthpeak,35570,1457,56781,2823000000,70513000
+HSIC,Henry Schein,18014,53675,136800,13200000000,419000000
+HSY,Hershey's,1550000,6557419,4679000,11692576000,883300000
+HES,Hess Corporation,1200000,2600000,4500000,12907000000,2769000000
+HPE,Hewlett Packard Enterprise,649573,15816671,1500000,34296000000,57000000
+HLT,Hilton Worldwide,22092928,2561872,45740000,12039000000,1461000000
+HOLX,Hologic,15099,14923,145000,4100500000,565700000
+HD,Home Depot (The),3134800,1547000,113562427,164683000000,14156000000
+HON,Honeywell,4638531,1417133,22429000,37442000000,4468000000
+HRL,Hormel Foods,3075777,922949,17585000,12106160000,478197000
+HST,Host Hotels & Resorts,617453,222322,10008688,6114000000,776000000
+HWM,Howmet Aerospace,3277778,750000,3500000,8252000000,1508000000
+HPQ,HP Inc.,682398,127600,2227000,55295000000,2500000000
+HUM,Humana,149029,98506,643052,129700000000,1190000000
+HBAN,Huntington Bancshares,182162,71093,468940,8231000000,2211000000
+HII,Huntington Ingalls Industries,500000,308753,3500000,12484000000,605000000
+IBM,IBM,1794000,191000,500000,67535000000,10600000000
+IEX,IDEX Corporation,131403,63130,410422,3500000000,482500000
+IDXX,Idexx Laboratories,69862,37459,92447,4304000000,1059000000
+ITW,Illinois Tool Works,899646,495154,2325753,16044000000,3066000000
+ILMN,Illumina,142718,34635,293766.79,4340000000,850000000
+INCY,Incyte,51186,16092,120000,5141242000,1286650000
+IR,Ingersoll Rand,336545,92043,352000,7650900000,588800000
+PODD,Insulet,31201,12547,150000,2700000000,247100000
+INTC,Intel,10200000,1320000,41918000,52850000000,-300000000
+ICE,Intercontinental Exchange,150000,297141,500000,12640000000,3300000000
+IFF,International Flavors & Fragrances,1296479,5667289,15000000,10890000000,-361000000
+IP,International Paper,66024870,18500000,280000000,23634000000,-3516000000
+IPG,Interpublic Group of Companies (The),120000,35000,250000,10690000000,689500000
+INTU,Intuit,67926,21053,28400,21448000000,4566000000
+ISRG,Intuitive Surgical,35000,696305,120000,10064700000,2876600000
+IVZ,Invesco,22338,5500,45000,6380000000,-726300000
+INVH,Invitation Homes,150000,75000,3000000,2729300000,589900000
+IQV,IQVIA,135000,55000,650000,16310000000,1360000000
+IRM,Iron Mountain,1616131,3529,949329,6902000000,144591000
+JBHT,J.B. Hunt,50400,1818487,923640,11999000000,598000000
+JKHY,Jack Henry & Associates,69079,6832,45000,2544339000,502776000
+J,Jacobs Solutions,47014,34485,15000,12029800000,303900000
+JNJ,Johnson & Johnson,1250000,500000,11000000,94193000000,26881000000
+JCI,Johnson Controls,1250000,582890,3196000,23596000000,3513000000
+JPM,JPMorgan Chase,2098794,873876,5600000,182447000000,57048000000
+JNPR,Juniper Networks,265969,1414944,50000,5073600000,287900000
+K,Kellogg's,1200000,448532,5593630,12749000000,1343000000
+KVUE,Kenvue,218500,132800,3582000,15100000000,1470000000
+KDP,Keurig Dr Pepper,496542,294455,13355000,16603000000,2080000000
+KEY,KeyCorp,79406,35673,50000,7500000000,1800000000
+KEYS,Keysight,193052,93652,834350,5375000000,846000000
+KMB,Kimberly-Clark,3660714,3209000,88800000,16447000000,2021000000
+KIM,Kimco Realty,185000,75000,1200000,2140116000,554400000
+KMI,Kinder Morgan,54000,16800000,1550000,16937000000,3056000000
+KLAC,KLA Corporation,251596,88899,357742,13580000000,4830771000
+KHC,Kraft Heinz,1220154,25079857,28616000,24942000000,-5848000000
+KR,Kroger,6954069,4916373,22106846,147600000000,1000000000
+LHX,L3Harris,350000,180000,1500000,21865000000,1606000000
+LH,LabCorp,850000,339117,3500000,13951700000,876500000
+LRCX,Lam Research,13700,50832,302833,23230000000,7270000000
+LW,Lamb Weston,4810000,1110507,2771800,6612300000,290000000
+LVS,Las Vegas Sands,851500,396453,8725000,13017000000,1627000000
+LDOS,Leidos,140000,136637,550000,17174000000,1462000000
+LEN,Lennar,12000,35000,500000,34200000000,2100000000
+LNC,Lincoln Financial,29062,7007,15000,17980000000,3275000000
+LIN,Linde plc,42500000,30000000,15000000,33986000000,6898000000
+LYV,Live Nation Entertainment,120000,75000,450000,25200000000,496000000
+LKQ,LKQ Corporation,140000,250000,1200000,13700000000,596000000
+LMT,Lockheed Martin,1565447,654334,4971245,75048000000,5017000000
+L,Loews Corporation,425,250000,1200000,18500000000,1667000000
+LOW,Lowe's,2553665,1168000,9652800,86286000000,6654000000
+LYB,LyondellBasell,93100000,18900000,139000000,30153000000,-738000000
+MTB,M&T Bank,140175,54281,218416,9690000000,2851000000
+MRO,Marathon Oil,1250000,3500000,15000000,6697000000,1554000000
+MPC,Marathon Petroleum,17850000,40400000,140181000,135222000000,5878000000
+MKTX,MarketAxess,2425,16530,15000,846300000,246900000
+MAR,Marriott International,18500000,6637786,144100000,26190000000,2600000000
+MMC,Marsh McLennan,159754,77390,200000,26981000000,4160000000
+MLM,Martin Marietta Materials,1200000,3400000,4500000,6150000000,990000000
+MAS,Masco,487000,128000,940000,7562000000,810000000
+MA,Mastercard,118864,512781,170200,32791000000,14968000000
+MTCH,Match Group,12000.0,25000.0,15000.0,3493000000.0,613500000.0
+MKC,McCormick & Company,432751,133040,2284000,6840300000,717200000
+MCD,McDonald's,1500000.0,60457705.0,7332000.0,26885000000.0,8563000000.0
+MCK,McKesson,350000,200482,1125000,403430000000,4762000000
+MDT,Medtronic,850000,288000,2050000,36364000000,4840000000
+MRK,Merck & Co.,1200000,884200,19500000,65011000000,18254000000
+META,Meta Platforms,18423634,8200000,3881000,200966000000,60458000000
+MET,MetLife,100000,48241,500000,76130000000,3200000000
+MTD,Mettler Toledo,120000,25000,350000,4026000000,869200000
+MGM,MGM Resorts,1415668,613211,18500000,17537700000,205862000
+MCHP,Microchip Technology,350000,180000,3500000,4713000000,1188000000
+MU,Micron Technology,9791521,6101940,62033000,37378000000,8539000000
+MSFT,Microsoft,24500000,20290000,8170000,331840000000,133750000000
+MAA,Mid-America Apartment Communities,150000,250000,17645321.72,2210000000,443200000
+MRNA,Moderna,139730,30883,250000,1900000000,-2800000000
+MHK,Mohawk Industries,12009878,2925940,15850000,10785400000,369900000
+MOH,Molina Healthcare,35000,8501,150000,45426000000,472000000
+TAP,Molson Coors Beverage Company,1200000,1500000,30000000,11140800000,-2139600000
+MDLZ,Mondelez International,5146667,30470000,10376000,38500000000,2450000000
+MPWR,Monolithic Power Systems,85497,45291,120000,2790459000,615927000
+MNST,Monster Beverage,120000,250000,1500000,8294343000,1905432000
+MCO,Moody's Corporation,22567,851,15000,7718000000,2459000000
+MS,Morgan Stanley,195000,246410,1150000,70645000000,16861000000
+MOS,Mosaic Company (The),3500000,7500000,320384000,12052000000,540700000
+MSI,Motorola Solutions,191200,100873,267000,11700000000,2154000000
+MSCI,MSCI,15000,7683,25000,3134459000,1202305000
+NDAQ,Nasdaq,70775,72188,57407,8218000000,1787000000
+NTAP,NetApp,150000,65340,450000,6930000000,1280000000
+NFLX,Netflix,258639,1037226,15000,45183036000,10981201000
+NWL,Newell Brands,350000,360526,3000000,7178000000,-285000000
+NEM,Newmont,3500000,4400000,123231000,22669000000,7085000000
+NWSA,News Corp (Class A),186883,935100,15000,9030000000,743000000
+NWS,News Corp (Class B),167500,82776,50000,8450000000,648000000
+NEE,NextEra Energy,250747000,43434476,114244000,27412000000,6835000000
+NKE,Nike,555700,8266474,6900000,51362000000,5700000000
+NI,NiSource,7266154,5446186,8890000,6609600000,929500000
+NDSN,Nordson Corporation,120000,55000,450000,2791700000,484500000
+NSC,Norfolk Southern Railway,367556,4167192,2541524,12180000000,2873000000
+NTRS,Northern Trust,72925,30924,50000,8086400000,1737000000
+NOC,Northrop Grumman,1450000,650000,11000000,42000000000,4200000000
+NCLH,Norwegian Cruise Line Holdings,1200000,3242719,7600000,9800000000,4232000000
+NRG,NRG Energy,154000000,30000000,120000000,30713000000,864000000
+NUE,Nucor,14000000,10500000,63000000,32500000000,1740000000
+NVDA,Nvidia,821200,10942270,134000,215900000000,120067000000
+NVR,NVR,12000,5000,60000,10323959000,1339816000
+NXPI,NXP Semiconductors,831349,206637,11148000,12269000000,2068000000
+ORLY,O'Reilly Auto Parts,1200000,493400,1500000,17781992000,2538209000
+OXY,Occidental Petroleum,12036810,22730000,50000000,21593000000,2369000000
+ODFL,Old Dominion,35000,1183791,500000,5496389000,1023703000
+OMC,Omnicom Group,120000,85000,350000,17271900000,-545000000
+ON,ON Semiconductor,2149054,1467300,15759000,5995400000,121000000
+OKE,ONEOK,2500000,1800000,5000000,33629000000,3462000000
+ORCL,Oracle Corporation,5155385,8500000,545500,67360000000,17100000000
+OGN,Organon & Co.,120000,55000,1500000,6200000000,187000000
+OTIS,Otis Worldwide,165400,211100,170343,14400000000,1384000000
+PCAR,Paccar,927460,227176,1500000,28444800000,2375800000
+PKG,Packaging Corporation of America,3500000,3050000,268400000,8989000000,774000000
+PANW,Palo Alto Networks,35000,983674,120000,11480000000,307000000
+PARA,Paramount Global,120000,50000,250000,28900000000,-621000000
+PH,Parker Hannifin,1200000,523964,4500000,21500000000,3650000000
+PAYX,Paychex,25000,3200,150000,6510000000,1760000000
+PAYC,Paycom,50028,752,125000,2050000000,453400000
+PYPL,PayPal,230100,478100,165800,33172000000,5233000000
+PNR,Pentair,250000.0,120000.0,117347.0,4180000000.0,653800000.0
+PEP,PepsiCo,4479167,24000000,35000000,93925000000,8240000000
+PFE,Pfizer,4324679,1125698,26600000,62579000000,7771000000
+PCG,PG&E Corporation,85000000,3394694,12000000,24939000000,2703000000
+PM,Philip Morris International,1022795,322445,3069000,40640000000,11350000000
+PSX,Phillips 66,14500000,37300000,180000000,132376000000,4403000000
+PNW,Pinnacle West,38377000,10179459,117955892,5340000000,6165000000
+PXD,Pioneer Natural Resources,1500000,7500000,20000000,19362000000,4894000000
+PNC,PNC Financial Services,434198,31286,1128266,23099000000,7000000000
+POOL,Pool Corporation,35000,25000,150000,5300000000,4064000000
+PPG,PPG Industries,2358333,630000,7450000,15875000000,1576000000
+PPL,PPL Corporation,58000,29683827,428087000,9042000000,1181000000
+PFG,Principal Financial Group,54600.0,25000.0,150000.0,15625500000.0,1255500000.0
+PG,Procter & Gamble,16456944,2079000,66733000,87030000000,16000000000
+PGR,Progressive Corporation,92010,68267,186000,87671000000,11308000000
+PLD,Prologis,120000,50000,1500000,8790000000,3322000000
+PRU,Prudential Financial,85233,435711,120000,60774000000,3576000000
+PEG,Public Service Enterprise Group,40816000,550000,2500000,12160000000,2111000000
+PTC,PTC,12500,5000,20000,2740000000,734000000
+PSA,Public Storage,495034,125000,1200000,4824113000,1797032000
+PHM,PulteGroup,12500,7520000,1500000,17300000000,2200000000
+QRVO,Qorvo,195000,85000,1200000,3678517000,339000000
+PWR,Quanta Services,33111,887174,150000,28480000000,1030000000
+QCOM,Qualcomm,165000,4664301,1250000,44284000000,5541000000
+DGX,Quest Diagnostics,289000,197600,1250000,11035000000,992000000
+RL,Ralph Lauren Corporation,237000,1230541,10110000,7079000000,743000000
+RJF,Raymond James,85000,35000,300000,14065000000,2130000000
+RTX,RTX Corporation,3500000,1409597,12000000,88600000000,6700000000
+O,Realty Income,6855757,3500000,50000,5700000000,1000000000
+REG,Regency Centers,59142,19271,1250000,1553500000,541000000
+REGN,Regeneron,250231,1228000,1660000,14343000000,4505000000
+RF,Regions Financial Corporation,150000,57620,500000,7500000000,2156000000
+RSG,Republic Services,8265383,13362683,1980000,16591000000,2139000000
+RMD,ResMed,46890,27530,399902,5146300000,1400723000
+RVTY,Revvity,85000,28600,249729,2856000000,241201000
+RHI,Robert Half,18500,7200,120000,5379000000,133000000
+ROK,Rockwell Automation,151420,91732,450000,8342000000,869000000
+ROL,Rollins,125000,55000,300000,3761050000,526710000
+ROP,Roper Technologies,120000,45000,250000,7902500000,1536300000
+ROST,Ross Stores,892971,500000,150000,22751000000,2145000000
+RCL,Royal Caribbean Group,8200000,5430541,35000000,17935000000,4268000000
+SPGI,S&P Global,45360,437348,121496,15336000000,4471000000
+CRM,Salesforce,913000,1100000,528500,41530000000,7500000000
+SBAC,SBA Communications,12500,5000,20000,2815100000,1054500000
+SLB,Schlumberger,816000,36115000,3965000,35710000000,3370000000
+STX,Seagate Technology,1620000,976534,7650000,12200000000,3200000000
+SEE,Sealed Air,1404337,418446,1571817,5360000000,441000000
+SRE,Sempra Energy,23573630,7300000,105234445,13702000000,1796000000
+NOW,ServiceNow,185000,86650,450000,13278000000,1748000000
+SHW,Sherwin-Williams,2525673,670749,4500000,23574300000,2568500000
+SPG,Simon Property Group,1250000,550000,12000000,6364505000,4614970000
+SWKS,Skyworks Solutions,336679,69875,1815619,4087000000,477000000
+SJM,J.M. Smucker Company (The),350000,341981,5000000,8726100000,-1230800000
+SNA,Snap-on,333728,89041,518601,4743200000,1016900000
+SEDG,SolarEdge,25000,11406,44073,1184400000,-405400000
+LUV,Southwest Airlines,82351,25600000,321760,28100000000,441000000
+SWK,Stanley Black & Decker,1174302,371762,1915263,15130000000,4019000000
+SBUX,Starbucks,2150000,13500000,5100000000,37184000000,1856400000
+STT,State Street Corporation,75000,25000,350000,13960000000,2717000000
+STLD,Steel Dynamics,7000000,1947698,35000000,18200000000,1200000000
+STE,Steris,140000,75000,650000,5940000000,782300000
+SYK,Stryker Corporation,195000,78000,1400000,25116000000,3246000000
+SYF,Synchrony Financial,33098,32401,68331,19000000000,3552000000
+SNPS,Synopsys,75482,345195,50000,7054200000,1332200000
+SYY,Sysco,4354777,1292040,3500000,81370000000,1830000000
+TMUS,T-Mobile US,7226040,2699882,807939,88310000000,11010000000
+TROW,T. Rowe Price,57013,328388,25000,7314800000,2087100000
+TTWO,Take-Two Interactive,66360,353596,12000,6656400000,-298200000
+TPR,Tapestry,95076,6607,3476784,7010000000,-180000000
+TRGP,Targa Resources,8500000,14162000,14510477,17028300000,1923000000
+TGT,Target Corporation,3500000,6114164,15000000,104780000000,3705000000
+TEL,TE Connectivity,1200000,250000,3500000,17262000000,1842000000
+TDY,Teledyne Technologies,257597.58,110941,912284,6115400000,894800000
+TFX,Teleflex,125000,55000,410031,3047300000,69675000
+TER,Teradyne,125000,55000,350000,3190000000,554050000
+TSLA,Tesla,3832267,1057000,5447800,94827000000,3794000000
+TXN,Texas Instruments,4289877,2500000,20000000,17680000000,5000000000
+TXT,Textron,500000,397839,1500000,14799000000,923000000
+TMO,Thermo Fisher Scientific,2844775,7623193,14000000,44556000000,6704000000
+TJX,TJX Companies,1200000,540000,1500000,60400000000,5500000000
+TSCO,Tractor Supply,300000,301000,1307432,15520000000,1100000000
+TT,Trane Technologies,894647,182511,1517000,21300000000,2920000000
+TDG,TransDigm Group,236128,130022,529710,8831000000,2074000000
+TRV,Travelers Companies (The),75000,38551,250000,48830000000,6288000000
+TRMB,Trimble Inc.,41077,180546,15000,3587300000,424000000
+TFC,Truist,350000,132394,1200000,20319000000,5307000000
+TYL,Tyler Technologies,12639,7196,45000,2328700000,315600000
+TSN,Tyson Foods,5000000,5760000,150000000,54441000000,507000000
+USB,U.S. Bank,594475,44382,750000,28700000000,7570000000
+UDR,UDR,198000,75000,9400000,1710000000,377700000
+ULTA,Ulta Beauty,393161,136998,150000,12390000000,1153500000
+UNP,Union Pacific Corporation,180000,9286290,1460000,24510000000,7138000000
+UAL,United Airlines Holdings,496215,39976609,1434670,59070000000,3400000000
+UPS,United Parcel Service,1250000,25771000,4500000,88661000000,5572000000
+URI,United Rentals,120000,589000,450000,16099000000,2494000000
+UNH,UnitedHealth Group,1437092,458770,50000,400278000000,14405000000
+UHS,Universal Health Services,180000,90000,3500000,17400000000,1450000000
+VLO,Valero Energy,14500000,29300000,164600000,122687000000,2348000000
+VTR,Ventas,125000,403647,1500000,2393100000,2615000000
+VRSN,Verisign,120000,50000,200000,1656600000,8257000000
+VRSK,Verisk,8054.93,4792.0,15000.0,3072700000.0,908300000.0
+VZ,Verizon,11388888,1000000,3500000,138191000000,17608000000
+VRTX,Vertex Pharmaceuticals,50000,13574,188400,12000000000,4000000000
+VFC,VF Corporation,180953,71130,71728706,9610000000,577000000
+VTRS,Viatris,1925000,751600,4037000,14300000000,-3500000000
+VICI,Vici Properties,5010.0,2241.8,1516834,4000000000,2800000000
+V,Visa Inc.,120000,84316,150000,40000000000,20058000000
+VMC,Vulcan Materials Company,4780000,900000,15000000,7941000000,1077000000
+WAB,Wabtec,150000,243885,1200000,11167000000,1170000000
+WBA,Walgreens Boots Alliance,1200000,1500000,3500000,147658000000,-8636000000
+WMT,Walmart,18500000,14400000,35000000,713160000000,21890000000
+WBD,Warner Bros. Discovery,350000,193571,1200000,37296000000,7490000000
+WM,Waste Management,1303000,13887000,6100000,25204000000,2708000000
+WAT,Waters Corporation,65000,25000,450000,3165000000,643000000
+WEC,WEC Energy Group,44059500,16737000,2443000000,9800100000,1600000000
+WFC,Wells Fargo,1509777,620158,6066842,83699000000,21300000000
+WELL,Welltower,1177770,450654,5678000,10838000000,9368000000
+WST,West Pharmaceutical Services,240000,97769,1150000,3074000000,493700000
+WDC,Western Digital,1457648,793638,10000000,12919000000,9424000000
+WRK,WestRock,12500000,8400000,110000000,20300000000,-1700000000
+WY,Weyerhaeuser,1214511,800000,2830000,6900000000,324000000
+WHR,Whirlpool Corporation,1545432,215772,2465000,15524000000,3180000000
+WMB,Williams Companies,5350000,15520000,100000,11950000000,2615000000
+WTW,Willis Towers Watson,120000,50000,200000,9708000000,1610000000
+GWW,W. W. Grainger,309000,83821,538000,17942000000,1706000000
+WYNN,Wynn Resorts,465275,72827,2379538,7140000000,327334000
+XEL,Xcel Energy,109401000,28000000,31654000,14669000000,2018000000
+XYL,Xylem Inc.,178417,79127,2480000,9035000000,957000000
+YUM,Yum! Brands,303992,162309,12000000,8214000000,1559000000
+ZBRA,Zebra Technologies,50000,24175,150000,5396000000,419000000
+ZBH,Zimmer Biomet,250000,113116,1500000,8232000000,7051000000
+ZION,Zions Bancorporation,25000,10000,150000,3400000000,899000000
+ZTS,Zoetis,906361,243598,2599103,9467000000,2673000000`;
+
+        const lines = rawData.split('\n');
+        const companies = [];
+        // Skip header, parse rest
+        for(let i=1; i<lines.length; i++) {
+            const cols = lines[i].split(',');
+            if(cols.length >= 6) {
+                companies.push({
+                    ticker: cols[0],
+                    name: cols[1],
+                    // Parse large integers safely
+                    electricity: parseFloat(cols[2].replace(/,/g, '')),
+                    co2: parseFloat(cols[3].replace(/,/g, '')),
+                    water: parseFloat(cols[4].replace(/,/g, '')),
+                    revenue: parseFloat(cols[5].replace(/,/g, '')),
+                    profit: parseFloat(cols[6].replace(/,/g, '')),
+                    // Simulate waste recycle rate since it wasn't in the list
+                    wasteRecycle: Math.floor(Math.random() * (95 - 20 + 1)) + 20
+                });
+            }
+        }
+
+        let state = {
+            selectedCompanyIndex: -1,
+            projEnergy: 0, projCO2: 0,
+            predictedYears: 0, percentile: 50
+        };
+
+        // --- 2. THREE.JS SETUP ---
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const manager = new THREE.LoadingManager();
+        manager.onLoad = () => { document.getElementById('loader').style.opacity = 0; setTimeout(() => document.getElementById('loader').style.display = 'none', 800); };
+        const textureLoader = new THREE.TextureLoader(manager);
+        scene.fog = new THREE.FogExp2(0x111111, 0.02);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0, 18);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.5;
+        container.appendChild(renderer.domElement);
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.maxPolarAngle = Math.PI;
+        controls.minDistance = 10;
+        controls.maxDistance = 40;
+
+        // --- 3. LIGHTING ---
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+        scene.add(ambientLight);
+        const hemiLight = new THREE.HemisphereLight(0xddeeff, 0x444444, 1.0);
+        scene.add(hemiLight);
+        const sunLight = new THREE.DirectionalLight(0xfff0dd, 3.5);
+        sunLight.position.set(10, 20, 10);
+        sunLight.castShadow = true;
+        sunLight.shadow.mapSize.width = 2048;
+        sunLight.shadow.mapSize.height = 2048;
+        sunLight.shadow.bias = -0.0001;
+        scene.add(sunLight);
+        const rimLight = new THREE.DirectionalLight(0x8899aa, 1.5);
+        rimLight.position.set(-10, 5, -10);
+        scene.add(rimLight);
+        const glowLight = new THREE.PointLight(0x555555, 0, 20);
+        glowLight.position.set(0, 1, 0);
+        scene.add(glowLight);
+
+        // --- 4. EARTH & TREE ---
+        const earthMap = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
+        const earthBump = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png');
+
+        const earthRadius = 5;
+        const earthGeo = new THREE.SphereGeometry(earthRadius, 64, 64);
+        const earthMat = new THREE.MeshStandardMaterial({
+            map: earthMap, bumpMap: earthBump, bumpScale: 0.05, roughness: 0.8, metalness: 0.1, color: 0xbbbbbb
+        });
+        const earth = new THREE.Mesh(earthGeo, earthMat);
+        earth.position.set(0, -5, 0);
+        earth.receiveShadow = true;
+        earth.castShadow = true;
+        scene.add(earth);
+
+        const atmoGeo = new THREE.SphereGeometry(earthRadius + 0.2, 64, 64);
+        const atmoMat = new THREE.MeshBasicMaterial({ color: 0x4a6080, transparent: true, opacity: 0.15, side: THREE.BackSide });
+        const atmosphere = new THREE.Mesh(atmoGeo, atmoMat);
+        atmosphere.position.set(0, -5, 0);
+        scene.add(atmosphere);
+
+        const treeGroup = new THREE.Group();
+        treeGroup.position.set(0, 0, 0);
+        scene.add(treeGroup);
+        const foliageGroup = new THREE.Group();
+        const flowerGroup = new THREE.Group();
+        treeGroup.add(foliageGroup);
+        treeGroup.add(flowerGroup);
+
+        const trunkMaterial = new THREE.MeshStandardMaterial({ color: 0x3d2817, roughness: 0.9 });
+        const leafMaterial = new THREE.MeshStandardMaterial({ color: 0x555555, roughness: 0.8, flatShading: true });
+        const flowerMaterial = new THREE.MeshStandardMaterial({
+            color: 0xe6a8d7,
+            emissive: 0xcc6688,
+            emissiveIntensity: 0.3
+        });
+
+        function createBranch(startPos, length, angle, depth) {
+            if (depth === 0) return;
+            const endPos = new THREE.Vector3(0, length, 0);
+            endPos.applyAxisAngle(new THREE.Vector3(1, 0, 0), angle.x);
+            endPos.applyAxisAngle(new THREE.Vector3(0, 1, 0), angle.y);
+            endPos.add(startPos);
+            const branchGeo = new THREE.CylinderGeometry(0.04 * depth, 0.06 * depth, length, 7);
+            const branch = new THREE.Mesh(branchGeo, trunkMaterial);
+            branch.position.copy(startPos.clone().add(endPos).multiplyScalar(0.5));
+            branch.lookAt(endPos);
+            branch.rotateX(Math.PI / 2);
+            branch.castShadow = true;
+            treeGroup.add(branch);
+            if (depth < 3) {
+                const foliageGeo = new THREE.DodecahedronGeometry(0.35 + Math.random() * 0.15);
+                const leaf = new THREE.Mesh(foliageGeo, leafMaterial.clone());
+                leaf.position.copy(endPos);
+                leaf.castShadow = true;
+                leaf.receiveShadow = true;
+                leaf.userData = { originalScale: 1, randomOffset: Math.random() * 100 };
+                foliageGroup.add(leaf);
+                if (Math.random() > 0.6) {
+                    const flowerGeo = new THREE.IcosahedronGeometry(0.1, 0);
+                    const flower = new THREE.Mesh(flowerGeo, flowerMaterial.clone());
+                    flower.position.copy(endPos).add(new THREE.Vector3((Math.random()-0.5)*0.3, (Math.random()-0.5)*0.3, (Math.random()-0.5)*0.3));
+                    flower.visible = false;
+                    flower.userData = { active: false };
+                    flowerGroup.add(flower);
+                }
+            }
+            createBranch(endPos, length * 0.8, {x: angle.x + 0.5, y: angle.y + 0.5}, depth - 1);
+            createBranch(endPos, length * 0.8, {x: angle.x - 0.5, y: angle.y - 0.5}, depth - 1);
+        }
+        createBranch(new THREE.Vector3(0, 0, 0), 1.5, {x: 0.4, y: 0}, 5);
+
+        const particleCount = 400;
+        const particlesGeo = new THREE.BufferGeometry();
+        const positions = new Float32Array(particleCount * 3);
+        const speeds = [];
+        for(let i=0; i<particleCount; i++){
+            positions[i*3] = (Math.random() - 0.5) * 20;
+            positions[i*3+1] = Math.random() * 10;
+            positions[i*3+2] = (Math.random() - 0.5) * 20;
+            speeds.push({ y: Math.random() * 0.01 + 0.002, x: (Math.random() - 0.5) * 0.005, z: (Math.random() - 0.5) * 0.005 });
+        }
+        particlesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const particleMaterial = new THREE.PointsMaterial({ color: 0xcccccc, size: 0.07, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending });
+        const particleSystem = new THREE.Points(particlesGeo, particleMaterial);
+        scene.add(particleSystem);
+
+        // --- 5. LOGIC ---
+
+        // Helper to format numbers (e.g. 1500M, 2.5B)
+        function formatCurrency(value) {
+            if(value >= 1e12) return '$' + (value/1e12).toFixed(2) + 'T';
+            if(value >= 1e9) return '$' + (value/1e9).toFixed(2) + 'B';
+            if(value >= 1e6) return '$' + (value/1e6).toFixed(1) + 'M';
+            return '$' + value.toLocaleString();
+        }
+
+        function formatNumber(value) {
+            if(value >= 1e6) return (value/1e6).toFixed(1) + 'M';
+            if(value >= 1e3) return (value/1e3).toFixed(1) + 'K';
+            return value.toLocaleString();
+        }
+
+        function updateAssessmentUI(index) {
+            if (index === -1) {
+                document.getElementById('ass-sector').innerText = "--";
+                document.getElementById('ass-revenue').innerText = "--";
+                document.getElementById('ass-profit').innerText = "--";
+                document.getElementById('ass-energy').innerText = "--";
+                document.getElementById('ass-co2').innerText = "--";
+                document.getElementById('ass-water').innerText = "--";
+                document.getElementById('ass-waste').innerText = "--";
+                return;
+            }
+            const c = companies[index];
+
+            // Using sector derived from Ticker logic or generic for now since list didn't have explicit sector column for all
+            document.getElementById('ass-sector').innerText = c.ticker;
+            document.getElementById('ass-revenue').innerText = formatCurrency(c.revenue);
+            document.getElementById('ass-profit').innerText = formatCurrency(c.profit);
+            document.getElementById('ass-energy').innerText = formatNumber(c.electricity) + " MWh";
+            document.getElementById('ass-co2').innerText = formatNumber(c.co2) + " Tons";
+            document.getElementById('ass-water').innerText = formatNumber(c.water) + " m³";
+
+            const elWaste = document.getElementById('ass-waste');
+            elWaste.innerText = c.wasteRecycle + "%";
+            elWaste.className = "assessment-value " + (c.wasteRecycle > 70 ? 'good' : 'bad');
+        }
+
+        function calculatePrediction() {
+            if (state.selectedCompanyIndex === -1) return;
+
+            const c = companies[state.selectedCompanyIndex];
+
+            // NORMALIZATION LOGIC FOR RAW DATA
+            // We define arbitrary maxima based on the dataset to create a score 0-1
+
+            // Electricity: Max ~200,000,000 (AEP). Min ~5000.
+            const maxElec = 200000000;
+            const scoreElec = 1 - Math.min(1, (c.electricity + (state.projEnergy * 100000)) / maxElec);
+
+            // CO2: Max ~120,000,000. Min ~2000.
+            const maxCO2 = 120000000;
+            const scoreCO2 = 1 - Math.min(1, (c.co2 + (state.projCO2 * 1000000)) / maxCO2);
+
+            // Water: Max ~18,000,000,000. Min ~15,000.
+            const maxWater = 18000000000;
+            const scoreWater = 1 - Math.min(1, c.water / maxWater);
+
+            // Waste Recycle: Max 100.
+            const scoreWaste = c.wasteRecycle / 100;
+
+            // Weights
+            const wE = 0.25, wC = 0.25, wW = 0.25, wR = 0.25;
+
+            const compositeScore = (scoreElec * wE) + (scoreCO2 * wC) + (scoreWater * wW) + (scoreWaste * wR);
+
+            state.predictedYears = Math.floor(10 + (compositeScore * compositeScore * 90));
+
+            // Percentile calculation against this dataset
+            let scores = [];
+            for(let comp of companies) {
+                let s = (1 - Math.min(1, comp.electricity/maxElec))*0.25 +
+                        (1 - Math.min(1, comp.co2/maxCO2))*0.25 +
+                        (1 - Math.min(1, comp.water/maxWater))*0.25 +
+                        (comp.wasteRecycle/100)*0.25;
+                scores.push(s);
+            }
+            scores.sort((a,b) => b-a);
+            const rank = scores.indexOf(compositeScore);
+            state.percentile = Math.floor((1 - (rank / scores.length)) * 100);
+
+            animateValue("years-display", parseInt(document.getElementById("years-display").innerText), state.predictedYears, 800);
+            document.getElementById("percentile-text").innerText = "Top " + state.percentile + "%";
+            document.getElementById("percentile-bar").style.width = state.percentile + "%";
+
+            update3DScene(compositeScore);
+        }
+
+        function update3DScene(score) {
+            let targetGlowColor = new THREE.Color(0x555555);
+            let targetGlowIntensity = 0;
+            targetGlowColor.lerpColors(new THREE.Color(0x555555), new THREE.Color(0x5c8a65), score);
+            targetGlowIntensity = score * 3.0;
+
+            const healthyColor = new THREE.Color(0x355e3b);
+            const deadColor = new THREE.Color(0x4a3c31);
+
+            foliageGroup.children.forEach(leaf => {
+                leaf.material.color.lerpColors(deadColor, healthyColor, score);
+                const s = 0.5 + (score * 0.8);
+                leaf.scale.setScalar(s);
+            });
+
+            flowerGroup.children.forEach(flower => {
+                if (score > 0.7) { // Threshold slightly higher for flowers as data is raw
+                    flower.visible = true;
+                    flower.material.opacity = (score - 0.7) * 3.0;
+                    flower.material.transparent = true;
+                } else {
+                    flower.visible = false;
+                }
+            });
+
+            particleMaterial.color.lerpColors(new THREE.Color(0x888888), new THREE.Color(0xd4b483), score);
+            glowLight.color.lerp(targetGlowColor, 0.05);
+            glowLight.intensity += (targetGlowIntensity - glowLight.intensity) * 0.05;
+        }
+
+        function animateValue(id, start, end, duration) {
+            if (start === end) return;
+            const range = end - start; let current = start;
+            const increment = end > start ? 1 : -1;
+            const stepTime = Math.abs(Math.floor(duration / range));
+            const obj = document.getElementById(id);
+            const timer = setInterval(() => {
+                current += increment; obj.innerHTML = current;
+                if (current == end) clearInterval(timer);
+            }, Math.max(stepTime, 20));
+        }
+
+        // --- 6. SEARCH BAR LOGIC ---
+
+        // ============================================================
+        //  PEACOCK INDEX
+        //  Counts come from peacock-data.js, baked out of the 485-document
+        //  corpus. Overlaps between lexicon terms were already resolved when
+        //  that file was written, so each stretch of a report is counted once.
+        // ============================================================
+        const PK = window.PEACOCK || null;
+
+        const pkState = {
+            slot: {},          // ticker -> row in the baked arrays
+            terms: [],         // {label, tier, weight, on, added, counts:Map}
+            totals: [],        // buzzwords per company, current term set
+            tierTotals: {},    // tier -> per-company totals
+            density: [],
+            ranked: [],        // company rows sorted by density, long docs only
+            MIN_WORDS: 2000,
+            tab: 'all',
+        };
+
+        function pkDecode(s) {
+            // "a:3,1f:2" in hex -> Map(company index -> count)
+            const m = new Map();
+            if (!s) return m;
+            for (const pair of s.split(',')) {
+                const i = pair.indexOf(':');
+                m.set(parseInt(pair.slice(0, i), 16), parseInt(pair.slice(i + 1), 16));
+            }
+            return m;
+        }
+
+        function pkInit() {
+            if (!PK) return;
+            PK.companies.forEach((t, i) => pkState.slot[t] = i);
+            pkState.terms = PK.terms.map(t => ({
+                label: t.label, tier: t.tier, weight: t.weight,
+                on: true, added: false, counts: pkDecode(t.c)
+            }));
+            pkRecompute();
+        }
+
+        function pkRecompute() {
+            const n = PK.companies.length;
+            pkState.totals = new Array(n).fill(0);
+            pkState.tierTotals = {};
+            PK.tiers.concat(['added']).forEach(t => pkState.tierTotals[t] = new Array(n).fill(0));
+
+            for (const term of pkState.terms) {
+                if (!term.on) continue;
+                const bucket = pkState.tierTotals[term.added ? 'added' : term.tier];
+                for (const [i, c] of term.counts) {
+                    pkState.totals[i] += c;
+                    bucket[i] += c;
+                }
+            }
+            pkState.density = pkState.totals.map(
+                (h, i) => PK.words[i] ? 1000 * h / PK.words[i] : 0);
+
+            // Rank only companies with enough text. A 350-word landing page can
+            // out-score any real report and mean nothing by it.
+            pkState.ranked = PK.companies
+                .map((t, i) => i)
+                .filter(i => PK.words[i] >= pkState.MIN_WORDS)
+                .sort((a, b) => pkState.density[b] - pkState.density[a]);
+
+            // Which peacock a company gets is decided by where it falls among
+            // the others, in fifths, not by a fixed number. So the drawing keeps
+            // its meaning when terms are added or dropped: every term set still
+            // has a least and a most pompous fifth.
+            const sorted = pkState.ranked.map(i => pkState.density[i]).slice().sort((a, b) => a - b);
+            pkState.cuts = [0.2, 0.4, 0.6, 0.8].map(f =>
+                sorted.length ? sorted[Math.floor(f * (sorted.length - 1))] : 0);
+        }
+
+        function pkStage(density) {
+            let s = 0;
+            while (s < pkState.cuts.length && density > pkState.cuts[s]) s++;
+            return s;  // 0..4, least to most fanned out
+        }
+
+        function pkSetBird(stage, pct) {
+            const fig = document.getElementById('pk-figure');
+            const img = document.getElementById('pk-bird');
+            const src = (PK.peacocks || [])[stage];
+            if (!src) { fig.style.display = 'none'; return; }
+            fig.style.display = 'block';
+            if (img.dataset.stage === String(stage)) return;   // already showing it
+            fig.classList.add('swap');
+            setTimeout(() => {
+                img.src = src;
+                img.dataset.stage = String(stage);
+                img.alt = `Peacock ${stage + 1} of 5`;
+                fig.classList.remove('swap');
+            }, 180);
+        }
+
+        function pkTierColor(tier) {
+            return tier === 'added' ? 'var(--accent-green)' : `var(--tier-${tier})`;
+        }
+
+        function updatePeacockUI(index) {
+            if (!PK) return;
+            const body = document.getElementById('peacock-body');
+            const empty = document.getElementById('peacock-empty');
+            const i = index === -1 ? -1 : (pkState.slot[companies[index].ticker] ?? -1);
+
+            if (i === -1) {
+                document.getElementById('pk-bird').dataset.stage = '';
+                body.style.display = 'none';
+                empty.style.display = 'block';
+                empty.innerText = index === -1
+                    ? 'Select a company to score its sustainability report.'
+                    : `No sustainability report indexed for ${companies[index].ticker}. ` +
+                      `The corpus covers ${PK.companies.length} of the S&P 500.`;
+                return;
+            }
+
+            body.style.display = 'flex';
+            empty.style.display = 'none';
+
+            const hits = pkState.totals[i], words = PK.words[i], dens = pkState.density[i];
+            const score = document.getElementById('pk-score');
+            score.innerText = dens.toFixed(1);
+            score.className = 'peacock-score ' + (dens >= 45 ? 'high' : dens >= 30 ? 'mid' : '');
+
+            document.getElementById('pk-hits').innerText = hits.toLocaleString();
+            document.getElementById('pk-words').innerText = words.toLocaleString() + ' words';
+            const sub = PK.substance[i];
+            document.getElementById('pk-sub').innerText = sub ? (hits / sub).toFixed(2) : '--';
+
+            const place = pkState.ranked.indexOf(i);
+            const rankEl = document.getElementById('pk-rank');
+            if (place === -1) {
+                rankEl.innerText = 'too short';
+                rankEl.className = 'assessment-value neutral';
+            } else {
+                const fromTop = 100 * place / Math.max(1, pkState.ranked.length - 1);
+                rankEl.innerText = `#${place + 1} of ${pkState.ranked.length}`;
+                rankEl.className = 'assessment-value ' + (fromTop < 25 ? 'bad' : fromTop > 75 ? 'good' : 'neutral');
+            }
+
+            // the bird
+            const stage = pkStage(dens);
+            pkSetBird(stage, place);
+            const st = (PK.stages || [])[stage] || { note: '' };
+            const cap = document.getElementById('pk-caption');
+            const N = pkState.ranked.length;
+            const beats = place === -1 ? 0
+                : Math.round(100 * (N - 1 - place) / Math.max(1, N - 1));
+            cap.innerHTML = place === -1
+                ? `Peacock <b>${stage + 1} of 5</b>, ${st.note}. Not ranked: the document is ` +
+                  `under ${pkState.MIN_WORDS.toLocaleString()} words.`
+                : place === 0
+                    ? `Peacock <b>${stage + 1} of 5</b>, ${st.note}. The most buzzword-dense ` +
+                      `of the ${N} companies with a comparable report.`
+                    : `Peacock <b>${stage + 1} of 5</b>, ${st.note}. More buzzword-dense than ` +
+                      `<b>${beats}%</b> of the ${N} companies with a comparable report.`;
+
+            // composition
+            const tiers = PK.tiers.concat(['added']).filter(t => pkState.tierTotals[t][i] > 0);
+            document.getElementById('pk-bar').innerHTML = tiers.map(t =>
+                `<span style="background:${pkTierColor(t)};width:${100 * pkState.tierTotals[t][i] / Math.max(1, hits)}%"></span>`).join('');
+            document.getElementById('pk-key').innerHTML = tiers.map(t =>
+                `<span><i style="background:${pkTierColor(t)}"></i>${t.replace('_', ' ')} ` +
+                `${(1000 * pkState.tierTotals[t][i] / words).toFixed(1)}</span>`).join('');
+
+            // terms doing the work here
+            const mine = pkState.terms
+                .filter(t => t.on && t.counts.get(i))
+                .sort((a, b) => b.counts.get(i) - a.counts.get(i))
+                .slice(0, 6);
+            document.getElementById('pk-terms').innerHTML = mine.map(t =>
+                `<span class="${t.added ? 'added' : ''}" style="${t.added ? '' : 'color:' + pkTierColor(t.tier)}">` +
+                `${t.label}<b>${t.counts.get(i)}</b></span>`).join('');
+        }
+
+        // ---------- buzzword editor ----------
+        const bwModal = document.getElementById('bw-modal');
+
+        function bwRender() {
+            const filter = document.getElementById('bw-filter').value.trim().toLowerCase();
+            const i = state.selectedCompanyIndex === -1
+                ? -1 : (pkState.slot[companies[state.selectedCompanyIndex].ticker] ?? -1);
+
+            const tabs = ['all', 'added'].concat(PK.tiers);
+            document.getElementById('bw-tabs').innerHTML = tabs.map(t =>
+                `<button class="${pkState.tab === t ? 'on' : ''}" data-t="${t}">${t.replace('_', ' ')}</button>`).join('');
+            document.querySelectorAll('#bw-tabs button').forEach(b =>
+                b.onclick = () => { pkState.tab = b.dataset.t; bwRender(); });
+
+            const shown = pkState.terms
+                .map((t, k) => ({ t, k }))
+                .filter(({ t }) => pkState.tab === 'all' ||
+                    (pkState.tab === 'added' ? t.added : (!t.added && t.tier === pkState.tab)))
+                .filter(({ t }) => !filter || t.label.toLowerCase().includes(filter));
+
+            // Show the count for the selected company if there is one, else corpus-wide.
+            const countOf = t => i === -1
+                ? [...t.counts.values()].reduce((a, b) => a + b, 0)
+                : (t.counts.get(i) || 0);
+
+            document.getElementById('bw-list').innerHTML = shown.map(({ t, k }) =>
+                `<div class="bw-term ${t.on ? '' : 'off'} ${t.added ? 'added' : ''}">
+                   <input type="checkbox" data-k="${k}" ${t.on ? 'checked' : ''}>
+                   <label title="${t.tier}" style="${t.added ? '' : 'color:' + pkTierColor(t.tier)}">${t.label}</label>
+                   <span class="n">${countOf(t).toLocaleString()}</span>
+                   <span class="x" data-rm="${k}">${t.added ? '×' : ''}</span>
+                 </div>`).join('') ||
+                '<div class="bw-note">Nothing matches.</div>';
+
+            document.querySelectorAll('#bw-list input[data-k]').forEach(cb =>
+                cb.onchange = () => {
+                    pkState.terms[+cb.dataset.k].on = cb.checked;
+                    pkRecompute(); bwRender(); refreshPeacock();
+                });
+            document.querySelectorAll('#bw-list .x[data-rm]').forEach(x =>
+                x.onclick = () => {
+                    const k = +x.dataset.rm;
+                    if (!pkState.terms[k].added) return;
+                    pkState.terms.splice(k, 1);
+                    pkRecompute(); bwRender(); refreshPeacock();
+                });
+
+            const lbl = i === -1 ? 'across the whole corpus' :
+                `in ${companies[state.selectedCompanyIndex].ticker}`;
+            document.getElementById('bw-msg').innerHTML =
+                `${pkState.terms.filter(t => t.on).length} of ${pkState.terms.length} terms active. ` +
+                `Counts shown are ${lbl}. Single words only.`;
+        }
+
+        function bwAdd() {
+            const field = document.getElementById('bw-add');
+            const word = field.value.trim().toLowerCase().replace(/[^a-z]/g, '');
+            const msg = document.getElementById('bw-msg');
+            if (!word) return;
+
+            if (pkState.terms.some(t => t.label.toLowerCase() === word)) {
+                msg.innerHTML = `<b>${word}</b> is already in the list.`;
+                field.value = ''; return;
+            }
+            const entry = PK.vocab[word];
+            if (!entry) {
+                msg.innerHTML = `<b>${word}</b> does not occur in the corpus, or is too rare to have been baked in. ` +
+                    `Single words only, and no wildcards on this page.`;
+                return;
+            }
+
+            // "c" is every occurrence. "n" is only those the lexicon does not
+            // already count, and that is what may be added to a score: counting
+            // the rest again would count the same words twice.
+            const all = pkDecode(entry.c);
+            const counts = entry.n === undefined ? all : pkDecode(entry.n);
+            const total = [...all.values()].reduce((a, b) => a + b, 0);
+            const net = [...counts.values()].reduce((a, b) => a + b, 0);
+
+            pkState.terms.unshift({ label: word, tier: 'peacock', weight: 1, on: true, added: true, counts });
+            field.value = '';
+            pkRecompute(); refreshPeacock();
+            pkState.tab = 'added'; bwRender();
+
+            msg.innerHTML = net === total
+                ? `Added <b>${word}</b>: ${total.toLocaleString()} occurrences, all of them new.`
+                : net === 0
+                    ? `<b>${word}</b> occurs ${total.toLocaleString()} times, but every one is already inside a term ` +
+                      `the lexicon counts, so the score does not move. Nothing is counted twice.`
+                    : `Added <b>${word}</b>: ${total.toLocaleString()} occurrences, of which ` +
+                      `${(total - net).toLocaleString()} were already counted by another term. ` +
+                      `${net.toLocaleString()} are new, and only those are scored.`;
+        }
+
+        function refreshPeacock() { updatePeacockUI(state.selectedCompanyIndex); }
+
+        if (PK) {
+            pkInit();
+            document.getElementById('bw-open').onclick = () => { bwModal.classList.add('active'); bwRender(); };
+            document.getElementById('bw-close').onclick = () => bwModal.classList.remove('active');
+            bwModal.onclick = e => { if (e.target === bwModal) bwModal.classList.remove('active'); };
+            document.getElementById('bw-addbtn').onclick = bwAdd;
+            document.getElementById('bw-add').onkeydown = e => { if (e.key === 'Enter') bwAdd(); };
+            document.getElementById('bw-filter').oninput = bwRender;
+            document.getElementById('bw-reset').onclick = () => {
+                pkState.terms.forEach(t => t.on = true);
+                pkState.terms = pkState.terms.filter(t => !t.added);
+                pkRecompute(); bwRender(); refreshPeacock();
+            };
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') bwModal.classList.remove('active');
+            });
+        } else {
+            document.getElementById('peacock-empty').innerText =
+                'peacock-data.js did not load. Keep it next to this file.';
+            document.getElementById('bw-open').style.display = 'none';
+        }
+
+        const searchInput = document.querySelector('.search-container .search-input');
+        const resultsContainer = document.querySelector('.search-results');
+        const searchContainer = document.querySelector('.search-container');
+
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase();
+            resultsContainer.innerHTML = '';
+
+            if (val.length === 0) {
+                resultsContainer.classList.remove('active');
+                return;
+            }
+
+            const matches = companies.filter(c => c.name.toLowerCase().includes(val) || c.ticker.toLowerCase().includes(val));
+            // Limit to 50 results for performance
+            const displayMatches = matches.slice(0, 50);
+
+            if (displayMatches.length > 0) {
+                displayMatches.forEach(comp => {
+                    const idx = companies.indexOf(comp);
+                    const item = document.createElement('div');
+                    item.className = 'result-item';
+                    item.innerHTML = `<span>${comp.name}</span> <span class="ticker">${comp.ticker}</span>`;
+                    item.addEventListener('click', () => {
+                        searchInput.value = comp.name;
+                        resultsContainer.classList.remove('active');
+                        state.selectedCompanyIndex = idx;
+                        updateAssessmentUI(idx);
+                        updatePeacockUI(idx);
+                        calculatePrediction();
+                    });
+                    resultsContainer.appendChild(item);
+                });
+                resultsContainer.classList.add('active');
+            } else {
+                const noResult = document.createElement('div');
+                noResult.className = 'result-item';
+                noResult.innerText = "No companies found";
+                noResult.style.cursor = "default";
+                resultsContainer.appendChild(noResult);
+                resultsContainer.classList.add('active');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchContainer.contains(e.target)) {
+                resultsContainer.classList.remove('active');
+            }
+        });
+
+        // Projection Sliders
+        const projEnergy = document.getElementById('proj-energy');
+        const projCO2 = document.getElementById('proj-co2');
+
+        function handleProjection() {
+            state.projEnergy = parseFloat(projEnergy.value);
+            state.projCO2 = parseFloat(projCO2.value);
+            document.getElementById('proj-energy-val').innerText = (state.projEnergy > 0 ? "+" : "") + state.projEnergy + "%";
+            document.getElementById('proj-co2-val').innerText = (state.projCO2 > 0 ? "+" : "") + state.projCO2 + "%";
+            if (state.selectedCompanyIndex !== -1) calculatePrediction();
+        }
+
+        projEnergy.addEventListener('input', handleProjection);
+        projCO2.addEventListener('input', handleProjection);
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // --- 7. RENDER LOOP ---
+        const clock = new THREE.Clock();
+        function animate() {
+            requestAnimationFrame(animate);
+            const time = clock.getElapsedTime();
+            controls.update();
+            earth.rotation.y = time * 0.05;
+            atmosphere.rotation.y = time * 0.05;
+            treeGroup.rotation.y = Math.sin(time * 0.1) * 0.05;
+
+            const positions = particleSystem.geometry.attributes.position.array;
+            for(let i=0; i<particleCount; i++){
+                positions[i*3+1] += speeds[i].y;
+                positions[i*3] += Math.sin(time + positions[i*3+1]) * 0.002 + speeds[i].x;
+                positions[i*3+2] += Math.cos(time + positions[i*3+1]) * 0.002 + speeds[i].z;
+                if(positions[i*3+1] > 10) {
+                    positions[i*3+1] = -5;
+                    positions[i*3] = (Math.random() - 0.5) * 20;
+                    positions[i*3+2] = (Math.random() - 0.5) * 20;
+                }
+            }
+            particleSystem.geometry.attributes.position.needsUpdate = true;
+            flowerGroup.children.forEach(flower => {
+                if(flower.visible) flower.scale.setScalar(1 + Math.sin(time * 4) * 0.2);
+            });
+            renderer.render(scene, camera);
+        }
+        animate();
+
+    </script>
+</body>
+</html>

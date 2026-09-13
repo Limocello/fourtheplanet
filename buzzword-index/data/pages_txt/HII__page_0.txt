@@ -1,0 +1,3311 @@
+2026
+SUSTAINABILITY REPORT
+Table of Contents
+02 Introduction
+13 Securing Our Business
+43 Protecting Our Resources
+About This Report
+Ethics and Compliance
+Environmental Compliance
+Welcome Letters
+Product Quality and Safety
+GHG and Energy Management
+Sustainability at HII
+Cybersecurity
+06 About HII
+53 Appendix
+Performance Data Table
+27 Building Our Community
+GRI Index
+Our Divisions
+Employee Engagement
+SASB Index
+Who We Serve
+Education and Training
+How We Manage and Govern
+Community Relations
+Governance Responsibilities at a Glance
+Employee Health and Safety
+Our Mission, Values, and Purpose
+Our Approach
+1
+Supply Chain Management
+2026 Sustainability Report
+Introduction
+ABOUT THIS REPORT
+Huntington Ingalls Industries, Inc.’s (“HII,” “we,” “our,” and the “Company”) 2026 Sustainability Report
+(the “Report”) details HII’s objectives and progress in the areas of environmental responsibility, social
+and organizational management, and governance performance. Data about financial performance
+is not included in this Report but may be found on HII.com, under the “Investors” tab and in HII’s public
+filings with the U.S. Securities and Exchange Commission (SEC).
+Unless otherwise specified, the quantitative and qualitative information contained in this document reflects
+HII’s activities from January 1, 2025 to December 31, 2025, in line with HII’s financial reporting period.
+This Report has been prepared with reference to the Global Reporting Initiative’s (GRI) latest standards
+released in October 2021. We additionally disclose in line with guidance from the Sustainability
+Accounting Standards Board (SASB) and the Task Force on Climate-Related Financial Disclosures (TCFD).
+More information on our alignments with GRI, SASB, and TCFD can be found in the Disclosure section of
+this Report.
+This Report was published online on March 31, 2026. It has been optimized for digital viewing. In the
+interest of minimizing paper use, please consider reading this Report electronically rather than printing
+a hard copy.
+For questions about this Report, please contact sustainability@hii-co.com.
+2
+2026 Sustainability Report
+MESSAGE FROM OUR LEADERS
+Built for This Moment
+Chris Kastner
+The world does not wait, and
+neither does HII. As the demands on
+our customers grow, we redouble
+our commitment to our mission
+and to every person who supports
+our success. Sustainability at HII
+represents both the structure and
+substance of that commitment.
+It is the practice of building a
+company that delivers to our
+stakeholders reliably, year after
+year and with excellence, no matter
+what the world presents.
+This past year, that practice
+produced real results. We grew and
+retained our workforce, increased
+throughput, and invested deeply in
+the communities where our people
+live and work. These achievements
+are evidence that doing business the
+right way — with integrity and an
+unrelenting focus on performance —
+makes us better at our jobs and
+more worthy of the trust placed in us.
+3
+Anchored in Purpose
+None of it happens without our
+people. The shipbuilders, engineers,
+technologists, and professionals
+across HII bring remarkable skill
+and dedication to one of the most
+consequential jobs in American
+industry. Their commitment to the
+work, to each other, and to the
+men and women in uniform who
+depend on what we build is what
+sets HII apart.
+Honoring that means building
+a company worthy of the trust
+given to us by our workforce, our
+customers, our shareholders, our
+suppliers, and our communities.
+The work in this report reflects that
+standard.
+Chris Kastner
+HII President and CEO
+Paul C. Harris
+What does it take to endure? For
+well over a century, HII has served
+this nation through times of peace
+and prosperity, and through times
+of conflict and upheaval, and the
+answer has never changed. It is our
+values: integrity, safety, respect,
+engagement, responsibility, and
+performance. These are not ideals
+we aspire to; this is how we work.
+When the world shifts — and it
+always does — values are what
+hold. But holding is not enough. At
+HII, purpose is a practice we keep.
+It shows up in how we govern
+ourselves, how seriously we take
+safety, how we invest in our people,
+and how carefully we manage our
+environmental responsibilities.
+Sustainability, at its core, means
+building a company that earns trust,
+not by saying the right things but
+by doing them, especially when it
+is hard. This report is a record of
+that work. Our values, in action,
+create value: for our customers,
+our people, our communities, and
+the nation we serve.
+Paul C. Harris
+HII Executive Vice President &
+Chief Sustainability and
+Compliance Officer
+Sustainability at HII: Purpose in Action
+MISSION
+At HII, Mission, Values, and Vision are where we start, but purpose is where they lead. Purpose is what happens when those
+foundations are put to work: through our ethics, our conduct, our decisions, and our daily operations. Everything in this report
+is a measure of that purpose in action.
+Our goal is to deliver the world’s most powerful ships and all-domain solutions in service of the nation.
+To uphold our commitment to serve our nation, in 2022, we conducted a materiality assessment to identify HII’s key sustainability focus areas. The assessment
+included interviews, surveys, detailed review, and benchmarking against peers in reporting, initiatives, and goal disclosures. The priority assessment highlighted
+the following areas.
+OUR FOCUS AREAS
+KEY:
+Ethics and Compliance
+Supply Chain Management
+Community Relations
+Product Quality and Safety
+Employee Health and Safety
+Environmental Compliance
+Cybersecurity
+Employee Engagement
+GHG and Energy Management
+Securing Our Business
+Building Our Community
+Protecting Our Resources
+Achievements in our sustainability focus areas are grounded in HII’s commitment to integrity, safety, respect, engagement, responsibility,
+and performance. See Our Approach for more detail about the priorities within each of our sustainability focus areas.
+4
+To deliver the world’s most powerful ships
+and all-domain solutions in service of the
+nation, creating the advantages for our
+customers to protect peace and freedom
+around the world.
+VALUES
+Our mission requires the best of us: the
+utmost in character and values. Our values
+are the cornerstones of HII’s culture, driving
+our day-to-day decision-making and the
+long-term trust and confidence of our
+stakeholders. Our adherence to our values
+upholds and protects the strong, stable, and
+resilient relationships on which our future
+growth and success depend.
+VISION
+Our vision is to be the global leader in
+advancing national security and driving
+sustained value and opportunity for our
+customers, employees, shareholders,
+communities, and suppliers in accordance
+with our values.
+OUR PROGRESS AGAINST OUR COMMITMENTS
+FOCUS AREA
+COMMITMENT
+2025 PROGRESS HIGHLIGHT
+Securing Our Business
+Product Quality
+and Safety
+Supply Chain
+Management
+Product Quality and Safety Roadmap: We will develop a structured, four-phase Product Quality and Safety Roadmap to advance enterprise-wide quality maturity
+by leveraging standardized processes, analytics, and AI to improve operational excellence, reduce rework, and embed measurable risk management.
+Established a four‑phase Product Quality and Safety
+Roadmap to advance enterprise-wide quality maturity.
+Quality Council: By the end of 2025, we will develop a Quality Council to provide strategic oversight, identify best practices, and drive continuous improvement
+across the organization by leveraging the talents and expertise of quality professionals from all divisions.
+Implemented a Quality Council to coordinate best practices,
+strengthen oversight, and drive continuous improvement
+across all divisions.
+Supplier Engagement Plan and Code of Conduct: By the end of 2025, we will develop sustainability criteria and incorporate them into the Supplier Engagement
+Plan, and in parallel, update the Supplier Code of Conduct to include a cross-reference to the Supplier Engagement Plan for sustainability.
+Embedded sustainability criteria into the Supplier Engagement
+Plan and the Supplier Code of Conduct.
+Supply Chain Roadmap: We conducted a current-state analysis of supply chain risks, capabilities and processes in 2024. We will develop a roadmap by the end
+of 2025 that will ultimately increase tracing of supply chain risks (e.g., countries of concern, conflict minerals, counterfeit parts, potential environmental/climate risk
+disruptions, human capital, and cybersecurity) by 2030 through improved supplier engagement and data tracking.
+Established a supply chain roadmap to strengthen traceability
+and oversight of priority risks.
+Building Our Community
+Employee
+Engagement
+Increase Engagement: We will continue to drive increased employee engagement as measured by surveys to create value for HII.
+Applied a continuous listening model to improve how insights
+translate into actions.
+Community
+Relations
+Educational Giving: We will target 40% of our total giving to education by 2030, while also prioritizing the core areas of community and veterans/military.
+Invested $2.2m , $3.2m and $0.6m in education, community
+and veterans/military through our partnerships.
+Increase Volunteering Participation: We will make good-faith efforts to increase the number of HII employee volunteers by 10% annually through 2030.
+1,727 employees participated in volunteer activities.
+Reduce Food Insecurity: Focusing on the crisis of health and hunger, HII and our employees will provide 100,000 meals annually to those in our communities facing
+food and nutrition insecurity.
+368k meals provided to local communities.
+Reduced Total Case Rate: We commit to sustained improvement of the safety of our people as demonstrated by a reduction in Total Case Rate (TCR).
+6% reduction in TCR from 2024.
+Safety Roadmaps: In 2025, we will develop roadmaps for our top three targeted safety initiatives: hazard recognition, safety training, and knowledge sharing.
+Completed and implemented division-aligned roadmaps.
+Employee Health
+and Safety
+Protecting Our Resources
+GHG and Energy
+Management
+5
+Reduce Emissions: By the end of 2024, we will develop a roadmap to exceed a 30% aggregate reduction in Scope 1 and 2 GHG emissions from our 2022 baseline
+GHG emissions. We have estimated our 2022 baseline of Scope 1 and 2 GHG emissions to be 348,236 metric tons of CO2 eq.
+11% reduction in GHG Scope 1 and 2 emissions from 2022.
+Introduction
+About HII
+Mission, Values,
+and Purpose
+Our Divisions
+Who We Serve
+How We Manage
+and Govern
+Governance Responsibilities
+at a Glance
+Our Approach
+Appendix
+Back to Contents
+6
+ABOUT HII
+OUR MISSION, VALUES, AND PURPOSE
+For HII, sustainability is more than just a strategy.
+It is embedded in our mission, culture, and everyday
+business practices.
+Mission, Values,
+and Purpose
+How We Manage
+and Govern
+Governance Responsibilities
+at a Glance
+Appendix
+Back to Contents
+Our mission is to deliver the world’s most advanced ships and
+comprehensive defense solutions across all domains, in service
+of our national security and of peace and freedom worldwide.
+As has been clear over our long history of contributing to
+the “arsenal of democracy,” our long-term success and
+operational excellence are mission-critical to delivering the
+advantage to our customers.
+Our sustainability efforts are grounded in our mission, values,
+and vision. This framework encompasses our highest mission
+and vision as well as our practical business decisions and
+ethical behaviors to guide our efforts to support long-term
+environmental stewardship, cultivate strong relationships
+with our employees and communities, and uphold responsible
+corporate governance. These principles are reinforced by a
+focus on culture and engagement, ensuring our workforce is
+empowered and aligned with our mission. Living our values
+in all we do requires steadfast collaboration across our
+divisions and with our customers and partners, upheld by an
+uncompromising commitment to quality, safety, performance,
+and integrity.
+We are also committed to enhancing operational efficiency
+and capability, increasing throughput via innovations in our
+operations and technologies, all with the purpose of delivering
+the vessels and systems that our customers need now more
+than ever. We are proud of our longstanding history and
+culture of continuously innovating in the national interest and
+strive to apply all the efforts of our dedicated workforce to
+new ways of working more efficiently and innovatively. This is
+critical because our products aren’t just products; they are the
+front line of deterrence and defense.
+HIGHLIGHTS1
+$12.5b
+Annual Revenue
+6.9k
+We are proud to collaborate with our federal partners and
+recognize the pivotal role of nuclear power in securing
+our national security and in achieving our commitment to
+reducing our environmental footprint. Nuclear energy gives
+our customers strategic, tactical, and protective advantages,
+without creating the greenhouse gas (GHG) emissions of a
+conventionally powered platform and is critical to a reducedcarbon future. Nuclear energy is highly technical, heavily
+regulated, and hard to generate. In fact, HII is currently building
+nuclear-powered vessels in the United States. HII remains
+committed to nuclear safety, maintaining an exemplary
+record in this critical area.
+Veterans Employed
+$53b
+In Backlog
+44k
+Employees
+By embedding our principles into everything we do, we
+position ourselves to attract top talent, foster innovation, and
+drive growth. Putting our values into practice supports our
+promise to deliver high-quality products to our customers,
+creating long-term benefits for our employees, customers,
+shareholders, suppliers, and for the communities we serve,
+and helps us never lose sight of why this work matters.
+For more information, visit hii.com.
+1
+7
+Refer to proxy statement for additional context
+about HII.
+At HII, we take pride in our key role in national security, technological advancement, and innovation, anchored in the good work of our people across our divisions.
+8
+HII’s Ingalls Shipbuilding division (Ingalls) is Mississippi’s
+largest manufacturing employer and a major driver of
+regional economic growth. For over 86 years, Ingalls
+has designed, built, and maintained amphibious ships,
+destroyers, and cutters for the U.S. Navy and the
+U.S. Coast Guard, serving as the largest supplier of
+U.S. Navy surface combatants. By advancing multiship programs, optimizing production schedules, and
+fostering collaboration across teams, Ingalls delivers
+operational excellence while meeting complex
+customer commitments.
+Our Mission Technologies division delivers integrated
+technology solutions and domain expertise to
+mission partners worldwide. Focused on the future, it
+develops integrated solutions supporting a connected,
+all-domain force across four areas: All-Domain
+Operations, Global Security, Warfare Systems, and
+Uncrewed Systems. Its capabilities include C5ISR
+systems, AI, and machine learning for advanced
+decision-making, electronic warfare, cyberspace
+operations, uncrewed systems, live-virtual-constructive
+training, and critical nuclear operations. Through these
+capabilities, Mission Technologies drives operational
+efficiency, accelerates throughput, and strengthens
+connected, all-domain solutions positioning HII to meet
+evolving defense requirements while empowering its
+workforce and advancing innovation.
+Our Newport News Shipbuilding division
+(Newport News) is Virginia’s largest industrial employer,
+with a workforce of over 25,000, including multiple
+generations of shipbuilders. Operating under the motto
+“Always Good Ships,” Newport News has designed,
+built, overhauled, and repaired more than 800 ships for
+the U.S. Navy and commercial clients. As a designer,
+builder, and refueler of nuclear-powered aircraft
+and constructing nuclear-powered submarines.
+Combining precision, collaboration, and continuous
+improvement, Newport News strives to deliver
+excellence.
+9
+HII’s sustainability strategy is driven by our commitment to the stakeholders who shape our mission: employees, customers, shareholders, communities, suppliers, industry
+partners, and alliances.
+• Employees: Our strength comes from a workforce united by a culture of ethics,
+safety, and well-being. We invest in training, development, and career growth
+opportunities that allow employees to apply their skills, contribute to innovation,
+and collaborate across teams to drive shared success.
+• Customers: We focus on delivering high-quality products and integrated
+solutions that meet evolving mission needs, while continuously enhancing
+operational efficiency, throughput, and responsiveness.
+• Shareholders: We focus on providing long-term sustainable growth through
+superior performance and commitment to excellence.
+• Communities: We actively contribute to the communities where we live and
+work, engaging in meaningful partnerships and initiatives that create lasting,
+positive impact.
+• Suppliers: We collaborate openly with our suppliers, treating them as strategic
+partners and leveraging their capabilities to enhance performance, drive
+innovation, and deliver superior results for our customers.
+• Industry partners & alliances: We engage with technology partners, joint
+ventures, and research collaborators to accelerate innovation, integrate advanced
+capabilities, and expand our ability to deliver complex, high-value solutions.
+HOW WE MANAGE AND GOVERN
+HII’s sustainability program is governed through a comprehensive framework that integrates oversight, accountability, and execution across all levels of the organization.
+This framework aligns corporate objectives with stakeholder expectations and embeds sustainability into strategic decision-making, operational performance, and
+enterprise risk management (ERM).
+Board Oversight
+Executive Management Accountability
+HII’s Board of Directors (the Board) provides oversight
+over the governance framework in support of longterm business success and stakeholder interests.
+Oversight of the sustainability program is distributed
+among the Board and its committees, aligned to HII’s
+key sustainability focus areas:
+The Chief Sustainability Officer (CSO) leads HII’s
+sustainability governance, ensuring management
+accountability for assessing and managing
+sustainability risks and opportunities. The CSO
+chairs the Corporate Sustainability Committee (CSC),
+a cross-functional team of Executive leadership
+and Divisional Points of Contact (Divisional POCs)
+from Ingalls, Mission Technologies, and Newport
+News. The CSC meets regularly to discuss strategic
+priorities across all sustainability focus areas, providing
+guidance to divisions and coordinating enterprisewide implementation.
+• Governance and Policy Committee: Oversees HII’s
+overall sustainability program, with a focus on ethical
+conduct, community relations, employee health and
+safety, and environmental compliance.
+• Compensation Committee: Oversees human capital
+resources, with emphasis on employee engagement
+and workforce development.
+• Audit Committee: Oversees energy management,
+GHG emissions, and related environmental reporting.
+• Cybersecurity Committee: Oversees cybersecurity
+and data protection matters.
+• Finance Committee: Oversees financial capital
+management, policies, strategies, capital structure,
+and ERM.
+The Board and its committees also provide
+oversight of HII’s ERM program, which incorporates
+climate-related and broader sustainability risks and
+opportunities. The Board receives annual briefings on
+enterprise risks, including updates on the results of the
+enterprise risk assessment processes.
+10
+Divisional Leadership and Sustainability
+Management Teams
+Divisional POCs serve as liaisons to the CSO,
+connecting their teams to enterprise sustainability
+initiatives and ensuring visibility of all focus areas.
+The SMTs, led by director-level focus area leads,
+are responsible for the day-to-day execution of HII’s
+sustainability program across divisions.
+Corporate Leadership and Accountability
+The Corporate Sustainability Director (CSD) serves
+as a central link between the CSO and Divisional
+Leadership. In this role, the CSD supports the CSO by
+coordinating Sustainability Management Team (SMT)
+activities, tracking performance against sustainability
+objectives, and facilitating the day-to-day execution
+of sustainability initiatives across divisions. The CSD
+also helps translate enterprise sustainability priorities
+into divisional actions and elevates insights and
+challenges from the divisions to corporate leadership.
+HII’s sustainability program is governed through a comprehensive framework that
+integrates oversight, accountability, and execution across all levels of the organization.
+GOVERNANCE RESPONSIBILITIES AT A GLANCE
+Since the launch of HII’s formal sustainability program in March 2022, this governance structure has evolved to strengthen accountability, promote cross-divisional
+collaboration, and integrate sustainability into every level of decision-making, positioning HII to advance operational performance, innovation, and long-term
+stakeholder value.
+HII’s Sustainability Governance Structure
+OVERSIGHT
+Board of Directors
+Chief Sustainability Officer
+Corporate Sustainability Director
+Strategic oversight, integration of sustainability into
+corporate objectives, ERM oversight, engagement with
+stakeholders, sustainability performance briefings, and
+alignment with shareholder interests.
+Leads enterprise-wide sustainability strategy, coordinates
+CSC and SMTs, and provides updates to the Board.
+Serves as the link between the CSO and Divisional leadership,
+coordinating SMT activities, tracking performance, and
+supporting day-to-day execution of sustainability initiatives
+across the enterprise.
+Audit Committee
+Executive oversight of sustainability initiatives across
+divisions, including climate, workforce, supply chain, and
+operational priorities.
+Oversight of energy management, GHG emissions, and
+related reporting.
+Corporate Sustainability Committee
+Compensation Committee
+Oversight of workforce strategy, human capital
+management, employee engagement, and enterprise risks
+associated with leadership development and skilled and
+diverse workforce development.
+Cybersecurity Committee
+Oversight of cybersecurity strategy and risk management.
+Governance and Policy Committee
+Oversight of financial strategy, capital management, and
+enterprise risks associated with supply chain management.
+HII’s sustainability office engages with other cross-functional business units from communications, finance, and legal to
+manage sustainability disclosures and related risks.
+Please see the following page for additional information about our SMT focus areas.
+Sustainability Management Teams
+Drive day-to-day execution of sustainability strategy, track
+performance against roadmaps and commitments, and
+coordinate cross-functional initiatives.
+Ethics and
+Compliance
+Product Quality
+Supply Chain
+Employee
+Engagement
+Employee Health
+Oversight of ethics, community relations, employee health
+and safety, and environmental compliance.
+Finance Committee
+11
+IMPLEMENTATION
+LeadershipAND
+and Planning
+LEADERSHIP
+PLANNING
+Community
+Relations
+Environmental
+Compliance
+KEY:
+GHG and Energy
+Our comprehensive “priority assessments” identified the sustainability focus areas shown below. SMTs have been established to oversee and drive impact
+across each focus area.
+Sustainability Focus Areas
+Upholding ethics guidelines, providing
+Code of Ethics training, ensuring
+compliance, and implementing anticorruption policies.
+Engaging suppliers through a shared
+Code of Conduct and transparent
+collaboration, while continuously
+monitoring risk to sustain a resilient and
+reliable supply chain.
+Implementing health and safety
+initiatives, adhering to safety laws,
+promoting health and wellness programs,
+and fostering a safe workplace culture.
+Managing product lifecycles, developing
+and sustaining quality management
+systems focused on continuous
+improvement, considering environmental
+impacts, ensuring compliance with safety
+laws, and handling product end-of-life.
+Fostering a positive company culture,
+reducing turnover, enhancing recruitment
+and retention, and ensuring employee
+satisfaction.
+Engaging with regulators and ensuring
+compliance with environmental laws
+and regulations.
+Strengthening cybersecurity by
+investing in resilient defenses, integrating
+compliance and risk assessment into
+operations, and empowering teams to
+prevent, detect, and respond effectively
+to evolving cyber threats.
+Supporting local communities through
+volunteering, relationship-building,
+economic impact, philanthropy,
+workforce development, and
+education programs.
+Reducing GHG emissions, improving
+energy efficiency, deploying renewable
+energy, and optimizing fuel consumption.
+12
+Ethics & Compliance
+Product Quality & Safety
+13
+SECURING
+OUR BUSINESS
+ETHICS & COMPLIANCE
+Product Quality & Safety
+14
+Upholding ethics guidelines, providing Code of Ethics
+training, ensuring compliance, and implementing
+anti‑corruption policies.
+Governance
+Every decision at HII carries ethical implications —
+from how HII conducts business to how it fulfills
+its responsibilities to customers, employees, and
+the nation it serves. The Governance and Policy
+Committee provides general oversight for ethics
+and compliance, while the full Board receives regular
+briefings and reviews program Key Performance
+Indicators (KPIs) as part of ongoing supervision. At
+the management level, the Chief Executive Officer
+(CEO) owns the policy, while operational responsibility
+lies with the Chief Human Resources Officer (CHRO),
+the Chief Compliance Officer (CCO), and the Chief
+Legal Officer (CLO). These roles work closely to
+integrate ethics and compliance into daily operations
+and company culture. Each division has Business
+Conduct Officers and local representatives responsible
+for training, promoting awareness, and case
+management. Cross-functional ethics committees
+offer further guidance and oversight to ensure
+consistent implementation across divisions. In addition,
+Internal Audit conducts regular reviews to verify the
+program’s effectiveness and controls.
+HIGHLIGHTS
+194
+Number of “On-the-Spot”
+Ethics Awards presented
+to employees
+Ethics & Compliance in HII Operations
+15
+HII’s ethics and compliance program
+is designed to promote integrity,
+accountability, and transparency across
+all divisions. The program operates
+through mandatory training, accessible
+reporting channels, and performancelinked incentives.
+Training and awareness form the
+foundation of HII’s program. All
+employees are required to complete
+annual training that covers the Code
+of Ethics and Business Conduct,
+which sets expectations for behavior
+and compliance. New hires receive
+onboarding modules tailored to their
+roles, and refresher courses are updated
+as policies and regulations evolve. HII
+enforces a zero-tolerance policy for
+corruption, with zero verified incidents
+in 2025, and emphasizes a “speak-up”
+culture that encourages employees to
+report concerns without fear of reprisal.
+Reporting mechanisms are designed to ensure accessibility and confidentiality.
+Members of the public and external stakeholders can report concerns through HII’s
+24/7 OpenLine, operated by an independent third party. The system allows for
+anonymous reporting and is protected by a non-retaliation policy, ensuring that all
+reports are handled objectively and confidentially. The Retaliation and Coercion Policy
+protects individuals who raise concerns or participate in investigations, reinforcing
+trust in the reporting process. To ensure that ethical communication reaches all
+employees, HII distributes updates through training modules, newsletters, and
+quarterly manager-led discussions. Monthly ethics highlights are distributed and
+posted at worksites.
+To measure program effectiveness, HII conducts an Enterprise Ethics Survey every
+three years, with the last survey conducted in 2024. The survey evaluates perceptions
+of ethical culture, leadership accountability, and employee confidence in reporting
+concerns. Results are analyzed to identify improvement areas and inform future
+training and communication strategies. Insights from each survey cycle are compared
+to track progress and strengthen alignment between employee feedback and
+program priorities.
+Accountability for ethics and compliance extends into performance management. HII
+integrates ethics and compliance objectives into its Annual Incentive Plan for senior
+leaders, linking compensation to training completion and risk management coverage.
+Performance against these objectives influences incentive payouts, underscoring that
+compliance and ethical leadership are essential elements of business performance.
+HII also reinforces its culture of ethics
+through recognition and engagement
+programs. Our On-the-Spot Ethics
+Awards highlight employees who
+demonstrate integrity in their daily
+work. In 2025, 194 ethics awards were
+presented, reflecting HII’s commitment
+to recognizing conduct that aligns with
+company values.
+Beyond our internal efforts, HII
+participates in the Defense Industry
+Initiative on Business Ethics and Conduct
+to benchmark its practices against peers
+and align its internal controls, training,
+and reporting processes with industry
+standards. Key metrics demonstrate
+program effectiveness: approximately
+90% of relevant employees completed
+anti-corruption training, 90% of
+operations underwent corruption risk
+assessments, and zero confirmed
+incidents of corruption were reported
+in 2025.
+Ethical Conduct In Our Supply Chain
+HII’s commitment to ethical conduct extends across
+our supply chain. As a defense contractor with
+global operations, HII recognizes the importance of
+holding suppliers, contractors, and partners to the
+same standards of integrity and compliance that
+govern internal operations. These expectations are
+outlined in HII’s Supplier Code of Conduct, which
+defines requirements for legal compliance, human
+rights protections, anti-corruption, and environmental
+stewardship. The Code aligns with international
+and domestic regulations, including California’s
+Transparency in Supply Chains Act (SB 657), the
+U.K. Modern Slavery Act of 2015, the Australian
+Commonwealth Modern Slavery Act of 2018, and the
+U.S. Federal Acquisition Regulation (FAR) §52.222-50.
+To promote alignment, we provide ethics-related
+information and guidance to our business partners.
+In 2025, approximately 90% of our business partners
+received communications outlining ethical procedures
+and policies, reinforcing expectations for conduct,
+reporting, and accountability. These communications
+are supported by contractual clauses and onboarding
+materials that reflect HII’s Code of Ethics and Business
+Conduct, ensuring consistency between internal and
+external standards.
+Supplier due diligence is a core element of HII’s
+procurement process and includes data certification,
+periodic reviews of supplier compliance, and audits
+performed by internal teams and external entities.
+HII performs due diligence on conflict minerals — tin,
+tantalum, tungsten, and gold — and has implemented
+procedures to detect counterfeit electronic
+components and prevent human trafficking, consistent
+with federal and international requirements.
+16
+Responsible sourcing extends HII’s ethical commitments
+into supply chain execution amid industry-wide
+challenges, as manufacturing and defense companies
+increasingly rely on raw materials containing critical
+minerals that may become scarce or more expensive
+due to constrained supply, geopolitical actions or
+sanctions, and rising global demand. HII addresses
+these risks by sourcing critical materials in alignment
+with contractual and regulatory requirements and by
+using advanced planning contracts and long-term
+ordering agreements for minerals needed in earlystage manufacturing. These approaches help stabilize
+availability and manage costs in a volatile market,
+while quantity-based pricing and the recycling of
+excess materials through contract transfers reduce
+replenishment risk and total cost of ownership.
+Supported by robust due diligence, including conflict
+minerals reviews and controls to prevent counterfeit
+parts and human trafficking, these sourcing practices
+reinforce ethical standards and strengthen overall
+supply chain resilience.
+Ongoing oversight reinforces these practices.
+Suppliers are required to self-attest to compliance
+with environmental, health, and safety laws, and
+periodic reviews verify adherence to contractual
+obligations. Internal controls include a monthly review
+of supplier data to ensure source documentation
+matches inputs in business systems. Audits of suppliers
+are scheduled and conducted at least every three
+years to verify compliance with contractual and
+regulatory requirements.
+HII further advances responsible sourcing through
+supplier diversity initiatives, supporting more than
+900 small businesses, including over 100 women-owned
+and 70 veteran-owned suppliers. In recognition of
+these efforts, Newport News received two awards in
+2025: Carolinas-Virginia Minority Supplier Development
+Council (CVMSDC) 2024 Corporation of the Year
+and the National Veteran Small Business Coalition
+(NVSBC) 2024 Rising Star “Champion” Award. These
+partnerships reflect HII’s broader commitment to
+ethical, equitable, and sustainable procurement
+practices.
+Ethical Conduct With Our External Stakeholders
+17
+HII maintains a commitment
+to uphold ethical engagement
+with external stakeholders,
+including regulatory bodies, the
+public, and the communities
+where we operate.
+HII communicates its ethics and
+compliance priorities through publicly
+available resources such as its corporate
+website, sustainability reports, and
+leadership messaging. Monthly ethics
+topics are distributed internally and
+externally to reinforce expectations
+for conduct and accountability. These
+communications are designed to be
+accessible to all employees, including
+those without regular computer access.
+Training on respect, civility, and fairness
+aligns with federal standards and HII’s
+Code of Ethics and Business Conduct.
+These principles guide daily interactions
+and shape our broader approach to
+stakeholder engagement. HII’s ethics
+program reinforces non-discrimination,
+anti-harassment, and inclusion as
+core elements of its operational and
+community commitments.
+HII complies with all laws governing
+political engagement and lobbying,
+publicly disclosing our lobbying activities
+and applying internal controls to
+ensure transparency and compliance.
+Disclosures are reviewed regularly
+and align with governance standards
+established by the Board.
+18
+Managing product lifecycles, developing and sustaining quality management systems focused on
+continuous improvement, considering environmental impacts, ensuring compliance with safety laws,
+and handling product end-of-life.
+Governance
+Product Quality and Safety is governed through
+an enterprise system integrated into ERM and
+sustainability governance, with Board oversight and
+a structured operating cadence designed to identify
+and take timely action on issues. The Product Quality
+and Safety SMT sets enterprise objectives and
+KPIs and aligns divisional programs with corporate
+priorities. The Quality Council convenes senior quality
+leaders to review audit findings, customer feedback,
+and divisional insights, translating them into shared
+corrective actions and maturity milestones, and
+providing advisory updates to the SMT and executive
+leadership. At the divisional level, Quality Teams
+operate the Quality Management System (QMS),
+track performance indicators, conduct internal audits,
+manage certifications and supplier quality, and close
+corrective actions, supported by embedded quality
+advocates who reinforce accountability. Assurance is
+strengthened through internal and external audits and
+regulatory assessments against corporate policy, ISO
+standards, and industry certifications, with findings
+feeding back to the Quality Council. Where supplier
+quality intersects with broader vendor risk, the Product
+Quality and Safety SMT connects with the Supply
+Chain Management SMT to strengthen root-cause
+analysis, corrective action discipline, and early issue
+detection across the value chain, with issues escalated
+to executive leadership as needed.
+Commitments:
+Development of Product Quality
+and Safety Roadmap
+Development of a Quality Council
+Commitment to Product Quality and Safety
+The PQS Roadmap, developed this year, builds on the governance and QMS
+foundation to guide enterprise-wide quality maturity. Structured across four phases,
+the roadmap defines a phased approach to improving operational excellence.
+The roadmap serves as a bridge between enterprise strategy and divisional
+execution, reinforcing transparency, accountability, and continuous improvement
+across HII’s operations.
+Product Quality and Safety Roadmap
+19
+Phase 1:
+Cycles of Improvement
+Phase 2:
+Fact-Based Management
+Phase 3:
+Managed and Understood
+Phase 4:
+Optimizing Quality
+Critical processes are standardized
+and simplified, key metrics
+trend positively, and employee
+engagement increases while
+rework declines.
+Decisions are guided by analytics,
+supported by data repositories,
+and AI begins recommending
+improvement actions; supplier
+quality metrics and customer
+satisfaction measures show
+upward trends.
+The QMS is fully embedded and
+documented, critical processes
+consistently produce desired
+outcomes, and all quality risk
+drivers are measurable.
+Quality decisions are
+predominantly data-driven,
+AI guides improvements, and
+performance achieves industryleading benchmarks while
+maintaining resilience under cost
+and schedule pressures.
+Quality Management System
+HII’s QMS provides the structure for consistent quality performance across all
+operations. Each division maintains QMS certifications tailored to its operations
+and customers. ISO 90012 is implemented enterprise-wide, providing a baseline
+quality standard for all facilities. ISO 9001 is supported by an internal Quality Policy
+that reflects seven core principles: customer focus, leadership, engagement,
+process discipline, improvement, evidence-based decision-making, and
+relationship management.
+Specific facilities hold additional certifications and meet government standards
+based on their function, such as labs, graving docks, and radiological facilities.
+Additional certifications include:
+• Ingalls: NAVSEA3 metrology standards and AMPP SSPC QP14 for coatings
+• Mission Technologies: AS9100D5 and CMMI6
+• Newport News: NAVSEA metrology standards and nuclear-related certifications
+Compliance is validated through internal self-audits, annual OSHA7 and statespecific audits, and external audits conducted every three years by independent
+bodies such as ABS-QE,8 AMPP, and NAVSEA. Audit findings are addressed within
+60 days. Supplier audits, both pre-purchase and periodically thereafter, reinforce
+quality standards and require corrective action plans for identified deficiencies,
+including root-cause analysis for systemic remediation.
+Across the Enterprise, HII continues to strengthen its QMS maturity through analysis
+of current state challenges and opportunities, clear standards and expectations,
+and structured learning from corrective actions and achievements from the
+prior year. The ISO-aligned QMS is continually refined by tightening standards,
+addressing known gaps, and acting on issues impacting material flow, program
+execution, and workforce readiness.
+International Organization for Standardization 9001
+Naval Sea Systems Command
+4
+Association for Materials Protection and Performance/
+Society for Protective Coatings Quality Program 1
+20 2026 Sustainability Report
+Aerospace Standard 9100 Revision D
+Capability Maturity Model Integration
+7
+Occupational Safety and Health Administration
+8
+American Bureau of Shipping Quality Evaluator
+2
+5
+3
+6
+Quality oversight is reinforced through deeper program reviews and internal audits,
+including expanded use of analytics and AI to identify risks early and focus corrective
+actions where they matter most. Best practices and benchmarking insights are
+shared cross-divisionally to improve consistency and outcomes across programs. For
+example, HII scaled Ingalls’ improvements in fiber-optic installation and testing, as
+well as Newport News’ use of digital, knowledge-based assessments to assess rolespecific requirements, assess proficiency, and target training. Together, these actions
+improved material control, schedule reliability, and workforce capability, advancing
+enterprise product quality and safety performance.
+Our QMS drives supplier compliance through regular vendor audits and ongoing
+surveillance, supported by corrective actions and monitoring against ISO and
+contractual requirements to safeguard product integrity across the value chain.
+21
+Product Quality and Safety Training
+Customer Feedback and Satisfaction
+HII continues to address workforce-related risks that impact product quality and
+operational performance. Retaining experienced personnel and closing skills gaps
+remain enterprise-wide priorities, particularly as programs grow in complexity and
+compliance requirements intensify.
+HII actively engages with customers to ensure product quality and safety meet the
+highest standards. Feedback is captured through the formal Contractor Performance
+Assessment Reporting System (CPARS), customer satisfaction ratings, structured
+audits of performance against standards, regular meetings, informal conversations,
+and ongoing dialogue. This feedback is reviewed regularly to identify opportunities
+for improvement, refine standards, and adjust processes and training programs as
+needed to support continuous improvement.
+Enterprise wide, training programs are designed to mitigate knowledge gaps and
+reinforce both safety and quality across the workforce and supply chain. Safety
+training courses are provided weekly through a library of Safety Training Modules,
+covering a range of topics, with targeted modules issued if incident trends indicate a
+concern in a specific area. Quality trainings are reinforced through our semi-annual
+QMS refresher courses and “Quality Matters” highlights posted on the intranet. Quality
+awareness is further emphasized during Quality Month in October, with signage,
+banners, and other communication postings circulated through the shipyards.
+Managers across all divisions are trained on quality standards and templates through
+a structured five-stage process, reinforcing governance and operational discipline.
+Review programs like Mission Technologies’ Program Excellence (PX) standards drive
+the development of needed trainings to advance workforce readiness. Craftsman
+capabilities are strengthened through targeted retraining and exercises, process
+standardization, and lessons learned across divisions.
+These initiatives strengthen workforce capability, reduce rework, and support HII’s
+long-term commitment to quality and safety.
+This approach is implemented at the division level to reflect distinct customer and
+regulatory environments. For example, Mission Technologies’ Program Excellence
+aligns customer feedback to its 80 quality standards to convert feedback into
+clear performance indicators that drive efforts. Ingalls and Newport News similarly
+translate customer assessments, audits, and direct engagement into targeted
+corrective actions and process improvements, reinforcing consistent quality, safety,
+and compliance outcomes.
+These practices ensure that customer insights directly influence process
+improvements, workforce training, and quality governance. By maintaining open
+communication and structured feedback loops, HII reinforces trust, strengthens
+relationships, and advances its commitment to operational excellence.
+22 2026 Sustainability Report
+Strengthening cybersecurity by investing in resilient defenses, integrating
+compliance and risk assessment into operations, and empowering teams
+to prevent, detect, and respond effectively to evolving cyber threats.
+Cybersecurity governance combines Board oversight with an enterprise-wide
+model focused on consistency, accountability, and risk management. The
+Cybersecurity Committee sets direction, evaluates risk posture, and approves
+high-level operations. Leadership updates on these activities are provided monthly
+to the CEO and through five annual briefings to the Board to maintain visibility into
+evolving threats and performance. The Cybersecurity SMT aligns policies, targets,
+and metrics across divisions, while the Chief Information Security Officer (CISO)
+and enterprise cybersecurity team manage core programs, including zero-trust
+architecture, vulnerability management, and incident response. Business Information
+Security Officers (BISOs) link enterprise standards with divisional operations, ensuring
+local execution aligns with enterprise priorities.
+In 2025, HII advanced its One-HII approach, clarifying first-line responsibility within
+divisions and concentrating on enterprise services where scale and consistency
+matter most. This approach supports standardized controls, coordinated incident
+response, and enterprise-wide visibility into vulnerability remediation and risk
+reduction. The same expectations extend to critical suppliers: by the end of the first
+quarter of 2026, suppliers handling Controlled Unclassified Information (CUI) must
+comply with Cybersecurity Maturity Model Certification (CMMC) Level 2 standards,
+supported through HII’s supplier portal and reinforced by contractual requirements,
+risk assessments, and ongoing monitoring.
+Certification & Assessment
+Automation & Continuous Monitoring
+HII is actively pursuing certifications and conducting assessments to strengthen
+cybersecurity readiness. Phase 1 of the CMMC assessment for HII’s core networks
+will be completed in early 2026. Internal audits in 2025 focused on IT process
+implementation, including the Enterprise Security Operations Center (ESOC),
+internet access, and cloud operations, while external audits validated compliance
+and governance effectiveness. Phase 2, which covers program-specific networks, is
+planned for 2026 to further ensure enterprise-wide security and resilience.
+HII is focused on enhancing efficiency and consistency through automation to
+strengthen cybersecurity resilience. Key initiatives include security orchestration and
+workflow automation for vulnerability management and incident response, as well
+as the deployment of a Governance, Risk, and Compliance (GRC) tool to streamline
+monitoring and reporting. Following the completion of CMMC Level 2 certifications,
+HII will shift its focus to continuous monitoring of all environments, ensuring ongoing
+compliance and proactive risk management.
+Incident Reporting & Metrics
+External Partnerships & Industry Collaboration
+HII actively engages in industry forums and collaborative initiatives to strengthen
+its cybersecurity posture. Participation in groups such as NDISAC9 and knowledgesharing with peers supports alignment with best practices and emerging
+threat intelligence. Strategic partnerships with various technology providers
+enable benchmarking, enhance operational resilience, and improve threat
+detection capabilities.
+HII emphasizes timely response and reporting as a cornerstone of its cybersecurity
+program. Focus areas include vulnerability metrics, incident response times, and
+employee awareness, ensuring that risks are addressed quickly and effectively. To
+strengthen internal defenses, HII is maturing its insider threat program through the
+deployment of User Behavior Analytics (UBA) and a centralized case management
+system, expected to be operational in 2026. These tools will enhance detection
+of anomalous activity and streamline investigative workflows, supporting a more
+proactive and integrated approach to risk management.
+Network Modernization & CUI Protection
+To strengthen the security and resilience of CUI, HII is executing a two-phase
+network modernization initiative. Phase 1 focuses on establishing a secure
+infrastructure for handling standard CUI, while Phase 2 expands protections to
+networks managing higher-sensitivity CUI. This effort enhances data segregation,
+fortifies defenses against evolving cyber threats, and ensures alignment with
+federal compliance requirements.
+9
+10
+23 2026 Sustainability Report
+National Defense Information Sharing and Analysis Center
+National Institute of Standards and Technology
+Programs
+Last year, HII’s cybersecurity programs focused on strengthening protection through
+continuous monitoring, employee awareness training, and rigorous internal and
+external audits. These efforts included penetration testing, compliance assessments,
+and enterprise-wide tabletop exercises to validate incident response readiness.
+Collaboration with government and industry partners supported threat intelligence
+sharing, while Mission Technologies advanced federal cybersecurity standards
+and contributed to NIST10 framework development. Building on this foundation,
+HII is adding new initiatives such as insider threat detection using user behavior
+analytics and a centralized case management system, automation of vulnerability
+management workflows, and expanded supplier assurance programs to maintain
+compliance with evolving requirements.
+Engaging suppliers through a shared Code of Conduct and transparent collaboration,
+while continuously monitoring risk to sustain a resilient and reliable supply chain.
+Supply Chain governance balances enterprise
+alignment with divisional operational requirements.
+The Board oversees supply chain strategy, supplier
+engagement, regulatory compliance, and climaterelated risks. The President and CEO establishes
+corporate priorities and collaborates with
+divisional POCs to monitor progress and address
+emerging challenges.
+Cross-divisional Supply Chain Councils coordinate
+strategic initiatives, assess high-impact regulatory
+requirements, and facilitate the adoption of best
+practices. The SMT lead conducts periodic reviews
+with the CSD to evaluate progress, refine objectives,
+and leverage enterprise data for strategic planning.
+Legal, Contracts, Supplier Quality, and Procurement
+teams provide integrated support of this structure
+through risk monitoring, regulatory compliance tracking,
+and supplier performance management.
+Procurement activities operate under comprehensive
+enterprise controls. Each division maintains dedicated
+Supply Chain Management personnel responsible
+for establishing and managing supplier relationships
+in accordance with HII’s Supply Chain Management
+Procedures.
+24 2026 Sustainability Report
+Divisions conduct annual evaluations of active suppliers
+and mandate compliance with HII’s Supplier Code of
+Conduct across all relationships, regardless of contract
+value or engagement frequency. Contractual terms
+incorporate compliance expectations and establish
+clear mechanisms for corrective action.
+Supply chain governance is also integrated with
+HII’s broader sustainability framework, particularly
+in EHS and Cybersecurity. Quality requirements
+are communicated through supplier scorecards
+and corrective action protocols, with performance
+evaluated across quality, delivery, and responsiveness
+metrics. The QMS ensures supplier compliance through
+regular vendor audits and continuous surveillance to
+maintain product integrity throughout the value chain.
+Suppliers must comply with all applicable
+environmental, health and safety regulations. HII’s
+cybersecurity extend to suppliers managing sensitive
+data or systems, ensuring alignment with internal
+controls and ERM requirements.
+Human rights considerations are embedded in supplier
+policies and engagement practices. The Supplier Code
+of Conduct and Supplier Engagement Plan articulate
+expectations for ethical conduct, labor standards,
+and responsible sourcing, accessible via HII’s Suppliers
+website. Suppliers may report concerns confidentially
+through HII’s ethics hotline.
+HII collects conflict minerals disclosures using the
+Conflict Minerals Reporting Template (CMRT), with
+participation from across all divisions. A recently
+completed supply chain roadmap enhances
+traceability and oversight of human rights risks,
+including conflict minerals, countries of concern, and
+labor practices.
+Commitments:
+Develop supplier engagement plan
+and code of conduct
+Develop supply chain roadmap
+Commitment to Supply Chain Management
+25 2026 Sustainability Report
+HII’s supply chain commitments
+reflect a strategic shift
+toward deeper engagement,
+transparency, and sustainability
+across its supplier network. These
+commitments reflect HII’s broader
+effort to integrate sustainability
+into supply chain operations,
+improve transparency, and
+promote long-term resilience
+across its supplier network.
+In 2025, HII formalized its first enterprise-wide Supplier
+Engagement Plan, outlining expectations for ethics,
+compliance, cybersecurity, environmental stewardship,
+and human rights. The plan positions suppliers as strategic
+partners and sets clear standards for conduct, including
+adherence to the Supplier Code of Conduct, health
+and safety compliance, and alignment with contractual
+and cybersecurity requirements. By the end of 2025, HII
+developed sustainability criteria and incorporated them
+into the Supplier Engagement Plan, while also updating
+the Supplier Code of Conduct to cross-reference the
+plan’s sustainability expectations. Suppliers provide
+critical material attestation through Source Intelligence
+and can access both documents via the HII supplier
+website. They are also expected to follow sustainability
+requirements in their operations.
+Following the findings from the current-state analysis to
+assess alignment of our FAR/DFARS contract requirements
+with sustainability priorities, HII developed a Supply Chain
+Sustainability Roadmap to increase tracking of supply
+chain risks over the next five years. The roadmap outlines a
+divisional approach to closing gaps and strengthening supplier
+performance. To improve supplier engagement and tracking,
+Ingalls is using contract obligations to guide resource allocation,
+Newport News is evaluating milestones for risk tracing, and
+Mission Technologies is developing a centralized platform to
+track supplier data and monitor critical risks across the enterprise.
+The roadmap aims to increase traceability of supply
+chain risks, including conflict minerals, counterfeit parts,
+environmental disruptions, human capital, and cybersecurity,
+by 2030. While explicit resilience thresholds are not yet
+established, divisions are actively evaluating priorities for risk
+mitigation and resource allocation.
+Programs and Initiatives
+To operationalize its supply chain strategy, HII has defined a set of core criteria
+within the Supplier Engagement Plan. These criteria guide supplier conduct across
+ethics, safety, cybersecurity, environmental stewardship, and human rights.
+Highlights include:
+• Ethics & Integrity: Suppliers must
+uphold ethical business practices,
+prohibit gratuities, and foster
+community engagement.
+• Cybersecurity & Zero-Trust:
+Suppliers must protect sensitive
+data and comply with DFARS and
+NIST standards.
+• Ingalls provides quarterly scorecards to suppliers. Buyers review low scores and
+collaborate on corrective actions or impose suspension if performance does not
+improve. Recent actions included a temporary suspension, demonstrating active
+enforcement of the process.
+• Health & Safety Compliance:
+Suppliers are required to
+maintain safety standards and
+follow site-specific procedures.
+• Contractual Integrity: Suppliers
+are responsible for flowing down
+compliance obligations and
+maintaining performance.
+• Mission Technologies reassesses low-scoring subcontractors after six months and
+explores alternative programs to retain critical partners.
+• Transparency & Respect: Open
+communication and mutual
+respect are expected in all
+supplier relationships.
+• Monitoring & Auditing: Routine
+assessments and corrective
+actions ensure accountability.
+• Environmental Stewardship:
+Suppliers must manage
+hazardous materials,
+reduce waste, and pursue
+energy efficiency.
+• Human Rights & Reporting:
+Suppliers must uphold labor
+rights and report misconduct via
+HII’s OpenLine platform.
+The plan also emphasizes transparency, contractual integrity, and proactive
+monitoring, with mechanisms for audits, performance tracking, and corrective
+actions when needed. Environmental expectations include hazardous materials
+management, waste reduction, energy efficiency, and sustainable procurement.
+To support these goals, HII has begun integrating tools that monitor supplier locations,
+track hazard exposure, and assist in contingency planning and remediation.
+26 2026 Sustainability Report
+Enterprise-wide sustainability considerations, such as responsible sourcing and
+recycled components, are integrated into supplier assessments when applicable.
+Formal metrics tied to climate events or recovery plans are not yet established.
+Supplier performance is evaluated through division-specific scorecard programs
+focused on product quality and delivery timeliness.
+• Newport News rates suppliers on quality, delivery performance, and
+responsiveness. Suppliers scoring below 90% in quality receive a Quality Block,
+requiring additional procurement approval until performance improves. Quality
+Scorecards are issued quarterly to all applicable suppliers.
+HII also participates in industry collaborations to strengthen supply chain resilience
+and share best practices. These partnerships support benchmarking, regulatory
+alignment, and threat intelligence, particularly in areas such as cybersecurity and
+climate risk. At the divisional level, Ingalls’ buyers proactively contact suppliers in
+regions impacted by storms to confirm contingency plans and maintain continuity of
+critical materials. Newport News monitors supplier locations and escalates issues to
+program or divisional leadership when severe weather threatens operations. Plans
+include software that will identify first- and second-tier suppliers in affected regions
+and provide real-time alerts on risks such as financial or cybersecurity concerns.
+Mission Technologies is piloting geofencing and location monitoring tools to receive
+early warnings of extreme weather exposure, with integration into environmental
+health and safety systems underway. Across all divisions, these efforts aim to build a
+robust supplier risk management process that leverages technology for early alerts
+and proactive mitigation of climate-related disruptions.
+Together, these programs reflect HII’s commitment to building a supply chain that is
+ethical, secure, and resilient — aligned with both operational excellence and longterm sustainability goals.
+Education & Training
+Employee Health & Safety
+27 2026 Sustainability Report
+BUILDING OUR
+Fostering a positive company culture, reducing turnover, enhancing
+recruitment and retention, and ensuring employee satisfaction.
+Education & Training
+Employee Health & Safety
+28 2026 Sustainability Report
+Employee engagement at HII is guided by a
+governance framework that connects workforce
+programs to the Company’s mission, vision, and
+values. The Board’s Compensation Committee
+reviews engagement outcomes and related initiatives
+to ensure alignment with workforce priorities and
+incentive structures. The Workforce SMT, reporting
+through the CSD, aligns engagement strategies,
+metrics, and oversight across divisions. Divisional HR
+teams and business leaders implement surveys, action
+plans, and communications, sharing results through
+dashboards and reporting channels so the SMT can
+track follow-through and highlight programs that scale.
+Responsibility for enterprise initiatives rests with
+the Employee Engagement Steering Group, which
+integrates divisional feedback, plans programs,
+and monitors progress. Ethics and compliance
+are reinforced through engagement programs,
+including training, non-retaliation policies, and
+case management overseen by the Ethics Office
+and divisional business conduct officers, ensuring
+engagement strengthens both culture and employee
+experience.
+HIGHLIGHTS
+44k
+total employees
+29 2026 Sustainability Report
+Commitment to Employee Engagement
+Key Programs & Initiatives
+Engagement is one of HII’s core values, having
+the same level of importance as quality, safety,
+performance, and integrity. HII operates in a highly
+competitive and dynamic labor market where
+attracting, developing, and retaining skilled employees
+is essential to long-term success. We will continue to
+strengthen employee engagement to create value
+for HII. Progress is tracked using surveys as well as
+through the measurement of the effectiveness of
+actions taken, feedback from focus groups, and
+key behavioral and outcome metrics (e.g., voluntary
+turnover, absenteeism, safety, quality, productivity,
+and participation).
+HII supports employee engagement through a set of
+enterprise-wide policies and programs that provide
+consistency across all divisions while allowing flexibility
+for local implementation. Each division applies these
+policies within its operations to support alignment with
+enterprise standards while addressing local needs.
+These policies establish clear expectations for ethical
+behavior, fairness, and respect in the workplace. They
+include the Code of Ethics and Business Conduct, Equal
+Employment Opportunity and Non-Discrimination,
+Anti-Harassment and Workplace Harassment, Benefits
+and Leave, and Career Development policies and are
+reinforced through onboarding, annual training, and
+performance reviews. Together, these policies create
+a foundation for a safe and professional environment
+where employees can thrive and take ownership of
+their work.
+“Culture & Engagement” describes the initiatives that
+have a positive impact on our teams and link our
+employees with each other and with the communities
+we serve, spanning formal programming, informal
+learning, Company-supported projects, and employeerun initiatives.
+Onboarding & Early Tenure Support
+HII’s onboarding programs are designed
+to help new employees feel welcome,
+informed, and prepared to succeed
+from their first day by introducing team
+members to our mission, culture, safety
+expectations, and workplace tools.
+The Navigator and Buddy Program
+pairs new hires with experienced
+colleagues to provide guidance and
+support during early tenure. Regular
+check-ins help employees access
+resources, build connections, and
+integrate into the organization. These
+efforts are complemented by initiatives
+to strengthen cultural alignment and
+engagement, including adjustments
+to orientation schedules and salary
+reviews for craft employees.
+Tools and programming across the divisions support new employees and their
+ongoing success in building a career at HII.
+• Personal connections and relationships: Personal relationships that can help
+new employees understand processes, culture, and the work environment
+are fostered via programs like Culture Connectors at Ingalls and the Navigator
+Program at Mission Technologies. The pairing of new hires with experienced
+guides helps fill the gaps in early knowledge and reinforce standards of
+business conduct.
+• Tools and online resources: Updated orientation sessions and digital
+onboarding are tailored to the needs of the new hire’s division and department.
+For example, Mission Technologies provides a centralized platform to support
+the broad geographies in which their employees work. Newport News has
+structured shipyard onboarding to integrate needed knowledge about both
+shipyard operations and digital systems.
+• Troubleshooting and help beyond day one: Programs like the Shipbuilder
+Concierge program at Ingalls provide troubleshooting and development
+support. At Mission Technologies, the MyCareer suite offers access anytime,
+anywhere to personalized career insights, microlearning, and leadership
+development. Apprenticeship programs provide clear pathways for earlycareer employees.
+• Feedback: Pulse surveys and feedback from new hires are incorporated
+into ongoing improvements to onboarding. Orientation schedules have been
+adjusted to align with production needs.
+Together, these strategies ensure an engaging onboarding experience that
+empowers the success of the individual and captures needs and opportunities
+to serve the unique operational context at each division. These cohesive
+onboarding journeys accelerate readiness and strengthen long-term
+engagement and performance.
+30 2026 Sustainability Report
+Employee Engagement & Retention Programs
+31
+HII engages employees through
+structured programs and feedback
+mechanisms that strengthen connection
+and support retention. Competitive
+compensation and benefits remain
+central to retention, complemented
+by programs that promote wellbeing.
+In 2025, HII shifted from annual Gallup
+surveys to a continuous listening
+strategy that uses qualitative feedback
+and pulse surveys to capture employee
+sentiment. Insights from these surveys,
+along with exit interview data, inform
+improvements and help shape future
+engagement initiatives.
+The divisions then build on enterprise programs with tailored initiatives:
+• Ingalls focuses on cultural connection and professional growth through programs
+such as Culture Connectors, structured mentoring, and community leadership
+workshops. The Ingalls Craft Career Corps provides career counseling and
+development support for craft employees, reinforcing long-term engagement.
+• Mission Technologies is committed to developing a highly engaged, skilled, and
+future-ready workforce through accessible learning, structured development
+pathways, and continuous feedback. The Leadership Capability Framework
+anchors this approach, ensuring development is intentional, personalized,
+and aligned with the behaviors that drive mission success. Employee insights
+gathered through surveys and interviews inform actions that enhance
+engagement and the overall employee experience, while training programs,
+digital learning platforms, and leadership development tools support ongoing
+growth and prepare employees for future roles.
+• Newport News utilizes pulse check surveys and exit surveys to guide engagement
+efforts and offers career mobility programs and provides leadership development
+and project-based learning. Furthermore, our comprehensive foodservice
+program, which includes convenience retail, cafés, catering, and mobile food
+trucks, served more than 5.4 million shipbuilders in 2025. Our on-site culinary
+team provides premium prepared sandwiches, salads, and grab-and-go items.
+Our portfolio also incorporates the Fuel Well strategy, which emphasizes food
+choices that promote strength, energy, and overall well-being, which supports
+productivity and creates a positive experience for all shipbuilders, navy personnel
+and contractors.
+32 2026 Sustainability Report
+Developing workforce skills, career pathways, and talent pipelines across all
+divisions through enterprise and division-specific programs, apprenticeships,
+continuing education, STEM outreach, and veteran-focused initiatives.
+HII’s education and training programs support
+workforce skills, talent acquisition, talent pipelines,
+and division-specific development needs. The Board
+monitors training outcomes, workforce readiness,
+and recruitment progress, informed by updates
+from the CHRO, HR and Learning functions, and ERM.
+The CHRO leads enterprise HR strategy for education,
+training, talent acquisition, retention, and workforce
+development, reporting to the CEO and Board
+and coordinating execution of the enterprise-wide
+strategy with division leadership.
+HR and Learning functions develop and manage
+enterprise programs, including apprenticeships,
+technical training, professional certifications, continuing
+education, and recruiting initiatives. They oversee
+implementation, track participation and outcomes, and
+provide updates to the CHRO, ERM, and the Board,
+while coordinating across divisions. Talent Acquisition
+drives university partnerships, veteran outreach, and
+SkillBridge programs, while Learning and Development
+manages curriculum, continuing education, and
+certifications. Divisional HR and Learning teams
+implement local programs, manage recruiting and
+STEM outreach to support talent acquisition and
+workforce development, and share updates and
+outcomes through Workforce SMT meetings and
+director-level touchpoints.
+100%
+of employees
+received training
+Enterprise Programs
+HII advances its employees’ skill sets through enterprise-wide programs, policies,
+and trainings that provide opportunities for learning, career development, and
+internal mobility. These initiatives create a foundation for growth across all
+divisions while allowing local adaptation to operational needs.
+• Training & Development Policy: Leadership courses, mentoring, online learning,
+and certifications across engineering, shipbuilding, and cyber disciplines.
+• Tuition Reimbursement & Education Assistance: Financial support for degrees,
+certifications, and continuing education; thousands of employees participate
+annually.
+• Apprenticeship & Early Career Programs: Apprenticeships, internships, and coops at Ingalls, Newport News, and Mission Technologies; hundreds trained each
+year in trades, technical, and leadership roles.
+• Recruiting & Inclusion Policy: Equitable hiring practices with outreach to students,
+veterans, and career-transition candidates.
+• Corporate Initiatives: Collegiate recruiting, military outreach, enterprise SkillBridge
+(2025 launch), and structured new-hire orientation.
+• Ethics & Compliance Training: Delivered through the Ethics Office and divisional
+officers, supporting workforce accountability and integrity.
+These programs strengthen skills, build career pathways, and sustain HII’s talent
+pipelines across our workforce.
+33 2026 Sustainability Report
+Education, apprenticeship, and community outreach programs across HII support
+workforce development and long-term talent pipelines.
+• Internal Education & Career Development: HII invests in structured learning and
+career progression programs that combine technical instruction with leadership
+development and hands-on experience. For example, Ingalls’ Shipbuilder
+Academy supports career advancement within the shipyard, while Mission
+Technologies strengthens technical capabilities through community-based
+engineering, cyber, C5ISR, AI, and digital engineering development programs.
+Newport News complements these efforts through classroom and shipyard-based
+education that integrates academic instruction with real-world application.
+• Apprenticeship Programs: Apprenticeship remains a cornerstone of workforce
+development across HII, offering clear, earn-while-you-learn pathways into skilled
+trades and professional roles. Ingalls’ Apprentice School provides three- to fouryear curricula preparing apprentices for critical shipbuilding roles, while Mission
+Technologies’ Fleet Sustainment Apprentice Program blends direct experience
+with academic instruction to build long-term maritime and defense talent.
+Newport News operates one of the nation’s most recognized apprenticeship
+institutions, offering four- to eight-year programs in partnership with Virginia
+Peninsula Community College and Old Dominion University and training more than
+800 apprentices annually across multiple trades.
+• Community & Pipeline Outreach: Early engagement and external partnerships
+strengthen regional talent pipelines and build awareness of careers in shipbuilding
+and technology. Across divisions, outreach includes PreK–12 STEM mentoring,
+career exploration, job shadowing, mock interviews, reentry programs,
+university partnerships, and support for technical training labs and skilled
+trades competitions. For example, Newport News’ Scouts, Youth Builder, and
+summer teacher programs, along with Ingalls’ school partnerships and National
+Apprenticeship Week participation, help foster early interest and expand access to
+technical education in the communities HII services.
+Veteran & Military Engagement
+HII is committed to supporting veterans, transitioning service members,
+and military families through targeted career pathways, mentorship,
+and workforce integration programs.
+Key enterprise initiatives include:
+• SkillBridge Program: Provides internships and structured transition-toemployment pathways across all divisions for service members and their
+spouses. Originally adopted by Mission Technologies, SkillBridge expanded to
+a companywide initiative in 2025.
+• Veteran Recruiting & Outreach: HII participates in more than 200 veteranfocused recruiting events annually, collaborating with military bases, Transition
+Assistance Programs (TAP), and organizations such as the Hampton Roads
+Veterans Employment Center (HRVC) to provide resume reviews, career
+guidance, and connection to HII roles.
+• HRVC Partnership: In partnership with the HRVC, HII hosts office hours, resume
+reviews, and career guidance sessions for veterans and military spouses.
+• Base-Specific TAP Collaboration: HII works with TAP programs at Langley/
+Eustis, Norfolk Naval, Little Creek, Oceana, Dam Neck, Keesler Air Force Base,
+Naval Base San Diego, Marine Corps Recruit Depot San Diego, Kitsap Naval,
+and Ft. Meade to connect service members preparing for civilian careers.
+• Mentorship & Integration: Enterprise-level mentoring programs pair
+veterans with experienced employees to support career development and
+workplace integration.
+Across the enterprise, veterans represent more than 15% of HII’s workforce —
+over 6,900 employees — reflecting HII’s sustained commitment to this talent pool.
+34 2026 Sustainability Report
+Supporting local communities through volunteering,
+relationship-building, economic impact, philanthropy,
+workforce development, and education programs.
+HII approaches community engagement with a focus
+on impact, alignment with enterprise priorities, and
+accountability. The Board reviews progress on giving,
+volunteering, and community programs, with input
+from the Governance and Policy Committee to ensure
+initiatives are effective and strategically aligned.
+Leadership guides engagement strategy and
+ensures initiatives support broader corporate
+objectives. Corporate Responsibility organizes
+enterprise programs under the “HII Cares” brand,
+coordinates giving and volunteering efforts, tracks
+participation, and provides updates to leadership.
+Divisional teams implement local programs, including
+volunteer events, donations, and STEM outreach,
+sharing outcomes and participation metrics through
+reporting channels to provide enterprise-wide
+visibility. The SMT provides a role in centralizing
+community relations efforts at both the corporate
+level and divisional level, providing a conduit to share
+community relations activities and impact. Internal
+communications promote opportunities, highlight
+achievements, and maintain tools for volunteer
+registration and tracking, encouraging engagement
+across all levels of the organization.
+40% of giving targeted toward education by 2030:
+36%
+of total charitable
+investments were associated
+with educational giving
+Increase employee volunteering by 10%:
+1,727
+employees
+participated in
+volunteer activities
+Provide 100,000 meals:
+368k
+35 2026 Sustainability Report
+meals provided
+Commitment to Improving Our Communities
+HII and the broader defense sector face several challenges in their communities,
+including gaps in education access, food and nutrition insecurity, and limited
+volunteer participation among employees due to operational demands. To address
+these challenges, HII has set long-term commitments to guide its community
+relations strategy and focus resources where they can have the most impact.
+HII’s community engagement strategy is anchored in three core commitments:
+1. 40% of total giving allocated to education programs by 2030.
+2. Increase employee volunteer participation by 10% annually through 2030.
+3. Provide 100,000 meals annually to address food and nutrition insecurity
+in local communities.
+Commitment 1: 40% of Total Giving Allocated to Education
+At the enterprise level, HII partners with schools, trade organizations, and
+STEM‑focused nonprofits to expand educational opportunities and strengthen
+talent pipelines. These partnerships include collaborations with universities and
+technical programs to support career readiness and workforce development.
+Ingalls focuses on building awareness and readiness through initiatives such
+as the Mayor’s Youth Councils, which bring over 100 high school students
+together for leadership and career education. Ingalls also celebrates National
+Apprenticeship Week to showcase skilled trades and hands-on learning
+opportunities. Employees volunteer as judges for the Future Shipbuilder STEM
+Grant program, which annually awards nearly $100,000 to more than 20 STEM
+initiatives in local schools, reinforcing Ingalls’ commitment to education and
+technical training.
+36 2026 Sustainability Report
+Mission Technologies advances education, workforce development, and innovation
+through strategic partnerships and community engagement. Key initiatives include
+a $25,000 contribution to the University of Maryland’s A. James Clark School of
+Engineering, supporting joint research, facility access, and intellectual property
+licensing, alongside leadership roles on the MATRIX Lab Industry Advisory Board.
+The division strengthens career development for transitioning service members
+and veterans through expanded collaboration with American Corporate Partners,
+The Honor Foundation, and Student Veterans of America, offering virtual learning,
+recruiter-led sessions, and pathways to internships and full-time roles. Employees
+mentor students, support PreK–12 STEM programs, and provide essential school
+supplies to military children and local students. Military engagement remains central,
+with participation in 120 veteran recruiting events, support for military spouses, and
+recognition as Military Innovator of the Year by the Hampton Roads Workforce
+Council, reflecting Mission Technologies’ leadership in fostering talent, innovation,
+and community impact.
+Newport News advances this commitment through programs that connect
+students and educators to shipbuilding careers. The WAVES Scouting Program
+engages employees as mentors in high school Career and Technical Education
+(CTE) programs, creating early exposure to technical trades. At the end of the
+2024–2025 school year, over 65 students applied to Newport News and The
+Apprentice School, with 7 students getting accepted into The Apprentice School.
+The program has expanded, with 19 committed scouts embedded in 15 CTE schools/
+programs. Newport News engaged over 800 students, with over 350 students
+interested in a skilled trades career at Newport News in the Fall of 2025. The division
+also relaunched its educator outreach as a One-Day Immersion Experience, giving
+teachers and administrators hands-on insight into shipyard operations and career
+pathways. University engagement remains strong, with more than 20 campus
+visits and career fairs across Virginia, Mississippi, and North Carolina to attract
+engineering talent.
+Commitment 2: Increase Employee Volunteer Participation by 10% Annually
+37 2026 Sustainability Report
+Enterprise-wide, HII encourages volunteerism through
+paid volunteer hours, making it easier for employees
+to contribute to causes they care about.
+Ingalls demonstrates its commitment through
+impactful volunteer initiatives, including Scouting
+Merit Badge Day, where employees teach shipbuilding
+skills to scouts. Additional efforts include participation
+in health-focused fundraising walks for organizations
+such as the Alzheimer’s Association, American Cancer
+Society, and American Heart Association.
+Mission Technologies fosters a culture of service,
+engaging employees in volunteer activities that
+advance STEM education, support military transitions,
+and strengthen communities. Employees mentor
+students and transitioning service members, host
+career talks, judge STEM competitions, and support
+school and museum programs. In 2025, the division’s
+sixth annual Global Day of Caring involved over 450
+employees and family members in more than 55
+projects across the U.S. and South Korea, including
+environmental cleanup, planting trees and crops,
+and donating over 2,500 pounds and packing
+more than 10,000 pounds of non-perishable food
+items. Volunteers also contributed 42 pints of blood,
+supported wellness fundraising walks, and advanced
+military and veteran services, demonstrating
+Mission Technologies’ commitment to meaningful
+community impact worldwide.
+Newport News nurtures a strong culture of service
+through volunteer efforts at community events such as
+Relay for Life, Heart Walks, Habitat for Humanity, and
+local food banks. Newport News raised a company
+record $49,000 in support of the American Cancer
+Society and over $41,000 for the American Heart
+Association in the annual Hampton Roads Heart Walk
+Event ranking among the top five in every major
+fundraising category — Top Walkers, Top Teams,
+and Top Companies — demonstrating exceptional
+community engagement and impact. Employees also
+support STEM events by mentoring students, hosting
+workshops, and presenting at school programs,
+reinforcing the division’s commitment to education
+and community engagement. Newport News was
+named an honoree of the Civic 50 Hampton Roads
+by VOLUNTEER Hampton Roads and Points of
+Light, the world’s largest organization dedicated to
+volunteer service, for the third consecutive year. The
+award recognizes Newport News as one of the most
+community-minded companies in Hampton Roads
+determined by an independently administered and
+scored survey.
+Commitment 3: Provide 100,000 Meals Annually
+38 2026 Sustainability Report
+HII is committed to addressing food insecurity in
+communities where we work and live through a
+number of initiatives within each division.
+Ingalls leads large-scale nutrition initiatives, including
+packing thousands of meals through Extra Table’s
+“Extra Full” program and sponsoring the “March
+of the Mayor’s” event, which provides more than
+25,000 meals to families in need. Ingalls also supports
+Backpack Buddy programs in multiple communities to
+promote access to food for children during weekends
+and holidays and contributes to food pantries and local
+nonprofits to fight hunger year-round. Collectively,
+these efforts provide well over 100,000 meals annually
+within the Gulf Coast region.
+Mission Technologies partners with local
+organizations to help address food insecurity among
+veterans and underserved populations. In 2025, the
+division contributed $2,400 to Operation Homefront
+to provide meals for service members and their
+families and donated over 1,100 pounds of food to
+local food banks and schools through employee food
+drives. In addition, during HII’s annual Global Day of
+Caring, employees volunteered at local food banks
+and packed more than 10,000 pounds of food for
+distribution. These efforts reflect the division’s ongoing
+commitment to strengthening the communities where
+employees live and work.
+Newport News contributes to this commitment
+through regular support for local food banks
+and meal programs, ensuring that families in the
+community have access to nutritious food. These
+efforts are integrated into broader volunteer initiatives,
+reinforcing the division’s role in addressing hunger.
+The 2025 Newport News Annual Holiday Food Drive,
+along with annual employee donations, provided the
+Virginia Peninsula Foodbank with more than 19,000
+pounds of food and more than $36,300 in monetary
+contributions, which combined provides 125,344 meals
+for the local community.
+39 2026 Sustainability Report
+Implementing health and safety initiatives, adhering
+to safety laws, promoting health and wellness programs,
+and fostering a safe workplace culture.
+HII manages employee health and safety through a
+layered governance model that combines enterprise
+standards with division-level accountability. Corporate
+frameworks set expectations for performance,
+reporting, and compliance, while divisions implement
+and oversee programs based on operational risk. The
+Employee Health and Safety (EHS) SMT manages
+operational functions relating to sustainability, including
+safety prevention and near-miss reduction, and
+maintains cross-divisional communication through
+regular touchpoints.
+Within divisions, leadership teams are accountable
+for health and safety strategy, compliance, and
+performance. Directors of Environmental, Health,
+and Safety manage day-to-day execution, overseeing
+audits, corrective actions, and remediation. Specialized
+risks are assigned to designated leaders responsible
+for hazard evaluations, post-incident reviews, fire
+safety, and hazardous materials controls. On-site
+EHS professionals conduct surveillance, inspections,
+and field engagement, while regional or division
+EHS managers lead formal audits and coordinate
+remediation.
+Health and safety expectations are communicated
+through safety meetings, alerts, newsletters,
+dashboards, digital platforms, bulletin boards,
+and safety committees, reinforced by leadership
+walk-throughs and direct employee engagement.
+Compliance is verified through internal assessments
+and monitoring programs, supported by external
+audits and certifications, including ISO 9001 where
+applicable. Corrective action systems, incident
+reporting tools, and performance tracking platforms
+support consistent oversight and continuous
+improvement across the enterprise.
+Reduce TCR Rate
+6%
+reduction from
+previous year
+Develop Roadmaps for Top Three
+Targeted Safety Initiatives
+Commitment to a Safe Workforce
+40 2026 Sustainability Report
+Protecting the health and safety of our workforce is central to HII’s operations,
+with safety being one of six corporate values guiding our day-to-day decisionmaking and the long-term trust and confidence of our stakeholders. In complex
+shipbuilding and advanced technology environments, safety is both a shared
+responsibility and a daily practice. We strengthen this culture through clear
+commitments, measurable progress, and a roadmap designed to anticipate
+risks and prevent injuries before they occur.
+These are the commitments we use to drive our success and hold us accountable
+to employee safety:
+1. Drive sustained improvement in safety performance, measured by a reduction
+in Total Case Rate.
+2. Develop division-specific roadmaps for our top three targeted safety initiatives:
+(1) hazard recognition, (2) safety training, and (3) knowledge sharing.
+To execute the second commitment, we have built a roadmap to address key risks
+and operational needs across our divisions, organized around three pillars: hazard
+recognition, safety training, and knowledge sharing. Each division has aligned its
+individual roadmap to these three pillars while taking a division-specific approach
+to reflect the unique health and safety considerations of its operations. This
+approach allows us to establish clear priorities across the enterprise while
+empowering our divisions to customize roadmap implementation.
+Develop Division-Specific Roadmaps
+Hazard recognition addresses the enterprise‑wide risk
+that hazards can be missed or inconsistently captured,
+particularly in large and dynamic operations and among
+new cohorts of employees. The objective is to promote
+early identification of hazards, evaluate them consistently,
+and correct them before work begins, with common
+expectations and terminology across the enterprise.
+Safety training addresses the enterprise‑wide risk of
+uneven training depth and limited hands‑on practice,
+especially for supervisors and recent hires. Our objective is
+to broaden and modernize training so employees across
+roles and environments gain practical skills and retain
+critical knowledge.
+Knowledge sharing addresses the risk that insights and
+lessons are not consistently communicated across divisions,
+and that near‑miss reporting and key performance
+indicators are not standardized. Our objective is to
+make safety information accessible, actionable, and
+routinely exchanged so that one team’s learning becomes
+everyone’s prevention.
+Division-Specific Roadmaps
+41
+Ingalls is transitioning its near miss program to a
+comprehensive hazard recognition model, aligning
+to shared terminology and building metrics that
+will be incorporated into site performance goals.
+Ingalls’ “Take Five” protocol reinforces that hazards
+must be addressed and abated before work begins.
+The division is working to move beyond traditional
+classroom formats by incorporating kinesthetic and
+virtual learning, while maintaining seasonal programs
+such as heat‑stress prevention and a robust hearing
+conservation program supported by industrial hygiene
+sampling and on‑site audiology safety precautions.
+Ingalls is formalizing its biweekly touchpoints into
+structured sessions with common templates and
+vocabulary, strengthening alignment on leading and
+lagging indicators.
+Mission Technologies sustains hazard recognition
+in a diverse set of work environments through daily
+safety debriefs, ergonomic assessments, and site‑level
+surveillance, with findings communicated through
+Safety Moments and Lessons Learned so that leading
+indicators inform corrective action. The division
+delivers targeted training on personal protective
+equipment and hazard avoidance tailored to office,
+warehouse, customer‑site, and shipboard activities,
+ensuring teams understand environment‑specific risks
+and controls. Mission Technologies sustains a regular
+cadence of Safety Moments, dashboards, and Lessons
+Learned communications, and uses these channels
+to share trends across geographically dispersed
+sites. Enterprise‑wide director syncs continue to align
+divisional leaders on priorities, emerging risks, and
+program improvements so that practices converge
+and outcomes improve over time.
+At Newport News, hazard recognition is embedded in
+daily operations through ObserveNNS, the integration
+of job safety analyses into work packages, and a
+pre‑job planning tool that strengthens front‑line
+leadership. The division is reinvigorating its Safety
+Task Team program with practical training,
+standards, and cadence to expand participation
+beyond Environmental Health and Safety staff.
+The division has upgraded its Environmental Health
+and Safety training with practical scenarios, mock
+shipboard environments, and virtual reality modules;
+new‑hire orientation has been revised to strengthen
+comprehension and application on the deckplate.
+Newport News disseminates lessons learned and
+significant events enterprise wide, and is partnering
+with Communications to expand delivery through
+mobile platforms and video formats that reach
+employees wherever they work.
+Improvement in Safety Performance:
+Reducing Our TCR
+Across the enterprise, injury rates are trending
+down, supported by more proactive reporting
+and targeted interventions. At Newport News,
+innovation is accelerating this improvement through
+the ObserveNNS mobile application, which enables
+employees to recognize, document, and mitigate
+hazards in real time. The platform has generated more
+than 174,000 observations for trend analysis, improving
+our ability to see emerging risks and act before injuries
+occur. Training enhancements, practical exercises, and
+safety reels delivered via mobile devices are further
+strengthening knowledge retention among newer
+employees, historically a higher‑risk group.
+42 2026 Sustainability Report
+Across the enterprise, injury rates
+are trending down, supported
+by more proactive reporting and
+targeted interventions.
+Maintaining Employee Health Beyond Risks
+Beyond risk mitigation, we are committed to
+maintaining and enhancing the overall health of
+our employees. Across our shipyards we provide
+access to nutritious food options that support
+wellbeing on long shifts. Body‑scan technologies
+are used to monitor ergonomic health over time,
+helping us understand whether the work our
+employees perform is having a detrimental effect,
+and enabling targeted remediation where needed.
+To keep safety front‑of‑mind, workdays begin with
+a safety moment that reinforces shared expectations
+and encourages employees to raise concerns, ask
+questions, and support one another. As described in
+last year’s sustainability report, our focus on wellbeing
+also includes convenient access to health services,
+proactive communications on healthy practices, and
+resources that support physical, mental, and financial
+wellness. Together, these efforts complement our
+injury‑prevention roadmap and underscore a simple
+principle: protecting people is not limited to the job
+task — it includes the whole person.
+We will continue to advance these pillars with
+disciplined execution, transparent reporting, and
+practical innovations that meet employees where they
+are. Our ambition is clear: embed hazard recognition
+in every process, equip our teams through training
+that works on the deckplate and in the classroom,
+and share what we learn so that each improvement
+compounds. In doing so, we are building workplaces
+where our people can do their best work — and go
+home safe and healthy, every day.
+43 2026 Sustainability Report
+PROTECTING
+OUR RESOURCES
+Engaging with regulators and ensuring compliance
+with environmental laws and regulations.
+HII’s environmental governance establishes consistent
+enterprise expectations while allowing programs
+to address site-specific operational and regulatory
+needs. The EHS SMT coordinates and manages
+sustainability strategy across the enterprise, setting
+policy, monitoring performance, and providing
+guidance across waste, water, hazardous materials,
+and incident prevention. The SMT reports to the CSD
+and engages with divisions through regular meetings,
+leadership walk-throughs, and digital collaboration
+tools. The CSO reports to the Board, which provides
+oversight of environmental performance and
+compliance with applicable regulations and internal
+standards. These enterprise standards provide a
+framework for divisions to implement programs
+tailored to their operations while maintaining
+alignment with corporate objectives.
+At Ingalls, oversight is provided by the division’s Vice
+President of Infrastructure and Sustainability, with
+day-to-day execution led by the Director of EHS
+and supported by the Manager of Environmental
+Engineering and the Fire Chief, managing
+compliance, waste and water programs, and
+emergency preparedness. Mission Technologies
+manages hazardous materials, recycling, and water
+conservation across its geographically dispersed sites,
+coordinating remediation and compliance activities.
+At Newport News, environmental programs address
+shipyard-specific standards, including hazardous
+materials, water management, recycling, and
+radiological compliance, with specialized facilities for
+industrial wastewater treatment and spill prevention
+plans maintained under an Integrated Contingency
+Plan, tested through regular drills.
+This governance approach supports consistent
+environmental compliance, defined responsibilities,
+and regular communication between corporate and
+division leadership.
+3%
+Reduction in hazardous
+waste generated
+9%
+Reduction in total water
+discharged to fresh
+water surface water
+compared to 2024
+0
+Reportable spills
+44 2026 Sustainability Report
+45 2026 Sustainability Report
+HII integrates environmental compliance requirements
+into all operational activities. Our approach begins
+with adherence to federal, state, and local statutes
+and regulations, including those administered by the
+EPA,11 OSHA, and state Departments of Environmental
+Quality (DEQ). These obligations are established in the
+Environmental Sustainability Policy and incorporated
+into the Code of Ethics and Business Conduct.
+It is HII policy to minimize environmental risks by
+reducing emissions to air and water and limiting
+waste generation. We set environmental objectives
+that drive continual improvement and pollution
+prevention across divisions.
+HII maintains an Environmental Management
+System (EMS), with each division aligned with
+specific environmental standards. The EMS governs
+monitoring, recordkeeping, internal controls, and riskbased auditing. Core compliance functions include
+permit administration, hazardous material and waste
+management, wastewater and stormwater controls,
+pollution prevention measures, and Clean Air Act
+emission control requirements for permitted sources
+under the EPA Title V operating permit. HII conducts
+routine interactions with regulatory agencies, including
+the EPA, U.S. Coast Guard, and local authorities,
+to confirm alignment with current and pending
+requirements. This approach supports compliance with
+existing requirements and prepares HII for emerging
+11
+U.S. Environmental Protection Agency
+12
+Polychlorinated Biphenyls
+environmental standards. Newport News has been
+recognized as an Extraordinary Environmental
+Enterprise Level 4 participant and has received
+multiple Hampton Roads Sanitation District Platinum
+and Diamond Awards for compliance performance.
+Ingalls has earned the Mississippi DEQ enHance
+Environmental Leader Award.
+We evaluate our environmental objectives through
+business case analyses to prioritize actions that deliver
+operational performance and environmental benefits
+(e.g., energy efficiency and fuel economy initiatives).
+Environmental expectations extend through the supply
+chain. Suppliers are guided by the HII Supplier Code
+of Conduct and supported through audits, training,
+and annual certifications to promote environmental
+responsibility throughout the value chain.
+Ingalls applies corporate requirements through the
+EHS Audits and Inspections Program and ISO 9001
+procedures. Compliance responsibilities include
+hazardous chemical oversight, waste-stream
+monitoring, water-management controls, and
+maintenance of environmental procedures in the
+Command Media System. Facility upgrades integrate
+energy-efficiency measures consistent with HII’s
+Climate Transition Plan. The division participates in
+relevant industry groups to maintain alignment with
+regulatory and technical standards.
+Mission Technologies maintains compliance
+across multiple sites through EHS surveillance, site
+assessments, and formal risk reviews. Operational
+requirements include hazardous material
+management, waste-reduction measures, and
+water-conservation controls. Compliance updates and
+findings are communicated through internal reporting
+channels, including dashboards, newsletters, and
+Lessons Learned documentation. The division adheres
+to all applicable federal and state regulations, including
+FAR-related environmental obligations, and maintains
+engagement with professional associations to track
+regulatory developments. Environmental personnel
+support site-level compliance and coordinate
+remediation activities as needed.
+Newport News evaluates suppliers and contractors
+that support practices to reduce risk. The division
+implements corporate environmental requirements
+through the Contractor EHS Manual and Purchase
+Order addendums. The division manages federal
+and state environmental permits, hazardous material
+inventories, mixed-waste controls, stormwater
+compliance, and waste-stream tracking, and
+evaluates older aircraft carriers for regulated PCBs12
+during inactivation and decommissioning. Reporting
+obligations are met through submissions to regulatory
+agencies and corporate ESG governance. Compliance
+verification includes annual compliance self
+assessments, and scheduled on-site inspections.
+Circularity and Waste Management
+Responsible waste management is a central component of
+HII’s environmental stewardship and operational performance.
+Our approach emphasizes resource conservation, regulatory
+compliance, and material recovery practices that reduce
+landfill use and support circular-economy principles.
+These commitments are grounded in HII’s Environmental
+Sustainability Policy and implemented through divisionlevel programs that integrate waste reduction into routine
+operations as well as long-term planning.
+HII’s waste practices encompass more than end-of-life
+disposal. Divisions operate recycling, reclamation, and
+repurposing programs that recover materials, reduce
+environmental risk, and comply with federal, state, and
+local requirements. Certain operations also follow specific
+contractual standards, including Navy Nuclear Propulsion
+waste-handling requirements.
+Wherever practical, HII implements recycling and reuse
+programs that conserve resources and reduce energy use and
+GHG emissions. Divisions also review production processes to
+identify opportunities to transition to less hazardous materials
+and increase the amount of waste diverted from traditional
+disposal to beneficial reuse.
+Wherever practical, HII implements
+recycling and reuse programs that
+conserve resources and reduce energy
+use and GHG emissions.
+46 2026 Sustainability Report
+Ingalls manages hazardous and non-hazardous waste under
+corporate EHS policies and federal regulations. The division
+conducts HazCom audits, HAZWOPER drills, and monitors
+chemical storage and disposal to ensure compliance. Wastestreams are tracked through the Hazardous Material Review
+Committee and industrial committees, while paint and
+chemical materials are reviewed to extend shelf life and
+reduce waste. Recycling efforts focus on minimizing hazardous
+waste shipments off-site, and reuse planning considers legacy
+projects to reinforce Ingalls’ commitment to sustainability and
+regulatory integrity.
+Mission Technologies integrates waste management into its
+site-level EHS surveillance programs, conducting audits and
+monitoring to identify opportunities for reuse and reduction.
+Small volumes of paint and solvents are processed on-site,
+with some repurposed for cement applications. Additionally,
+garnet blasting pilot programs reduce material shipping
+needs and improve containment, supporting both operational
+efficiency and environmental performance.
+Newport News recycles ferrous and non-ferrous metals
+as well as other materials, which reduces disposal
+volumes. These initiatives follow the Environmental Controls
+Manual, which governs hazardous waste tracking and
+resource conservation.
+Water Management
+47 2026 Sustainability Report
+Water is a critical resource for HII’s operations. Our
+approach emphasizes compliance with federal,
+state, and local regulations, operational efficiency,
+and proactive measures to reduce water-related
+risks. We focus on minimizing stormwater runoff,
+preventing contamination, and safeguarding water
+quality through targeted facility upgrades and
+process improvements. These efforts are reinforced by
+internal audits, site-level assessments, and continuous
+training to ensure accountability and alignment with
+ISO 14001 principles.
+Ingalls monitors water usage, runoff, and potential
+contamination, applying corporate EHS and ISO
+14001-aligned procedures. Ingalls also aligns water
+management practices with Command Media System
+guidance and regulatory requirements.
+Mission Technologies’ water management practices
+are included in site-level assessments and EHS
+surveillance visits. Any issues identified are documented,
+resolved in collaboration with site management, and
+reported in newsletters and dashboards.
+Newport News addresses stormwater runoff and
+other water management issues through operational
+updates and facility improvements. The division
+coordinates with corporate policies to maintain
+compliance with federal, state, and local water
+regulations.
+Hazardous Materials
+Managing hazardous materials safely is central to HII’s
+commitment to environmental responsibility and regulatory
+compliance. All material types follow military specifications,
+and any deviation requires prior approval from NAVSEA.
+Products undergo evaluation for worker exposure protection
+through industrial hygiene controls and for hazardous waste
+management. When feasible, less hazardous products
+that meet military specifications may be substituted. Strict
+federal, state, and local requirements are upheld, supported
+by HII’s Environmental Sustainability Policy and divisionspecific procedures. These practices are built into our EMS
+and strengthened through audits, monitoring, and ongoing
+improvement programs to reduce risk and protect our
+employees and communities.
+Hazardous material management includes controlled use,
+proper storage, and safe disposal, along with proactive
+steps like exposure monitoring and replacing hazardous
+substances with safer alternatives when possible. Compliance
+is reinforced through training, documented procedures, and
+internal and external audits.
+Ingalls manages hazardous chemicals through EHS audits,
+chemical labeling, HAZWOPER drills, and an in-house chemistry
+lab. Exposure monitoring and industrial hygiene assessments
+help maintain safe handling and compliance. Policies and
+procedures are maintained through the Command Media
+System, with updates reviewed annually or as needed. The
+Hazardous Material Review Committee reviews technical
+specifications for hazardous risk, and the division actively
+substitutes safer materials where possible to reduce
+regulatory and operational risk.
+48 2026 Sustainability Report
+Mission Technologies operates under controlled processes
+with limited exposure due to low-volume operations.
+Specialized paint booths and powder coating are managed
+under strict protocols, typically involving a single operator.
+Hazardous material exposure is monitored through site-level
+EHS programs, with findings shared with employees and
+corrective actions taken in line with corporate policy. When
+corrective actions go beyond immediate on-the-spot fixes,
+formal action plans are required under the Corrective Action
+Management program, which is integrated with Mission
+Technologies’ EHS policies, procedures, and QMS.
+Newport News uses controlled processes for hazardous
+materials, including painting and powder coating, under
+the Environmental Controls Manual and Health & Safety
+Manual. Local teams manage storage, handling, and disposal,
+with exposure controls and compliance checked through
+Industrial Hygiene assessments, process surveillance, EHS
+audits, and monitoring. Through our hazardous material
+approval process, alternative materials that meet Navy design
+and military specifications are evaluated to ensure worker
+exposure protection and proper waste management. Waste
+classification is determined and verified prior to material use
+and before off-site shipment to prevent compliance issues.
+Managing hazardous materials safely is
+central to HII’s commitment to environmental
+responsibility and regulatory compliance.
+49 2026 Sustainability Report
+Reducing GHG emissions, improving energy
+efficiency, deploying renewable energy, and
+optimizing fuel consumption.
+Managing GHG emissions and energy use is a
+core priority for HII, driven by our commitment
+to environmental responsibility and regulatory
+requirements. The company’s roadmap targets
+a 30% reduction in Scope 1 and 2 emissions from
+the 2022 baseline, with energy and emissions
+considerations built into enterprise risk discussions
+and long-term planning.
+Progress against the GHG and energy roadmap
+is reviewed and approved by the Board through
+regular reporting. The Audit Committee receives
+quarterly updates on energy and GHG performance,
+and the full Board is briefed annually on performance,
+risks, and emerging regulatory considerations.
+At the executive level, the CEO and the CSC set
+enterprise priorities for energy management and
+emissions reduction, while Division Presidents remain
+responsible for results within their operations.
+Divisions translate these priorities into sitelevel action. At Ingalls, an Energy Management
+Committee oversees energy initiatives, while the
+Hazardous Material Review Committee evaluates
+emissions-related risks. Mission Technologies
+manages energy and emissions across its dispersed
+footprint by standardizing data collection and
+advancing efficiency and electrification efforts. At
+Newport News, governance reflects the scale of
+shipyard operations: the Energy Team drives efficiency
+and electrification initiatives, Utilities Maintenance
+carries out infrastructure upgrades, and Risk
+Assessment and Compliance teams monitor energy
+supply and regulatory risks.
+Information on energy use, efficiency efforts,
+electrification projects, and Scope 1 and 2 emissions
+flows from the GHG/Energy SMT to the Divisional
+POCs to the CSC. The SMTs consolidate and review
+the data in alignment with the GHG Protocol and
+internal governance standards, with limited assurance
+applied to reported emissions. Energy and emissions
+metrics are reflected in executive dashboards and
+leadership incentive plans.
+Reduce Emissions by 30%
+Continue to action against our Scope 1 and 2
+GHG emissions reduction roadmap to exceed a
+30% aggregate reduction from our 2022 baseline
+GHG emissions.
+11%
+reduction in GHG emissions
+in operations compared to
+2022 baseline
+Commitment to Reducing Emissions
+We continue to take action against our Scope 1 and 2 GHG
+emissions reduction roadmap to exceed a 30% aggregate
+reduction from our 2022 baseline. We have estimated our
+2022 baseline of Scope 1 and 2 GHG emissions to be 348,236
+metric tons of CO2e.
+HII’s roadmap for GHG and energy management is built on
+three pillars: Electrification, Maximized Efficiencies, and Clean
+Energy Opportunities. Together, these pillars drive progress
+toward HII’s commitment to exceed a 30% reduction.
+Our GHG Reduction Roadmap
+50 2026 Sustainability Report
+Electrification
+Maximize Efficiencies
+Explore opportunities to replace
+technology and processes with
+electrically powered alternatives to
+reduce fossil fuel usage.
+Invest in new technology and
+products to reduce the amount
+of energy required to support
+the business.
+Fleet electrification | Building
+steam/natural gas (NG) heating
+replacement with heat pump
+technology | Aircraft carrier testing
+with electricity rather than steam
+Chill water and compressed air
+systems efficiency optimization |
+Emerging technologies integration |
+HVAC-lighting controls optimization |
+Lighting replacements to LED | Large
+building ventilation optimization
+Clean Energy Opportunities
+Continue partnerships with
+Dominion Energy that will enable
+us to purchase sustainable energy
+as Dominion installs new renewable
+generation resources to meet
+the Virginia Clean Economy
+Act regulation.
+Electrification
+Maximized Efficiencies
+Clean Energy Opportunities
+Replacing fossil fuel-based processes with electrically
+powered alternatives:
+Reducing energy consumption through advanced
+technologies and operational improvements:
+Sourcing energy from renewable and sustainable
+sources through strategic partnerships and planning:
+• Ingalls has invested approximately $40 million to
+electrify power delivery for ship testing, which will
+reduce reliance on diesel generators and avoid
+significant emissions over time. The division is also
+upgrading its dock voltage through the electrification
+of fossil fuel processes, which has led to improved
+reliability and minimized distribution losses and
+supports sub-metering implementation.
+• Ingalls monitors utility use monthly to identify
+anomalies, is modernizing its fleet for fuel efficiency,
+and conducts annual energy innovation projects to
+identify opportunities for optimization.
+• Ingalls participates in a 10-year, 25 MW solar
+subscription with Mississippi Power and is exploring
+other solar-farm partnerships.
+• Mission Technologies continues to identify
+opportunities to implement electrification during
+lease renewals where infrastructure supports these
+upgrades and continues to evaluate opportunities to
+reduce reliance on natural gas.
+• Newport News is continuing to identify opportunities
+to reduce the consumption of electricity through
+innovative ideas from their energy savings team.
+The division is also continuing to replace aging
+facilities with new, more energy-efficient facilities.
+Levers to
+Achieving
+Goals
+• Newport News is deploying AI-enabled tools to sort
+through SAP maintenance tickets and tabulate how
+many repairs we are making to our compressed air
+system to help us to quantify energy savings. Newport
+News continues to use smart controls to optimize
+industrial ventilation and compressed air system
+controls. These efforts are complemented by ongoing
+LED lighting conversions and HVAC upgrades.
+Green energy opportunities
+51
+• Mission Technologies is strengthening operational
+efficiency through centralized utility-billing reviews
+and tracking across all offices and field shops,
+supported by finance-led audits to ensure data
+quality. The division implements incremental
+upgrades to office technologies as opportunities
+arise and works closely with landlords to improve
+energy performance in leased spaces.
+Energy efficiencies
+• Mission Technologies actively reviews facilities
+to identify opportunities to phase out natural
+gas, leverages regional renewable grid energy
+where available, and integrates clean energy
+considerations into real estate planning.
+• Newport News is positioned to benefit from Virginia’s
+renewable energy transition and is integrating risk
+assessments into energy supply planning.
+Together, these pillars drive progress
+toward HII’s commitment to exceed
+a 30% reduction.
+Emerging technologies
+Strategic capital planning
+Sustainable fuels
+Awareness & fuels
+Climate Transition Plan
+Managing Emissions in Our Value Chain
+HII developed its Climate Transition Plan through a
+structured, operations-focused assessment designed
+to translate emissions data into practical engineering
+and facility actions. The approach began with a
+detailed enterprise GHG inventory and site‑level
+emissions analysis to identify operational hotspots
+across HII shipyards and support facilities, followed
+by evaluation of reduction opportunities through
+engineering review, technology feasibility screening,
+and cost and reliability considerations. Crossfunctional teams assessed options such as equipment
+modernization, process efficiency improvements,
+targeted electrification, and lower-emission energy
+sourcing, prioritizing measures that maintain mission
+readiness and operational performance while reducing
+emissions intensity. This disciplined process produced
+a sequenced implementation roadmap and prioritized
+project portfolio that is already delivering measurable
+emissions reductions compared to the baseline year,
+demonstrating that operational and infrastructure
+decisions can advance both performance and
+climate objectives.
+While HII’s current roadmap focuses primarily on
+reducing emissions within its direct operations,
+HII recognizes the broader impact of its products
+and supply chain on GHG emissions. Customer
+requirements for fuel efficiency increasingly shape our
+design and engineering decisions, as fuel efficiency
+directly enhances operational endurance. Our naval
+platforms with propulsion systems are capable of
+sustaining operations for 60 days, and our nuclearpowered vessels require refueling only after 25 years.
+The advantage of a nuclear-powered vessel is a
+nuclear propulsion system that uses zero fossil fuels to
+propel the platform and power electrical, steam, and
+cooling systems. These capabilities not only deliver
+operational benefits to our customers but also reduce
+lifecycle emissions.
+See the full report for additional detail on
+methodology, assumptions, and results here.
+52 2026 Sustainability Report
+For example, the combined diesel and gas turbine
+hybrid propulsion in the LHA 6 America-class reduces
+fuel use by roughly 25,000 gallons per day compared
+to the LHD 1 Wasp-class, cutting an estimated 18 million
+metric tons of GHG emissions over the ship’s service
+life. Nuclear-powered carriers, such as the CVN 78
+Ford-class, eliminate direct propulsion emissions,
+avoiding millions of tons of GHG over 50 years. In
+addition, nuclear propulsion supplies onboard electrical,
+steam, and cooling needs without fossil fuels, further
+limiting operational emissions on those platforms.
+Beyond propulsion, HII integrates energy efficiency into
+ship design and facilities. Next-generation weapons
+and sensor systems increase electrical and thermal
+demands, which engineers address through highefficiency fuel-to-energy conversion, optimized gas
+turbines, and advanced system components. At
+Newport News, converting the Nancy Lee Floating
+Test Steam Facility from fuel oil to natural gas
+reduces particulate matter by 37 tons, sulfur dioxide
+by 500 tons, nitrogen oxides by 100 tons, and CO₂ by
+16,000 tons per Refueling Complex Overhaul cycle.
+These engineering choices are intentional: they meet
+customer endurance requirements while lowering fuel
+intensity across classes and deployments.
+This year, HII completed a preliminary Scope 3
+emissions screening to identify emissions hotspots
+across its value chain, marking an important step
+toward expanding GHG management beyond direct
+operations. This screening provides insight into where
+the most significant impacts occur and lays out the
+groundwork for a comprehensive Scope 3 inventory.
+Using the Greenhouse Gas Protocol, HII will define and
+prioritize Scope 3 categories for future reporting.
+Downstream activities, driven by the number of
+products delivered, are expected to represent the
+largest variability in annual emissions. Recognizing this
+dynamic, HII plans to conduct a full Scope 3 inventory
+next year and intends to disclose material categories
+in future reporting cycles. These efforts will inform
+supplier engagement strategies, investment decisions,
+and long-term sustainability planning.
+Performance Data Table
+GRI Index
+SASB Index
+53 2026 Sustainability Report
+Disclosures
+PERFORMANCE DATA TABLE1
+Metric
+2024
+2025
+HII
+HII
+Progress
+against
+2024
+% of employees that
+completed anticorruption training
+Percentage
+N/A
+90%
+90%
+0%
+% of operations
+that underwent
+corruption risk
+assessments
+Percentage
+N/A
+0%
+# of “On-the-Spot”
+Ethics Awards
+presented to
+Number
+266
+194
+-27%
+54 2026 Sustainability Report
+Unit
+2023
+Unless stated otherwise, the data disclosed in these tables include Ingalls Shipbuilding, Mission Technologies, and Newport News Shipbuilding information. Figures may differ slightly due to rounding.
+HII continues to improve its reporting transparency, with several metrics being disclosed for the first time in this year’s report. As a result, not all metrics are available historically and/or across all
+divisions. Where data is not available, metrics have been recorded as N/A.
+Metric
+2023
+Unit
+Progress
+against
+2025
+Ingalls
+MT
+NNS
+Ingalls
+MT
+NNS
+Site Certifications
+# of sites ISO 9001
+certified2
+Number
+24
+26
+25
+27
+18
+20
+-26%
+# of sites ISO 14000
+certified
+0
+# of sites ISO 17025
+certified
+# of sites ISO 45001
+# of sites CMMI
+ML 3 certified
+# of sites CMMI
+ML 5 certified
+300%
+# of sites AS9100D
+certified3
+-14%
+# of sites NAVSEA
+Metrology certified
+# of sites AMPP
+SSPC-QP1 Paint
+# of sites certified
+by the state of
+Virginia/Mississippi
+and NRC for use
+and storage of
+radiological sources4
+55 2026 Sustainability Report
+MT’s decision to reduce the number of certifications is a result of combining registered sites to leverage existing QMS infrastructure.
+MT’s decision to reduce site certifications was based on a cost-benefit analysis, as the client had not required certification. In the absence of the certification, QMS processes are still maintained.
+2023 and 2024 site certifications for NNS have been updated from previous reporting years. All site locations in the shipyard are covered under one license.
+Ratings
+Work Package
+Acceptance Rate5
+97%
+99%
+98%
+98%
+99%
+93%
+97%
+96%
+-2%
+Process Inspection
+Acceptance Rate6
+93%
+92%
+92%
+95%
+94%
+95%
+Procedural
+Acceptance Rate7
+91%
+94%
+96%
+81%
+-4%
+Average Supplier
+Quality Rating for
+All Suppliers8
+82%
+-6%
+Average Supplier
+Quality Rating for
+Critical Suppliers
+1%
+15.41
+11.10
+34.5
+Investment Associated with Independent Research and Development (IR&D) and Manufacturing and Production Engineering (M&PE)
+IR&D and M&PE9
+56 2026 Sustainability Report
+M USD
+3.81
+Ingalls reports a general measure of completed work quality performance. MT reports this metric for UxS only, calculated as the percentage of Manufacturing Orders passing in‑process quality
+inspection on first pass. NNS reports an index composed of multiple IPPC Work Package Quality metrics (including PLOG Quality Rate and WP Quality metrics), with a maximum score of 15.
+Ingalls reports a general measure of completed work quality performance. MT reports UxS receiving inspection acceptance rates for bought parts, with data collection still being standardized
+across sites. NNS reports a measure based on unsatisfactory non‑nuclear inspections performed by X67.
+Ingalls completes Internal Quality System Reviews annually. MT aggregates results from Internal Quality System Reviews, ISO 9001 internal audits, PX reviews, and Program Management Review
+compliance metrics. NNS reports compliance based on surveillances performed by K93.
+Ingalls and NNS report an average outcome of established annual supplier performance assessment processes. MT reports a UxS‑only metric focused on high‑volume suppliers categorized as
+Red due to quality or on‑time performance, and does not include all suppliers. Metric frequency for MT will transition from annual to quarterly beginning in 2026.
+HII value includes an additional $4.2m USD of corporate-sponsored IR&D.
+Supply Chain Management10
+Number of
+suppliers11
+1,710
+2,350
+1,612
+5,672
+1,570
+2,658
+1,731
+5,959
+1,337
+3,368
+1,894
+6,599
+11%
+% of suppliers
+completing annual
+self-attestation12
+100%
+46%
+54%
+67%
+-33%
+Number of supplier
+events attended
+60
+71
+14
+43
+66
+49
+67
+2%
+Number of mass
+distribution
+communications
+sent to suppliers
+20
+23
+28
+24
+31
+% of suppliers that
+are incorporated in
+the United States
+% of suppliers that
+are incorporated
+in the same state
+as the operational
+facility procuring the
+material/supplies.
+25%
+25%
+57 2026 Sustainability Report
+Ingalls reports supplier data from November 1 of the previous year through October 31 of the current year.
+The definition of “supplier” and data source varies by division. Ingalls and NNS report the total number of authorized suppliers as of a point in time, which may fluctuate as suppliers expire or are reinstated.
+NNS excludes federal and state suppliers with indefinite expiration dates. MT reports suppliers based on an A/P Cognos report reflecting suppliers receiving payments during the reporting year, rather than
+authorized suppliers at a point in time.
+Ingalls reports the percentage of suppliers identified as handling CUI/CDI that completed annual self‑attestation, excluding DFARS 7021 due to timing of publication. MT reports responses from suppliers
+requesting CUI sharing. NNS calculates the percentage based on authorized suppliers self‑attesting to applicable FAR, NIST, or CMMC levels, counting each supplier once at the highest level attained and
+excluding federal and state entities. The methodology reflects evolving regulatory requirements and is expected to change as CMMC and SPRS requirements mature.
+Workforce
+Total workforce
+44,473
+44,467
+43,799
+-2%
+# of employees
+that are veterans
+6,500
+6,900
+6%
+Employees covered
+by collective
+bargaining
+agreement
+45%
+45%
+# employees hired
+8,000
+# employees hired
+from Skillbridge
+program
+Full-time employees
+with access to
+benefits
+Monetary
+incentive for the
+management of
+environmental
+issues13
+10%
+10%
+Employee Benefits
+% of employees that
+received training
+13
+58 2026 Sustainability Report
+See the proxy statement for more information.
+Total charitable
+investments
+M USD
+7.2
+6.0
+6.01
+Total charitable
+investments
+invested into
+programs
+3.48
+2.99
+3.24
+8%
+invested into
+education programs
+2.74
+2.44
+2.18
+-11%
+% of total charitable
+investments spent
+on education14
+38%
+41%
+36%
+-11%
+military and veteran
+support programs
+0.98
+5.65
+0.6
+-89%
+Meals provided
+187,311
+368,402
+Total employees
+to participate
+in volunteer
+opportunities
+1,962
+1,885
+1.727
+-8%
+59 2026 Sustainability Report
+Totals fluctuate from year to year based on requests received for support, with our corporate citizenship teams responding to the greatest needs within the year.
+Employee Heath and Safety
+Safety Reporting
+Number of workrelated incidents
+737
+48
+1,381
+2,166
+740
+36
+1,307
+2,083
+629
+28
+1,311
+1,968
+-6%
+Number of near
+miss reports15
+19
+206
+225
+16
+226
+242
+96
+110
+-55%
+Accident
+Frequency Rate
+32%
+Lost Day
+Incident Rate
+3%
+1%
+4%
+4%
+2%
+4.0%
+-14%
+Fatalities
+Number of Health
+and Safety training
+courses available
+2,913
+2,944
+21
+2,832
+2,872
+47
+3,002
+3,070
+7%
+Number of Health
+and Safety training
+hours completed by
+the entire workforce
+98,938
+7,231
+1,655,120
+1,761,289
+99,050
+7,235
+1,727,271
+1,833,556
+1,309,568
+7,356
+1,310,698
+2,627,622
+43%
+courses specific to
+new hires
+30%
+courses available to
+front-line supervision
+1,567
+1,580
+1,414
+1,436
+47
+1,464
+1,532
+7%
+Safety Training
+15
+60 2026 Sustainability Report
+Ingalls classifies a near miss as a hazard recognition program under which employees are encouraged to report unsafe conditions or people doing at-risk behaviors. Ingalls’ inclusion of the recorded number
+would not be comparable to the number disclosed by Mission Technologies and Newport News Shipbuilding due to dissimilar criteria for reporting.
+Waste and Water
+Total hazardous
+waste generated
+Metric tons
+273
+273
+359
+320
+679
+404
+256
+660
+-3%
+Total water
+discharged to fresh
+surface water,
+including rainwater,
+water from
+wetlands, rivers,
+and lakes
+Megaliters
+3,771
+3,771
+4,194
+1,921
+6,115
+3,778
+1,799
+5,577
+-9%
+Total water
+discharged to
+brackish surface
+water/seawater
+Megaliters
+5,338
+5,338
+6,941
+6,941
+30%
+discharged
+to renewable
+groundwater
+500
+500
+514
+514
+517
+517
+discharged to
+third‑party sources
+1,439
+1,439
+1,001
+1,001
+-30%
+Number of
+reportable spills
+Metric tons
+Quantity of
+61
+GHG Emissions16
+Scope 1
+CO2e
+20,117
+1,250
+63,013
+84,380
+20,173
+1,434
+59,341
+80,948
+20,625
+1,588
+71,367
+93,580
+16%
+Scope 2
+(location based)
+CO2e
+83,448
+10,888
+134,759
+229,095
+77,759
+9,832
+122,692
+210,283
+77,743
+9,547
+127,883
+215,173
+Scope 2
+(market based)
+83,976
+11,220
+124,666
+219,862
+83,065
+10,474
+119,775
+213,314
+78,753
+9,658
+122,901
+211,312
+-1%
+Energy Use
+Total energy
+consumed17
+Gigajoules
+1,039,878
+148,869
+2,884,389
+4,073,136
+1,031,695
+142,009
+2,749,685
+3,923,389
+1,035,763
+146,994
+3,032,839
+4,215,595
+Total nonrenewable energy
+consumed
+Gigajoules
+1,039,878
+148,869
+2,884,389
+4,073,136
+1,031,695
+142,009
+2,749,685
+3,923,389
+1,035,763
+146,994
+3,032,839
+4,215,595
+Total renewable
+energy consumed
+Total fuel consumed18
+309,183
+20,633
+1,175,426
+1,505,242
+306,610
+23,955
+1,108,178
+1,438,743
+311,025
+27,412
+1,321,761
+1,660,198
+15%
+Total non—
+renewable fuel
+consumed
+309,183
+20,633
+1,175,426
+1,505,242
+306,610
+23,955
+1,108,178
+1,438,743
+311,025
+27,412
+1,321,761
+1,660,198
+15%
+This Report includes Scope 1 and 2 location-based and market-based emissions, calculated in alignment with the GHG Protocol. GHG emissions in this Report include, but are not limited to, emissions from
+electricity and fuel consumption — carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O) — as well as emissions from hydrofluorocarbons (HFCs) from fugitive emissions of refrigerants used in HVAC
+systems. Emissions from perfluorocarbons (PFCs), and/or nitrogen trifluoride (NF3) are not included in this quantification, as the Company has deemed these GHGs to be not material to the Company’s
+operations.
+Refer to Huntington Ingalls Industries, Inc. 2025 GHG Emissions Report for general assumptions and methodology used to calculate and report Scope 1 and Scope 2 emissions.
+The increase year over year in total emissions is being driven by the addition of Charleston operations at Newport News Shipbuilding and lifecycle operations changes in NNS’ Nancy Lee test steaming facility
+(steaming in 2025 in support of NNS’ CVN 74 RCOH)
+62 2026 Sustainability Report
+17
+Includes Scope 1 (Natural Gas, Diesel, Propane, Gasoline, and Cutting Fuel) and Scope 2 (Grid Electricity).
+Includes Natural Gas, Diesel, Propane, Gasoline, Fuel Cutting.
+63 2026 Sustainability Report
+Energy Use (continued)
+Total renewable
+fuel consumed
+–
+–
+Grid electricity
+consumption
+730,695
+128,237
+1,708,963
+2,567,895
+725,085
+118,054
+1,641,508
+2,484,647
+724,738
+119,582
+1,711,077
+2,555,397
+GRI INDEX18
+DISCLOSURES
+ANSWER, CROSS-REFERENCE, OMISSIONS, AND EXPLANATIONS
+GRI 2-1
+Organizational details
+About the Report; Sustainability at HII; About HII
+GRI 2-2
+Entities included in the organization’s sustainability reporting
+About the Report
+GRI 2-3
+Reporting period, frequency, and contact point
+About the Report; Sustainability at HII; About HII
+GRI 2-4
+Restatements of information
+Not applicable
+GRI 2-5
+External assurance
+Refer to Huntington Ingalls Industries, Inc. 2025 Greenhouse Gas (GHG) Emissions Report for external
+assurance conducted over Scope 1 and Scope 2 emissions.
+GRI 2-6
+Activities, value chain, and other business relationships
+About HII; Ethics and Compliance; Product Quality and Safety; Supply Chain Management
+GRI 2-7
+2025 10-K (pg. 7)
+GRI 2-8
+Workers who are not employees
+Not applicable
+GRI 2-9
+Governance structure and composition
+Sustainability at HII; How We Manage and Govern; Governance Responsibilities at a Glance
+GRI 2-10
+Nomination and selection of the highest governance body
+2026 Proxy Statement
+GRI 2-11
+Chair of the highest governance body
+The Board has a non-executive Chairman.
+GRI 2-12
+Role of the highest governance body in overseeing the
+management of impacts
+2026 Proxy Statement
+GRI 2-13
+Delegation of responsibility for managing impacts
+How We Manage and Govern; Governance Responsibilities at a Glance
+GRI 2-14
+Role of the highest governance body in sustainability reporting
+How We Manage and Govern
+GRI 2-15
+Conflicts of interest
+GRI 2-16
+Communication of critical concerns
+HII Code of Ethics and Business Conduct
+GRI 2-17
+Collective knowledge of the highest governance body
+GRI STANDARD
+General Disclosures
+64 2026 Sustainability Report
+Huntington Ingalls Industries, Inc. has reported the information cited in this GRI content index for the period January 1, 2025 through December 31, 2025, with reference to the GRI Standards.
+GRI 1: Foundation 2021.
+GRI STANDARD
+ANSWER, CROSS-REFERENCE, OMISSIONS, AND EXPLANATIONS
+GRI 2-18
+Evolution of the performance of the highest governance body
+GRI 2-19
+Remuneration policies
+GRI 2-20
+Process to determine remuneration
+GRI 2-21
+Annual total compensation ration
+Strategy, Policies, and Practices
+GRI 2-22
+Statement of sustainable development strategy
+Sustainability at HII; Our Approach
+GRI 2-23
+Policy commitments
+HII Code of Ethics and Business Conduct; Policy commitments generally apply to all organizational
+activities and business relationships. Policy commitments are communicated to workers, business
+partners and other relevant parties via electronic communications, in writing, and through formal and
+informal oral communications.
+GRI 2-24
+Embedding policy commitments
+Section 1: Securing Our Business
+GRI 2-25
+Process to remediate negative impacts
+GRI 2-26
+Mechanisms for seeking advice and raising concerns
+Ethics and Compliance – Ethics & Compliance in HII Operations; Supply Chain Management – Governance;
+HII Code of Ethics and Business Conduct
+GRI 2-27
+Compliance with laws and regulations
+HII adheres to all legal and regulatory requirements. Any significant non-compliance incidents would be
+reported in our 2025 10-K.
+GRI 2-28
+Membership associations
+2025 10-K (pg. 7)
+Stakeholder Engagement
+GRI 2-29
+Approach to stakeholder engagement
+Sustainability at HII; Our Approach
+GRI 2-30
+Collective bargaining agreements
+GRI Material Topics (2021)
+65 2026 Sustainability Report
+GRI 3-1
+Process to determine material topics
+Sustainability at HII; Our Approach
+GRI 3-2
+List of material topics
+Sustainability at HII; Our Approach
+GRI 3-2
+Management of material topics
+Sustainability at HII; Our Approach
+ANSWER, CROSS-REFERENCE, OMISSIONS, AND EXPLANATIONS
+Section 1: Securing Our Business
+GRI 205: Anti-Corruption (2016)
+GRI 205-1
+Operations assessed for risks related to corruption
+Ethics and Compliance – Ethics & Compliance in HII Operations
+GRI 205-2
+Communication and training about anti-corruption policies
+and procedures
+Ethics and Compliance – Ethics & Compliance in HII Operations
+GRI 205-3
+Confirmed incidents of corruption and actions taken
+Ethics and Compliance – Ethics & Compliance in HII Operations
+GRI 408: Child Labor (2016)
+GRI 408-1
+Operations and suppliers at significant risk for incidents
+of child labor
+Human Rights – Ethics & Compliance in HII Operations; Supply Chain Management – Governance; HII Code
+of Ethics and Business Conduct
+All human beings should be treated with dignity and respect. Conduct that is specifically prohibited or
+restricted by applicable laws, regulations, and policies, such as the use of child labor and trafficking in
+humans, should be reported to the Law Department immediately.
+GRI 412: Human Rights (2016)
+GRI 412-2
+Employee training on human rights policies or procedures
+Ethics and Compliance; Supply Chain Management; HII Code of Ethics and Business Conduct
+GRI 415: Public Policy (2016)
+GRI 415-1
+Political contributions
+Lobbying and Political Activities; Political Engagement Disclosure
+GRI 204: Procurement Practices (2016)
+GRI 204-1
+Proportion of spending on local suppliers
+Performance Data Table – Supplier Chain Management
+Section 2: Building Our Community
+GRI 401: Employment (2016)
+66 2026 Sustainability Report
+GRI 401-1
+New employee hires and employee turnover
+Employee Engagement and Benefits; Performance Data Table
+GRI 401-2
+Benefits provided to full-time employees that are not provided to
+temporary or part-time employees
+Employee Engagement and Benefits; Performance Data Table– Employee Benefits
+GRI 401-3
+Parental leave
+ANSWER, CROSS-REFERENCE, OMISSIONS, AND EXPLANATIONS
+GRI 404: Training and Education (2016)
+GRI 404-1
+Average hours of training per year per employee
+Employee Engagement; Performance Data Table – Safety Training
+GRI 404-2
+Programs for upgrading employee skills and transition
+assistance programs
+Employee Engagement; Performance Data Table – Safety Training
+GRI 404-3
+Percentage of employees receiving regular performance and
+career development reviews
+Employee Engagement; Performance Data Table
+GRI 405: Diversity and Equal Opportunity (2016)
+67 2026 Sustainability Report
+GRI 405-1
+Diversity of governance bodies and employees
+2026 Proxy Statement; Performance Data Table – Workforce
+GRI 405-2
+Ratio of basic salary and remuneration of women to men
+GRI 413: Local Communities (2016)
+GRI 413-1
+Operations with local community engagement, impact
+assessments, and development programs
+GRI 403: Occupational Health and Safety (2018)
+GRI 403-1
+Occupational health and safety management system
+Employee Health and Safety; 2025 10-K (pg. 9)
+GRI 403-2
+Hazard identification, risk assessment, and incident investigation
+GRI 403-3
+Occupational health services
+GRI 403-4
+Worker participation, consultation, and communication on
+occupational health and safety
+GRI 403-5
+Worker training on occupational health and safety
+GRI 403-6
+Promotion of worker health
+Employee Health and Safety; 2025 10-K (pg. 9)
+GRI 403-7
+Prevention and mitigation of occupational health and safety
+impacts linked by business relationships
+Employee Health and Safety; 2025 10-K (pg. 9)
+GRI 403-8
+Workers covered by an occupational health and safety
+management system
+Employee Health and Safety; 2025 10-K (pg. 9)
+GRI 403-9
+Work-related injuries
+Employee Health and Safety; 2025 10-K (pg. 9)
+68 2026 Sustainability Report
+ANSWER, CROSS-REFERENCE, OMISSIONS, AND EXPLANATIONS
+Section 3: Protecting Our Resources
+GRI 302: Energy (2016)
+GRI 302-1
+Energy consumption within the organization
+Performance Data Table – Energy Use
+GRI 302-3
+Energy intensity
+GRI 305: Emissions (2016)
+GRI 305-1
+Direct (Scope 1) GHG emissions
+Performance Data Table – GHG Emissions
+GRI 305-2
+Energy indirect (Scope 2) GHG emissions
+Performance Data Table – GHG Emissions
+GRI 305-4
+GHG emissions intensity
+GRI 305-5
+Reduction of GHG emissions
+Performance Data Table – GHG & Energy Management
+GRI 306-1
+Waste generation and significant waste-related impacts
+Environmental Compliance; Performance Data Table
+GRI 306-2
+Management of significant waste-related impacts
+Environmental Compliance; Performance Data Table
+GRI 306-3
+Performance Data Table – Waste
+GRI 306-5
+Waste directed to disposal
+Performance Data Table – Waste
+GRI 306: Waste (2020)
+SUSTAINABILITY ACCOUNTING STANDARDS BOARD (SASB) INDEX
+Aerospace & Defense Standard
+SASB STANDARD
+ANSWER, CROSS-REFERENCE, OMISSIONS AND EXPLANATIONS
+RT-AE-130a.1
+(1) Total energy consumed
+(2) Percentage grid electricity
+(3) Percentage renewable
+(1) Performance Data Table – Energy Use
+(2) Performance Data Table – Energy Use
+(3) Performance Data Table – Energy Use
+RT-AE-150a.1
+(1) Amount of hazardous waste generated
+(2) Percentage recycled
+(1) Performance Data Table
+RT-AE-150a.2
+(1) Number and aggregate quantity of reportable spills
+(2) Quantity recovered
+(1) Performance Data Table
+(2) Zero quantities recovered and long-term remediation activities.
+RT-AE-230a.1
+(1) Number of data breaches
+(2) Percentage involving confidential information
+Huntington Ingalls Industries considers this information to be confidential.
+RT-AE-230a.2
+Description of approach to identifying and addressing data
+security risks in (1) entity operations and (2) products
+Cybersecurity; 2025 10-K (pg. 11)
+RT-AE-250a.1
+Number of recalls issued; total units recalled
+(1) Zero product-related safety recalls issued
+(2) Zero total number of units recalled during the reporting period
+(3) Zero voluntary recalls and 0% involuntary recalls issued
+RT-AE-250a.2
+Number of counterfeit parts detected; percentage avoided
+Huntington Ingalls Industries considers this information to be confidential.
+RT-AE-250a.3
+Number of Airworthiness Directives received, total units affected
+RT-AE-250a.4
+Total amount of monetary losses as a result of legal proceedings
+associated with product safety
+RT-AE-410a.1
+Revenue from alternating energy-related products
+About HII; GHG & Energy Management – Managing Emissions and GHG in Our Value Chain
+RT-AE-410a.2
+Description of approach and discussion of strategy to address
+fuel economy and GHG emissions of products
+Environmental Management – Environmental Compliance; GHG & Energy Management – Managing
+Emissions and GHG in Our Value Chain; Huntington Ingalls Industries, Inc. 2025 GHG Emissions Report
+RT-AE-440a.1
+Description of the management of risks associated with the use
+of critical materials
+Ethical Conduct in Our Supply Chain
+RT-AE-510a.1
+Total amount of monetary losses as a result of legal proceedings
+associated with incidents of corruption, bribery, and/or illicit
+international trade
+Huntington Ingalls Industries considers this information to be confidential.
+69 2026 Sustainability Report
+SASB STANDARD
+ANSWER, CROSS-REFERENCE, OMISSIONS AND EXPLANATIONS
+RT-AE-510a.2
+Revenue from countries ranked in the “E” or “F” Band
+of Transparency International’s Governance Defense
+Anti‑Corruption Index
+Huntington Ingalls Industries considers this information to be confidential.
+RT-AE-510a.3
+Discussion of processes to manage business ethics risks
+throughout the value chain
+Ethics & Compliance in HII Operations; Supply Chain Management – Governance;
+HII’s Supplier Code of Conduct
+RT-AE-000.A
+Production by reportable segment
+RT-AE-000.B
+Number of employees
+An Earth-positive economy is possible, now and in the future.
+In 2025, we disclosed our environmental data through @‌CDP, meaning we have
+joined thousands of companies, public authorities, small and medium-sized
+enterprises, cities, states, and regions around the world who are committed to
+transparency and sustainability.
+Now more than ever, all organizations need to measure and understand their
+environmental impacts, surfacing the data that helps them make smarter decisions
+for people, planet, and profit.
+70 2026 Sustainability Report
+Cautionary Statement Regarding Forward-Looking Statements:
+Statements in this Sustainability Report and in our other information relating to HII’s sustainability commitments, objectives, plans, expectations, performance, and data, constitute “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995. In some
+cases, you can identify forward-looking statements by words such as “may,” “will,” “should,” “expects,” “intends,” “plans,” “anticipates,” “believes,” “estimates,” “guidance,” “outlook,” “predicts,” “potential,” “continue,” and similar words or phrases or the negative of these words or phrases. These
+statements relate to future events or our future financial performance and involve known and unknown risks, uncertainties, and other factors that may cause our actual results, levels of activity, performance, or achievements to be materially different from any future results, levels of activity,
+performance, or achievements expressed or implied by these forward-looking statements. Although we believe the expectations reflected in the forward-looking statements are reasonable when made, we cannot guarantee future results, levels of activity, performance, or achievements.
+There are a number of important factors that could cause our actual results to differ materially from the results anticipated by our forward-looking statements, which include, but are not limited to, our dependence on the U.S. Government for substantially all of our business; significant delays or
+reductions in appropriations for our programs and/or changes in customer priorities and requirements (including government budgetary constraints, shifts in defense spending, and changes in customer short-range and long-range plans); our ability to estimate our future contract costs, including
+cost increases due to inflation, labor challenges, changes in trade policy, or other factors and our efforts to recover or offset such costs and/or changes in estimated contract costs, and perform our contracts effectively; changes in business practices, procurement processes, and government
+regulations and our ability to comply with such requirements; adverse economic conditions in the United States and globally; our level of indebtedness and ability to service our indebtedness; our ability to deliver our products and services at an affordable lifecycle cost and compete within our
+markets; our ability to attract, retain, and train a qualified workforce; subcontractor and supplier performance and the availability and pricing of raw materials and components; our ability to execute our strategic plan, including with respect to share repurchases, dividends, capital expenditures,
+and strategic acquisitions; investigations, claims, disputes, enforcement actions, litigation (including criminal, civil, and administrative), and/or other legal proceedings, and improper conduct of employees, agents, subcontractors, suppliers, business partners, or joint ventures in which we participate,
+Mission. Values. Purpose.
+including the impact on our reputation or ability to do business; changes in key estimates and assumptions regarding our pension and retiree health care costs; security threats, including cybersecurity threats, and related disruptions; natural and environmental disasters and political instability;
+health epidemics, pandemics, and similar outbreaks; and other risk factors discussed herein and in our other reports. There may be other risks and uncertainties that we are unable to predict at this time or that we currently do not expect to have a material adverse effect on our business, and
+we undertake no obligation to update or revise any forward-looking statements. You should not place undue reliance on any forward-looking statements that we may make.

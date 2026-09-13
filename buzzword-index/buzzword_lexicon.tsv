@@ -1,0 +1,253 @@
+label	tier	weight	pattern	syntax
+our journey	peacock	1.0	(?:our|the|this) (?:sustainability |ESG |climate |decarbonisation |decarbonization )?journey	regex
+holistic	peacock	1.0	holistic(?:ally)?	regex
+best-in-class	peacock	1.0	best[- ]in[- ]class	regex
+world-class	peacock	1.0	world[- ]class	regex
+industry-leading	peacock	1.0	industry[- ]leading	regex
+market-leading	peacock	1.0	market[- ]leading	regex
+cutting-edge	peacock	1.0	cutting[- ]edge	regex
+state-of-the-art	peacock	1.0	state[- ]of[- ]the[- ]art	regex
+thought leadership	peacock	1.0	thought leader(?:ship)?	regex
+purpose-driven	peacock	1.0	purpose[- ](?:driven|led)	regex
+mission-driven	peacock	1.0	mission[- ](?:driven|led)	regex
+values-driven	peacock	1.0	values[- ](?:driven|led)	regex
+people-first	peacock	1.0	people[- ]first	regex
+north star	peacock	1.0	north star	regex
+moonshot	peacock	1.0	moonshot	regex
+game-changing	peacock	1.0	game[- ]chang(?:er|ing)	regex
+transformative	peacock	1.0	transformat(?:ive|ional)	regex
+paradigm shift	peacock	1.0	paradigm shift	regex
+sea change	peacock	1.0	sea change	regex
+step change	peacock	1.0	step change	regex
+quantum leap	peacock	1.0	quantum leap	regex
+in our DNA	peacock	1.0	in our DNA	regex
+passionate	peacock	1.0	passionate(?:ly)?	regex
+deeply committed	peacock	1.0	deeply committed	regex
+unwavering	peacock	1.0	unwavering(?:ly)?	regex
+relentless	peacock	1.0	relentless(?:ly)?	regex
+tireless	peacock	1.0	tireless(?:ly)?	regex
+we are proud	peacock	1.0	(?:we are|we're|I am|I'm) (?:incredibly |immensely |especially |particularly |truly |so )?proud	regex
+proud to	peacock	1.0	proud to	regex
+thrilled to	peacock	1.0	(?:excited|thrilled|delighted) to	regex
+meaningful impact	peacock	1.0	meaningful (?:impact|change|progress|difference)	regex
+make a difference	peacock	1.0	make a (?:real )?difference	regex
+doing well by doing good	peacock	1.0	doing well by doing good	regex
+doing the right thing	peacock	1.0	do(?:ing)? the right thing	regex
+force for good	peacock	1.0	force for good	regex
+a brighter future	peacock	1.0	(?:a )?(?:better|brighter|greener|cleaner|more sustainable) (?:tomorrow|future|world|planet)	regex
+future generations	peacock	1.0	(?:for )?(?:future|the next) generations?	regex
+generations to come	peacock	1.0	generations to come	regex
+leave the world better	peacock	1.0	leave the (?:world|planet) better	regex
+people and planet	peacock	1.0	people(?:,| and)? planet(?:,? and profit)?	regex
+triple bottom line	peacock	1.0	triple bottom line	regex
+win-win	peacock	1.0	win[- ]win	regex
+low-hanging fruit	peacock	1.0	low[- ]hanging fruit	regex
+move the needle	peacock	1.0	move the needle	regex
+raise the bar	peacock	1.0	rais(?:e|ing|ed) the bar	regex
+push the envelope	peacock	1.0	push(?:ing)? the envelope	regex
+limitless	peacock	1.0	(?:boundless|limitless|endless possibilit(?:y|ies))	regex
+at the heart of	peacock	1.0	at the heart of	regex
+deeply rooted	peacock	1.0	deeply (?:rooted|embedded|ingrained)	regex
+cornerstone	peacock	1.0	cornerstone	regex
+bedrock	peacock	1.0	bedrock	regex
+lifeblood	peacock	1.0	lifeblood	regex
+beacon	peacock	1.0	beacon	regex
+catalyst for change	peacock	1.0	catalyst for change	regex
+agent of change	peacock	1.0	agents? of change	regex
+changemaker	peacock	1.0	changemakers?	regex
+trailblazing	peacock	1.0	trailblaz(?:er|ers|ing)	regex
+pioneering	peacock	1.0	pioneer(?:s|ed|ing)?	regex
+visionary	peacock	1.0	visionary	regex
+inspiring	peacock	1.0	inspiring	regex
+bold action	peacock	1.0	bold(?:ly)? (?:action|ambition|step|move|goal)	regex
+lasting change	peacock	1.0	(?:positive|lasting|real|systemic) change	regex
+tangible impact	peacock	1.0	tangible (?:impact|progress|results|outcomes)	regex
+exciting	peacock	1.0	exciting	regex
+remarkable	peacock	1.0	remarkable	regex
+incredible	peacock	1.0	incredible	regex
+proud history	peacock	1.0	proud history	regex
+only the beginning	peacock	1.0	only the beginning	regex
+more work to do	peacock	1.0	more (?:work|to do) (?:remains|ahead)	regex
+long way to go	peacock	1.0	long way to go	regex
+rome wasn't built	peacock	1.0	rome was not built	regex
+aim to	hedge	1.0	aim(?:s|ed|ing)? to	regex
+strive to	hedge	1.0	striv(?:e|es|ed|ing) to	regex
+aspire to	hedge	1.0	aspir(?:e|es|ed|ing) to	regex
+aspiration	hedge	1.0	aspiration(?:s|al)?	regex
+endeavour to	hedge	1.0	endeavou?r(?:s|ed|ing)? to	regex
+seek to	hedge	1.0	seek(?:s|ing)? to	regex
+work towards	hedge	1.0	work(?:s|ed|ing)? towards?	regex
+on track to	hedge	1.0	on track to	regex
+on our way to	hedge	1.0	(?:well )?on (?:our|the) way to	regex
+intend to	hedge	1.0	intend(?:s|ed)? to	regex
+hope to	hedge	1.0	hop(?:e|es|ed|ing) to	regex
+committed to	hedge	1.0	committed to	regex
+commitment	hedge	1.0	commitments?	regex
+dedicated to	hedge	1.0	dedicated to	regex
+focused on	hedge	1.0	focused on	regex
+continue to	hedge	1.0	continu(?:e|es|ed|ing) to	regex
+ongoing effort	hedge	1.0	ongoing (?:effort|work|commitment|journey|process)	regex
+where possible	hedge	1.0	where (?:possible|feasible|practicable|appropriate|applicable|relevant)	regex
+as appropriate	hedge	1.0	as (?:appropriate|applicable|relevant|needed)	regex
+helps to reduce	hedge	1.0	(?:help|helps|helping) (?:to )?(?:reduce|cut|lower|avoid|address|drive|support)	regex
+contribute to	hedge	1.0	contribut(?:e|es|ed|ing) to	regex
+support the transition	hedge	1.0	support(?:s|ed|ing)? the transition	regex
+aligned with	hedge	1.0	align(?:s|ed|ing)? with	regex
+in line with	hedge	1.0	in line with	regex
+consistent with	hedge	1.0	consistent with	regex
+broadly	hedge	1.0	broadly	regex
+substantially	hedge	1.0	substantial(?:ly)?	regex
+significantly	hedge	1.0	significant(?:ly)?	regex
+over time	hedge	1.0	over time	regex
+in the coming years	hedge	1.0	in the (?:coming|years ahead|near future|long term|long run)	regex
+looking ahead	hedge	1.0	look(?:ing)? (?:ahead|forward)	regex
+expect to	hedge	1.0	expect(?:s|ed)? to	regex
+plan to	hedge	1.0	plan(?:s|ned)? to	regex
+exploring	hedge	1.0	explor(?:e|es|ed|ing)	regex
+evaluating opportunities	hedge	1.0	evaluat(?:e|es|ed|ing) opportunities	regex
+where we can	hedge	1.0	where we can	regex
+doing our part	hedge	1.0	do(?:ing)? our part	regex
+take steps	hedge	1.0	take (?:steps|action)	regex
+remain committed	hedge	1.0	remain(?:s)? committed	regex
+leverage	corporate	1.0	leverag(?:e|es|ed|ing)	regex
+synergy	corporate	1.0	synerg(?:y|ies|istic)	regex
+ecosystem	corporate	1.0	ecosystems?	regex
+stakeholder	corporate	1.0	stakeholders?	regex
+stakeholder engagement	corporate	1.0	stakeholder engagement	regex
+best practice	corporate	1.0	best practices?	regex
+robust	corporate	1.0	robust(?:ly|ness)?	regex
+framework	corporate	1.0	frameworks?	regex
+roadmap	corporate	1.0	roadmaps?	regex
+pillar	corporate	1.0	pillars?	regex
+lever	corporate	1.0	levers?	regex
+enabler	corporate	1.0	enablers?	regex
+key driver	corporate	1.0	key drivers?	regex
+touchpoint	corporate	1.0	touchpoints?	regex
+deep dive	corporate	1.0	deep dive	regex
+deliverable	corporate	1.0	deliverables?	regex
+actionable	corporate	1.0	actionable	regex
+scalable	corporate	1.0	scalable|at scale	regex
+seamless	corporate	1.0	seamless(?:ly)?	regex
+streamline	corporate	1.0	streamlin(?:e|es|ed|ing)	regex
+optimise	corporate	1.0	optimi(?:z|s)(?:e|es|ed|ing|ation)	regex
+unlock	corporate	1.0	unlock(?:s|ed|ing)?	regex
+create value	corporate	1.0	(?:creat|driv)(?:e|es|ed|ing) value	regex
+value creation	corporate	1.0	value creation	regex
+embed	corporate	1.0	embed(?:s|ded|ding)?	regex
+embark	corporate	1.0	embark(?:s|ed|ing)?	regex
+cross-functional	corporate	1.0	cross[- ]functional	regex
+end-to-end	corporate	1.0	end[- ]to[- ]end	regex
+engage	corporate	1.0	engag(?:e|es|ed|ing|ement)	regex
+empower	corporate	1.0	empower(?:s|ed|ing|ment)?	regex
+enable	corporate	1.0	enabl(?:e|es|ed|ing)	regex
+foster	corporate	1.0	foster(?:s|ed|ing)?	regex
+cultivate	corporate	1.0	cultivat(?:e|es|ed|ing)	regex
+nurture	corporate	1.0	nurtur(?:e|es|ed|ing)	regex
+harness	corporate	1.0	harness(?:es|ed|ing)?	regex
+spearhead	corporate	1.0	spearhead(?:s|ed|ing)?	regex
+champion	corporate	1.0	champion(?:s|ed|ing)?	regex
+elevate	corporate	1.0	elevat(?:e|es|ed|ing)	regex
+amplify	corporate	1.0	amplif(?:y|ies|ied|ying)	regex
+accelerate	corporate	1.0	accelerat(?:e|es|ed|ing|ion)	regex
+catalyse	corporate	1.0	cataly(?:se|ze|ses|zes|sed|zed|sing|zing)	regex
+galvanise	corporate	1.0	galvani(?:s|z)(?:e|es|ed|ing)	regex
+mobilise	corporate	1.0	mobili(?:s|z)(?:e|es|ed|ing)	regex
+operationalise	corporate	1.0	operationali(?:s|z)(?:e|es|ed|ing)	regex
+innovation	corporate	1.0	innovat(?:e|es|ed|ing|ion|ions|ive)	regex
+disruptive	corporate	1.0	disrupt(?:ive|ion|ing)?	regex
+agile	corporate	1.0	agil(?:e|ity)	regex
+nimble	corporate	1.0	nimble	regex
+resilience	corporate	1.0	resilien(?:t|ce)	regex
+future-proof	corporate	1.0	future[- ]proof(?:ed|ing)?	regex
+fit for the future	corporate	1.0	fit for the future	regex
+next-generation	corporate	1.0	next[- ]generation|next[- ]gen	regex
+capacity building	corporate	1.0	capacity building	regex
+buy-in	corporate	1.0	buy[- ]in	regex
+alignment	corporate	1.0	alignment	regex
+learnings	corporate	1.0	learnings	regex
+key takeaway	corporate	1.0	key takeaways?	regex
+laser-focused	corporate	1.0	laser[- ]focused	regex
+double down	corporate	1.0	double down	regex
+lean in	corporate	1.0	lean(?:ing)? in	regex
+holistic approach	corporate	1.0	holistic approach	regex
+strategic priority	corporate	1.0	strategic priorit(?:y|ies)	regex
+core competency	corporate	1.0	core competenc(?:y|ies)	regex
+value-add	corporate	1.0	value[- ]add(?:ed|ing)?	regex
+synchronise	corporate	1.0	synchroni(?:s|z)(?:e|ed|ing)	regex
+paradigm	corporate	1.0	paradigm	regex
+ideation	corporate	1.0	ideat(?:e|ion)	regex
+bandwidth	corporate	1.0	bandwidth	regex
+turnkey	corporate	1.0	turnkey	regex
+drive progress	corporate	1.0	drive (?:progress|impact|change|adoption|results|efficiency)	regex
+unlock potential	corporate	1.0	unlock(?:ing)? (?:value|potential|opportunit(?:y|ies))	regex
+world of work	corporate	1.0	world of work	regex
+human capital	corporate	1.0	human capital	regex
+talent pipeline	corporate	1.0	talent pipeline	regex
+culture of X	corporate	1.0	culture of (?:safety|innovation|inclusion|excellence|caring|ownership)	regex
+sustainable	esg_jargon	1.0	sustainab(?:le|ility|ly)	regex
+ESG	esg_jargon	1.0	ESG	regex
+net zero	esg_jargon	1.0	net[- ]zero	regex
+carbon neutral	esg_jargon	1.0	carbon[- ]neutral(?:ity)?	regex
+climate neutral	esg_jargon	1.0	climate[- ]neutral(?:ity)?	regex
+decarbonisation	esg_jargon	1.0	decarboni(?:s|z)(?:e|ed|ing|ation)	regex
+carbon footprint	esg_jargon	1.0	carbon footprint	regex
+circular economy	esg_jargon	1.0	circular economy|circularity	regex
+closed loop	esg_jargon	1.0	closed[- ]loop	regex
+regenerative	esg_jargon	1.0	regenerative	regex
+nature-positive	esg_jargon	1.0	nature[- ]positive	regex
+climate-positive	esg_jargon	1.0	climate[- ]positive	regex
+carbon-negative	esg_jargon	1.0	carbon[- ]negative	regex
+net positive	esg_jargon	1.0	net[- ]positive	regex
+eco-friendly	esg_jargon	1.0	eco[- ]friendly|environmentally friendly	regex
+green X	esg_jargon	1.0	green(?:er)? (?:future|growth|transition|economy|solutions?|products?|energy)	regex
+stewardship	esg_jargon	1.0	environmental stewardship|stewardship	regex
+responsible sourcing	esg_jargon	1.0	responsible (?:sourcing|business|growth|investment|supply)	regex
+corporate citizenship	esg_jargon	1.0	corporate (?:citizenship|responsibility)	regex
+licence to operate	esg_jargon	1.0	(?:social )?licen[cs]e to operate	regex
+materiality	esg_jargon	1.0	(?:double )?materiality	regex
+material topics	esg_jargon	1.0	material topics	regex
+stakeholder capitalism	esg_jargon	1.0	stakeholder capitalism	regex
+shared value	esg_jargon	1.0	shared value	regex
+positive impact	esg_jargon	1.0	positive impact	regex
+impact	esg_jargon	1.0	impact(?:ful)?	regex
+handprint	esg_jargon	1.0	handprint	regex
+climate action	esg_jargon	1.0	climate action	regex
+climate ambition	esg_jargon	1.0	climate (?:ambition|leadership)	regex
+energy transition	esg_jargon	1.0	energy transition	regex
+just transition	esg_jargon	1.0	just transition	regex
+low-carbon future	esg_jargon	1.0	low[- ]carbon (?:future|economy|transition)	regex
+clean energy future	esg_jargon	1.0	clean energy future	regex
+science-based	esg_jargon	1.0	science[- ]based	regex
+Paris-aligned	esg_jargon	1.0	Paris[- ]aligned|Paris Agreement	regex
+nature-based solutions	esg_jargon	1.0	nature[- ]based solutions?	regex
+biodiversity	esg_jargon	1.0	biodiversity	regex
+ecosystem services	esg_jargon	1.0	ecosystem services	regex
+planetary boundaries	esg_jargon	1.0	planetary boundaries	regex
+carbon offsets	esg_jargon	1.0	carbon (?:credits?|offsets?)|offsetting	regex
+DEI	esg_jargon	1.0	DE&?I|diversity,? equity,? and inclusion	regex
+inclusion	esg_jargon	1.0	inclusi(?:ve|on|vity)	regex
+belonging	esg_jargon	1.0	belonging	regex
+wellbeing	esg_jargon	1.0	(?:well[- ]being|wellbeing)	regex
+thrive	esg_jargon	1.0	thriv(?:e|es|ing)	regex
+safety culture	esg_jargon	1.0	safety culture	regex
+purpose	esg_jargon	1.0	(?<!for )(?<!for the )purposes?(?! of)	regex
+transparency	esg_jargon	1.0	transparency|transparent	regex
+accountability	esg_jargon	1.0	accountab(?:le|ility)	regex
+integrity	esg_jargon	1.0	integrity	regex
+ethics	esg_jargon	1.0	ethical(?:ly)?|ethics	regex
+good governance	esg_jargon	1.0	good governance	regex
+community investment	esg_jargon	1.0	community investment	regex
+giving back	esg_jargon	1.0	giving back	regex
+social impact	esg_jargon	1.0	social impact	regex
+greenwashing	esg_jargon	1.0	green(?:washing)?wash(?:ing)?	regex
+ambitious target	esg_jargon	1.0	ambitious (?:target|goal|commitment|plan)	regex
+bold target	esg_jargon	1.0	bold (?:target|goal|commitment|ambition)	regex
+leadership position	esg_jargon	1.0	leadership position	regex
+raise ambition	esg_jargon	1.0	raise ambition	regex
+climate-smart	esg_jargon	1.0	climate[- ]smart	regex
+sustainable X	esg_jargon	1.0	sustainable (?:future|growth|value|development|solutions?|practices?)	regex
+ESG strategy	esg_jargon	1.0	ESG (?:journey|strategy|performance|leadership)	regex
+reduce our footprint	esg_jargon	1.0	reduce our footprint|reducing our footprint	regex
+environmental footprint	esg_jargon	1.0	environmental footprint	regex
+eco-conscious	esg_jargon	1.0	eco[- ]conscious	regex
+responsible steward	esg_jargon	1.0	responsible steward(?:s|ship)?	regex
