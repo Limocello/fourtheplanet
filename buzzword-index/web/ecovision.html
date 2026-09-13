@@ -72,15 +72,21 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 0;
             padding: 0.8rem;
-            width: 300px; /* Slightly wider for more data */
+            width: 330px; /* Slightly wider for more data */
             max-height: 95vh; /* Increased slightly */
             overflow-y: auto;
             flex-shrink: 1;
+            /* The panels still scroll when a window is short, they just do it
+               without a visible bar. Chrome draws one over the content. */
+            scrollbar-width: none;          /* Firefox */
+            -ms-overflow-style: none;       /* old Edge */
             display: flex;
             flex-direction: column;
             gap: 0.8rem; /* Increased gap */
             box-shadow: none;
         }
+
+        .panel::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
         .panel:hover { border-color: rgba(255, 255, 255, 0.25); }
 
@@ -166,43 +172,12 @@
             margin-top: 0.5rem;
         }
 
-        details {
-            display: block; /* Force visibility */
-            cursor: default;
-        }
-
-        summary {
+        /* Always shown, so a heading rather than a collapsible control. */
+        .methodology-title {
             font-size: 0.8rem;
             color: var(--accent-blue);
             font-weight: 600;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
             padding: 5px 0;
-            outline: none;
-            cursor: pointer;
-        }
-
-        /* Hide the default triangle */
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        /* Custom Indicator */
-        summary::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-left: 2px solid var(--accent-blue);
-            border-bottom: 2px solid var(--accent-blue);
-            transform: rotate(45deg);
-            transition: transform 0.2s;
-        }
-
-        details[open] summary::before {
-            transform: rotate(225deg);
-            border-color: var(--accent-danger);
         }
 
         .methodology-content {
@@ -290,7 +265,7 @@
         @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
 
         /* ---- Peacock index ---- */
-        #peacock-panel { width: 330px; gap: 0.45rem; }
+        #peacock-panel { gap: 0.45rem; }
         .peacock-head { display: flex; align-items: baseline; justify-content: space-between; }
         .peacock-head .edit {
             pointer-events: auto; background: none; border: none; cursor: pointer;
@@ -416,8 +391,8 @@
             <!-- METHODOLOGY: open by default, still collapsible -->
             <div class="methodology-section">
 
-                <details open>
-                    <summary>Methodology - Stress Test Model</summary>
+                <div>
+                    <div class="methodology-title">Methodology - Stress Test Model</div>
                     <div class="methodology-content">
                         <p style="margin-bottom:8px;">
                             Calculates the <strong>Sustainability Horizon (&tau;)</strong> based on the economic impact of rising resource costs.
@@ -440,15 +415,15 @@
                             not reach zero profit within the available 2026&ndash;2100 projections.
                         </p>
                     </div>
-                </details>
+                </div>
 
-                <details open>
-                    <summary>Source - Data Collection</summary>
+                <div>
+                    <div class="methodology-title">Source - Data Collection</div>
                     <div class="methodology-content">
                         Company data gathered by the extraction script may include model estimates when reported
                         values are unavailable, so results should be treated as indicative rather than forecasts.
                     </div>
-                </details>
+                </div>
 
             </div>
 
