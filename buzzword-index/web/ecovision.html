@@ -132,21 +132,6 @@
 
         .stat-label { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
 
-        .percentile-bar-container {
-            width: 100%;
-            height: 4px;
-            background: rgba(255,255,255,0.1);
-            margin-top: 5px;
-            overflow: hidden;
-        }
-
-        .percentile-bar {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #c96e6e, #d4b483, #6da57a);
-            transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
         .projection-section {
             margin-top: auto;
             border-top: 1px solid rgba(255,255,255,0.15);
@@ -531,16 +516,6 @@
             <div class="big-stat">
                 <div class="stat-label">Predicted Survival</div>
                 <div class="stat-value"><span id="years-display">0</span> <span style="font-size: 0.8rem;">YRS</span></div>
-            </div>
-
-            <div style="margin-top: 5px;">
-                <div class="slider-label">
-                    <span>S&P 500 Rank</span>
-                    <span id="percentile-text" style="color: var(--accent-green);">Top 0%</span>
-                </div>
-                <div class="percentile-bar-container">
-                    <div class="percentile-bar" id="percentile-bar"></div>
-                </div>
             </div>
         </div>
 
@@ -1679,7 +1654,7 @@ ZTS,>140,>140,>140,>140`;
         let state = {
             selectedCompanyIndex: -1,
             projEnergy: 0, projCO2: 0,
-            predictedYears: 0, percentile: 50
+            predictedYears: 0
         };
 
         // --- 2. THREE.JS SETUP ---
@@ -1886,22 +1861,11 @@ ZTS,>140,>140,>140,>140`;
 
             const compositeScore = (scoreElec * wE) + (scoreCO2 * wC) + (scoreWater * wW) + (scoreWaste * wR);
 
-            // The survival figure is no longer derived here. It comes straight
-            // from the table above, which was computed properly elsewhere. The
-            // composite score below is still used for the S&P 500 rank bar.
-
-            // Percentile calculation against this dataset
-            let scores = [];
-            for(let comp of companies) {
-                let s = (1 - Math.min(1, comp.electricity/maxElec))*0.25 +
-                        (1 - Math.min(1, comp.co2/maxCO2))*0.25 +
-                        (1 - Math.min(1, comp.water/maxWater))*0.25 +
-                        (comp.wasteRecycle/100)*0.25;
-                scores.push(s);
-            }
-            scores.sort((a,b) => b-a);
-            const rank = scores.indexOf(compositeScore);
-            state.percentile = Math.floor((1 - (rank / scores.length)) * 100);
+            // Nothing numeric is derived here any more. The survival figure
+            // comes straight from the table above, and the S&P 500 rank bar it
+            // used to feed has been removed for being made up. The composite
+            // score is now only a visual input: it tints the tree and the
+            // particles in the scene behind the panels.
 
             // Years to zero profit, read from the table rather than modelled here.
             // A ">140" entry means the horizon ran out before profit reached
@@ -1929,9 +1893,6 @@ ZTS,>140,>140,>140,>140`;
                 }
                 state.predictedYears = target;
             }
-
-            document.getElementById("percentile-text").innerText = "Top " + state.percentile + "%";
-            document.getElementById("percentile-bar").style.width = state.percentile + "%";
 
             update3DScene(compositeScore);
         }
