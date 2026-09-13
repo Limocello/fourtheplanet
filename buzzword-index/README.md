@@ -101,6 +101,7 @@ A company with both a main report and a separate ESG data sheet has them added t
 
 `web/ecovision.html` is the Three.js assessment page with the peacock index built into it. Open it however you already open it. It needs `web/peacock-data.js` beside it, which is why they live in the same folder.
 
+- **Predicted Survival**, in the Assessment panel, is the all-drivers column of `data/profit_impact_years.csv`, read straight from the table rather than modelled in the page. A `> 140` entry means the horizon ran out before profit reached zero, and shows as `140+`. The projection sliders no longer feed it.
 - The **Peacock Index** panel sits at the bottom right, under Assessment: density, the split across the four categories, buzzword count, report length, buzzwords per hard number, and rank among the 372 companies long enough to compare.
 - A **peacock** sits above the number, one of five drawings from a closed tail to a full squawking fan. Which one appears depends on where the company falls among the others, in fifths, rather than on a fixed score. That is deliberate: the cut points are recomputed from whatever terms are currently active, so the picture keeps its meaning when words are added or dropped. Every term set still has a least and a most pompous fifth. A side effect worth knowing is that dropping a term can move a company up a peacock, if its peers leaned on that word more than it did.
 - **Buzzwords**, top right of that panel, opens the editor. Type a word to add it, untick a term to drop it, and the score, the composition bar and the rank all move immediately.
@@ -135,6 +136,7 @@ Adding a word counts only the occurrences the lexicon does not already claim. "s
 | `data/buzzword_index.csv` | Results, one row per report. |
 | `data/buzzword_index_by_company.csv` | Results, one row per company. |
 | `data/companies.csv` | Ticker, name, website and GICS sector for each of the 395. |
+| `data/profit_impact_years.csv` | Years until resource costs take profit to zero, per company, for all drivers together and for CO2, water and electricity alone. Computed elsewhere. The all-drivers column is inlined into the page and drives the survival figure. |
 
 The report PDFs and their extracted text are not in this folder, because they are 6 GB and 126 MB. They are only needed to rebuild the index or to run `scan_reports.py`. To rebuild:
 
