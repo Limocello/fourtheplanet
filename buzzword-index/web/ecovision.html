@@ -73,12 +73,12 @@
             border-radius: 0;
             padding: 0.8rem;
             width: 300px; /* Slightly wider for more data */
-            max-height: 90vh;
+            max-height: 95vh; /* Increased slightly */
             overflow-y: auto;
             flex-shrink: 1;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            gap: 0.8rem; /* Increased gap */
             box-shadow: none;
         }
 
@@ -92,6 +92,7 @@
             letter-spacing: 1px;
             border-bottom: 1px solid rgba(255,255,255,0.15);
             padding-bottom: 0.4rem;
+            margin-bottom: 0.2rem;
         }
 
         .assessment-list {
@@ -173,10 +174,75 @@
             cursor: pointer;
         }
 
+        /* --- METHODOLOGY STYLES --- */
+        .methodology-section {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        details {
+            display: block; /* Force visibility */
+            cursor: default;
+        }
+
+        summary {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Hide the default triangle */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Custom Indicator */
+        summary::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid var(--accent-blue);
+            border-bottom: 2px solid var(--accent-blue);
+            transform: rotate(45deg);
+            transition: transform 0.2s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(225deg);
+            border-color: var(--accent-danger);
+        }
+
+        .methodology-content {
+            padding: 8px 0;
+            font-size: 0.7rem; /* Slightly smaller to fit more content */
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .math-block {
+            background: rgba(255,255,255,0.05);
+            padding: 8px;
+            margin: 8px 0;
+            border-left: 2px solid var(--accent-blue);
+            font-family: 'Courier New', monospace;
+            font-size: 0.65rem;
+        }
+
+        sub { font-size: 0.7em; vertical-align: sub; }
+        sup { font-size: 0.7em; vertical-align: super; }
+
         .search-container {
             position: relative;
             width: 100%;
-            z-index: 50;
+            /* Removed z-index here to fix clipping */
         }
 
         .search-input {
@@ -207,6 +273,8 @@
             flex-direction: column;
             margin-top: 2px;
             border-radius: 0;
+            z-index: 20; /* High z-index for dropdown to sit on top of everything */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
 
         .search-results.active { display: flex; }
@@ -360,6 +428,45 @@
                 <div class="search-results"></div>
             </div>
 
+            <!-- METHODOLOGY: open by default, still collapsible -->
+            <div class="methodology-section">
+
+                <details open>
+                    <summary>Methodology - Stress Test Model</summary>
+                    <div class="methodology-content">
+                        <p style="margin-bottom:8px;">
+                            Calculates the <strong>Sustainability Horizon (&tau;)</strong> based on the economic impact of rising resource costs.
+                        </p>
+                        <div class="math-block">
+                            <strong>1. Extra Annual Cost (&Delta;C):</strong><br>
+                            &Delta;C<sub>i</sub>(t) = &Sigma; [u<sub>i,r</sub> &times; (c<sub>r</sub>(t) - c<sub>r</sub>(b))]
+                        </div>
+                        <div class="math-block">
+                            <strong>2. Projected Profit (P):</strong><br>
+                            P<sub>i</sub>(t) = P<sub>i</sub> - &Delta;C<sub>i</sub>(t)
+                        </div>
+                        <div class="math-block" style="margin-bottom:0">
+                            <strong>3. Sustainability Horizon (&tau;):</strong><br>
+                            &tau;<sub>i</sub> = min(t - b)<br>
+                            <span style="color:var(--accent-danger); font-size:0.8em;">where &Delta;C<sub>i</sub>(t) &ge; P<sub>i</sub></span>
+                        </div>
+                        <p style="margin-top:8px;">
+                            The calculation is made for each resource separately. <b>140+</b> means the company does
+                            not reach zero profit within the available 2026&ndash;2100 projections.
+                        </p>
+                    </div>
+                </details>
+
+                <details open>
+                    <summary>Source - Data Collection</summary>
+                    <div class="methodology-content">
+                        Company data gathered by the extraction script may include model estimates when reported
+                        values are unavailable, so results should be treated as indicative rather than forecasts.
+                    </div>
+                </details>
+
+            </div>
+
             <div class="projection-section">
                 <h2>Projections</h2>
                 <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends.</p>
@@ -392,7 +499,7 @@
 
             <div class="assessment-list">
                 <div class="assessment-item">
-                    <span class="assessment-label">Sector</span>
+                    <span class="assessment-label">Ticker</span>
                     <span class="assessment-value" id="ass-sector">--</span>
                 </div>
                 <div class="assessment-item">
