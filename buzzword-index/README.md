@@ -22,6 +22,7 @@ python3 buzzword.py board                          rank companies
 python3 buzzword.py board --metric puffery_per_1000_words
 python3 buzzword.py board --add "steward*"         add a word of your own
 python3 buzzword.py board --only-added --add "future ready"
+python3 buzzword.py board --reverse --sources main --top 50   the plainest reports
 
 python3 buzzword.py lookup AAPL                    one company in detail
 python3 buzzword.py lookup nike.com                ticker, name or website all work

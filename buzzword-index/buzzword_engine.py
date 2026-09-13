@@ -531,7 +531,10 @@ def aggregate_by_symbol(index: "Index", terms: list[dict], counts: np.ndarray,
                 when it did not. This is the default, because a page capture is
                 a weaker source, and because four of the captures turned out to
                 be the same document as the report already held.
-      "reports" reports only. Companies with nothing but a page drop out.
+      "reports" reports and data sheets. Companies with only a page drop out.
+      "main"    the sustainability report itself only, so the 10 companies
+                with nothing but a data sheet and the 17 with nothing but a
+                captured page drop out entirely. 366 companies remain.
       "pages"   captured pages only.
       "all"     everything, duplicates included.
     """
@@ -546,6 +549,8 @@ def aggregate_by_symbol(index: "Index", terms: list[dict], counts: np.ndarray,
     def choose(idxs: list[int]) -> list[int]:
         reports = [i for i in idxs if index.docs[i]["doc_kind"] != "page"]
         pages = [i for i in idxs if index.docs[i]["doc_kind"] == "page"]
+        if sources == "main":
+            return [i for i in idxs if index.docs[i]["doc_kind"] == "main"]
         if sources == "reports":
             return reports
         if sources == "pages":

@@ -117,13 +117,16 @@ def cmd_board(args) -> None:
     rows = be.aggregate_by_symbol(index, terms, counts, args.sources)
     decorate(rows)
     rows = [r for r in rows if r["total_words"] >= args.min_words]
-    rows.sort(key=lambda r: -(r[args.metric] if r[args.metric] != "" else -1))
+    rows.sort(key=lambda r: (r[args.metric] if r[args.metric] != "" else -1),
+              reverse=not args.reverse)
     payload = {"metric": args.metric, "companies": len(rows),
                "added": be.added_word_stats(index, terms, counts),
                "rows": rows[: args.top]}
 
     def table(p):
-        print(f"{len(rows)} companies over {args.min_words:,} words, ranked by {args.metric}\n")
+        direction = "plainest first" if args.reverse else "most buzzword-dense first"
+        print(f"{len(rows)} companies over {args.min_words:,} words, "
+              f"ranked by {args.metric}, {direction}\n")
         print(f"{'#':>3} {'TICKER':<7} {'COMPANY':<30} {'WORDS':>9} {'BUZZ':>7} "
               f"{'PER 1k':>7} {'PUFFERY':>8} {'ADDED':>7}")
         for i, r in enumerate(p["rows"], 1):
@@ -249,9 +252,11 @@ def main() -> None:
                        help="score with the added words alone, ignoring the lexicon")
         p.add_argument("--tier", default="puffery", choices=be.TIER_ORDER,
                        help="which category added words belong to (default puffery)")
-        p.add_argument("--sources", default="auto", choices=["auto", "reports", "pages", "all"],
+        p.add_argument("--sources", default="auto",
+                       choices=["auto", "reports", "pages", "all", "main"],
                        help="auto uses a company's report, or its captured web page when it "
-                            "published no report (default)")
+                            "published no report (default). main keeps only companies that "
+                            "published an actual report")
         p.add_argument("--json", action="store_true")
 
     b = sub.add_parser("board", help="rank companies")
@@ -259,6 +264,8 @@ def main() -> None:
     b.add_argument("--top", type=int, default=25)
     b.add_argument("--min-words", type=int, default=2000,
                    help="skip short ESG data sheets, whose density is unstable")
+    b.add_argument("--reverse", action="store_true",
+                   help="rank from the plainest upward instead of the most buzzword-dense down")
     b.add_argument("--metric", default="buzzwords_per_1000_words",
                    choices=["buzzwords_per_1000_words", "buzzword_hits", "weighted_per_1000_words",
                             "puffery_per_1000_words", "extra_per_1000_words",
