@@ -10,7 +10,7 @@
             --accent-green: #6da57a;
             --accent-danger: #c96e6e;
             --accent-blue: #7d8ca3;
-            --tier-peacock: #c98f6e;
+            --tier-puffery: #c98f6e;
             --tier-hedge: #b0a06e;
             --tier-corporate: #7d8ca3;
             --tier-esg_jargon: #6da57a;
@@ -1471,28 +1471,15 @@ ZTS,Zoetis,906361,243598,2599103,9467000000,2673000000`;
             }
 
             // the bird
-            const stage = pkStage(dens);
-            pkSetBird(stage, place);
-            const st = (PK.stages || [])[stage] || { note: '' };
-            const cap = document.getElementById('pk-caption');
-            const N = pkState.ranked.length;
-            const beats = place === -1 ? 0
-                : Math.round(100 * (N - 1 - place) / Math.max(1, N - 1));
-            cap.innerHTML = place === -1
-                ? `Peacock <b>${stage + 1} of 5</b>, ${st.note}. Not ranked: the document is ` +
-                  `under ${pkState.MIN_WORDS.toLocaleString()} words.`
-                : place === 0
-                    ? `Peacock <b>${stage + 1} of 5</b>, ${st.note}. The most buzzword-dense ` +
-                      `of the ${N} companies with a comparable report.`
-                    : `Peacock <b>${stage + 1} of 5</b>, ${st.note}. More buzzword-dense than ` +
-                      `<b>${beats}%</b> of the ${N} companies with a comparable report.`;
+            pkSetBird(pkStage(dens), place);
 
             // composition
             const tiers = PK.tiers.concat(['added']).filter(t => pkState.tierTotals[t][i] > 0);
             document.getElementById('pk-bar').innerHTML = tiers.map(t =>
                 `<span style="background:${pkTierColor(t)};width:${100 * pkState.tierTotals[t][i] / Math.max(1, hits)}%"></span>`).join('');
             document.getElementById('pk-key').innerHTML = tiers.map(t =>
-                `<span><i style="background:${pkTierColor(t)}"></i>${t.replace('_', ' ')} ` +
+                `<span><i class="dot" style="background:${pkTierColor(t)}"></i>` +
+                `${PK.tierNames?.[t] || t.replace('_', ' ')} ` +
                 `${(1000 * pkState.tierTotals[t][i] / words).toFixed(1)}</span>`).join('');
 
             // terms doing the work here
@@ -1503,6 +1490,37 @@ ZTS,Zoetis,906361,243598,2599103,9467000000,2673000000`;
             document.getElementById('pk-terms').innerHTML = mine.map(t =>
                 `<span class="${t.added ? 'added' : ''}" style="${t.added ? '' : 'color:' + pkTierColor(t.tier)}">` +
                 `${t.label}<b>${t.counts.get(i)}</b></span>`).join('');
+
+            // A sentence about the company, not about the drawing: where its
+            // report sits against the others, and what kind of language it
+            // leans on to get there.
+            const N = pkState.ranked.length;
+            const beats = place === -1 ? 0
+                : Math.round(100 * (N - 1 - place) / Math.max(1, N - 1));
+            let where;
+            if (place === -1) {
+                where = `At ${words.toLocaleString()} words this is a web page rather than a report, ` +
+                        `too short to set against the others.`;
+            } else if (place === 0) {
+                where = `The most buzzword-dense of the ${N} comparable S&P 500 reports.`;
+            } else if (place === N - 1) {
+                where = `The plainest of the ${N} comparable S&P 500 reports.`;
+            } else if (beats >= 50) {
+                where = `Denser in buzzwords than <b>${beats}%</b> of the ${N} comparable S&P 500 reports.`;
+            } else {
+                where = `Plainer than <b>${100 - beats}%</b> of the ${N} comparable S&P 500 reports.`;
+            }
+
+            let lean = '';
+            const ranking = tiers.map(t => [t, pkState.tierTotals[t][i]]).sort((a, b) => b[1] - a[1]);
+            if (ranking.length && mine.length) {
+                const share = Math.round(100 * ranking[0][1] / Math.max(1, hits));
+                const top = mine[0];
+                lean = ` <b>${share}%</b> of it is ${PK.tierNames?.[ranking[0][0]] || ranking[0][0]}, ` +
+                       `led by "${top.label}" at ${top.counts.get(i)} uses in ` +
+                       `${words.toLocaleString()} words.`;
+            }
+            document.getElementById('pk-caption').innerHTML = where + lean;
         }
 
         // ---------- buzzword editor ----------
@@ -1515,7 +1533,8 @@ ZTS,Zoetis,906361,243598,2599103,9467000000,2673000000`;
 
             const tabs = ['all', 'added'].concat(PK.tiers);
             document.getElementById('bw-tabs').innerHTML = tabs.map(t =>
-                `<button class="${pkState.tab === t ? 'on' : ''}" data-t="${t}">${t.replace('_', ' ')}</button>`).join('');
+                `<button class="${pkState.tab === t ? 'on' : ''}" data-t="${t}">` +
+                `${t === 'all' ? 'all' : (PK.tierNames?.[t] || t.replace('_', ' '))}</button>`).join('');
             document.querySelectorAll('#bw-tabs button').forEach(b =>
                 b.onclick = () => { pkState.tab = b.dataset.t; bwRender(); });
 

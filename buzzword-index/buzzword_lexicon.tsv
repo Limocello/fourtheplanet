@@ -1,75 +1,75 @@
 label	tier	weight	pattern	syntax
-our journey	peacock	1.0	(?:our|the|this) (?:sustainability |ESG |climate |decarbonisation |decarbonization )?journey	regex
-holistic	peacock	1.0	holistic(?:ally)?	regex
-best-in-class	peacock	1.0	best[- ]in[- ]class	regex
-world-class	peacock	1.0	world[- ]class	regex
-industry-leading	peacock	1.0	industry[- ]leading	regex
-market-leading	peacock	1.0	market[- ]leading	regex
-cutting-edge	peacock	1.0	cutting[- ]edge	regex
-state-of-the-art	peacock	1.0	state[- ]of[- ]the[- ]art	regex
-thought leadership	peacock	1.0	thought leader(?:ship)?	regex
-purpose-driven	peacock	1.0	purpose[- ](?:driven|led)	regex
-mission-driven	peacock	1.0	mission[- ](?:driven|led)	regex
-values-driven	peacock	1.0	values[- ](?:driven|led)	regex
-people-first	peacock	1.0	people[- ]first	regex
-north star	peacock	1.0	north star	regex
-moonshot	peacock	1.0	moonshot	regex
-game-changing	peacock	1.0	game[- ]chang(?:er|ing)	regex
-transformative	peacock	1.0	transformat(?:ive|ional)	regex
-paradigm shift	peacock	1.0	paradigm shift	regex
-sea change	peacock	1.0	sea change	regex
-step change	peacock	1.0	step change	regex
-quantum leap	peacock	1.0	quantum leap	regex
-in our DNA	peacock	1.0	in our DNA	regex
-passionate	peacock	1.0	passionate(?:ly)?	regex
-deeply committed	peacock	1.0	deeply committed	regex
-unwavering	peacock	1.0	unwavering(?:ly)?	regex
-relentless	peacock	1.0	relentless(?:ly)?	regex
-tireless	peacock	1.0	tireless(?:ly)?	regex
-we are proud	peacock	1.0	(?:we are|we're|I am|I'm) (?:incredibly |immensely |especially |particularly |truly |so )?proud	regex
-proud to	peacock	1.0	proud to	regex
-thrilled to	peacock	1.0	(?:excited|thrilled|delighted) to	regex
-meaningful impact	peacock	1.0	meaningful (?:impact|change|progress|difference)	regex
-make a difference	peacock	1.0	make a (?:real )?difference	regex
-doing well by doing good	peacock	1.0	doing well by doing good	regex
-doing the right thing	peacock	1.0	do(?:ing)? the right thing	regex
-force for good	peacock	1.0	force for good	regex
-a brighter future	peacock	1.0	(?:a )?(?:better|brighter|greener|cleaner|more sustainable) (?:tomorrow|future|world|planet)	regex
-future generations	peacock	1.0	(?:for )?(?:future|the next) generations?	regex
-generations to come	peacock	1.0	generations to come	regex
-leave the world better	peacock	1.0	leave the (?:world|planet) better	regex
-people and planet	peacock	1.0	people(?:,| and)? planet(?:,? and profit)?	regex
-triple bottom line	peacock	1.0	triple bottom line	regex
-win-win	peacock	1.0	win[- ]win	regex
-low-hanging fruit	peacock	1.0	low[- ]hanging fruit	regex
-move the needle	peacock	1.0	move the needle	regex
-raise the bar	peacock	1.0	rais(?:e|ing|ed) the bar	regex
-push the envelope	peacock	1.0	push(?:ing)? the envelope	regex
-limitless	peacock	1.0	(?:boundless|limitless|endless possibilit(?:y|ies))	regex
-at the heart of	peacock	1.0	at the heart of	regex
-deeply rooted	peacock	1.0	deeply (?:rooted|embedded|ingrained)	regex
-cornerstone	peacock	1.0	cornerstone	regex
-bedrock	peacock	1.0	bedrock	regex
-lifeblood	peacock	1.0	lifeblood	regex
-beacon	peacock	1.0	beacon	regex
-catalyst for change	peacock	1.0	catalyst for change	regex
-agent of change	peacock	1.0	agents? of change	regex
-changemaker	peacock	1.0	changemakers?	regex
-trailblazing	peacock	1.0	trailblaz(?:er|ers|ing)	regex
-pioneering	peacock	1.0	pioneer(?:s|ed|ing)?	regex
-visionary	peacock	1.0	visionary	regex
-inspiring	peacock	1.0	inspiring	regex
-bold action	peacock	1.0	bold(?:ly)? (?:action|ambition|step|move|goal)	regex
-lasting change	peacock	1.0	(?:positive|lasting|real|systemic) change	regex
-tangible impact	peacock	1.0	tangible (?:impact|progress|results|outcomes)	regex
-exciting	peacock	1.0	exciting	regex
-remarkable	peacock	1.0	remarkable	regex
-incredible	peacock	1.0	incredible	regex
-proud history	peacock	1.0	proud history	regex
-only the beginning	peacock	1.0	only the beginning	regex
-more work to do	peacock	1.0	more (?:work|to do) (?:remains|ahead)	regex
-long way to go	peacock	1.0	long way to go	regex
-rome wasn't built	peacock	1.0	rome was not built	regex
+our journey	puffery	1.0	(?:our|the|this) (?:sustainability |ESG |climate |decarbonisation |decarbonization )?journey	regex
+holistic	puffery	1.0	holistic(?:ally)?	regex
+best-in-class	puffery	1.0	best[- ]in[- ]class	regex
+world-class	puffery	1.0	world[- ]class	regex
+industry-leading	puffery	1.0	industry[- ]leading	regex
+market-leading	puffery	1.0	market[- ]leading	regex
+cutting-edge	puffery	1.0	cutting[- ]edge	regex
+state-of-the-art	puffery	1.0	state[- ]of[- ]the[- ]art	regex
+thought leadership	puffery	1.0	thought leader(?:ship)?	regex
+purpose-driven	puffery	1.0	purpose[- ](?:driven|led)	regex
+mission-driven	puffery	1.0	mission[- ](?:driven|led)	regex
+values-driven	puffery	1.0	values[- ](?:driven|led)	regex
+people-first	puffery	1.0	people[- ]first	regex
+north star	puffery	1.0	north star	regex
+moonshot	puffery	1.0	moonshot	regex
+game-changing	puffery	1.0	game[- ]chang(?:er|ing)	regex
+transformative	puffery	1.0	transformat(?:ive|ional)	regex
+paradigm shift	puffery	1.0	paradigm shift	regex
+sea change	puffery	1.0	sea change	regex
+step change	puffery	1.0	step change	regex
+quantum leap	puffery	1.0	quantum leap	regex
+in our DNA	puffery	1.0	in our DNA	regex
+passionate	puffery	1.0	passionate(?:ly)?	regex
+deeply committed	puffery	1.0	deeply committed	regex
+unwavering	puffery	1.0	unwavering(?:ly)?	regex
+relentless	puffery	1.0	relentless(?:ly)?	regex
+tireless	puffery	1.0	tireless(?:ly)?	regex
+we are proud	puffery	1.0	(?:we are|we're|I am|I'm) (?:incredibly |immensely |especially |particularly |truly |so )?proud	regex
+proud to	puffery	1.0	proud to	regex
+thrilled to	puffery	1.0	(?:excited|thrilled|delighted) to	regex
+meaningful impact	puffery	1.0	meaningful (?:impact|change|progress|difference)	regex
+make a difference	puffery	1.0	make a (?:real )?difference	regex
+doing well by doing good	puffery	1.0	doing well by doing good	regex
+doing the right thing	puffery	1.0	do(?:ing)? the right thing	regex
+force for good	puffery	1.0	force for good	regex
+a brighter future	puffery	1.0	(?:a )?(?:better|brighter|greener|cleaner|more sustainable) (?:tomorrow|future|world|planet)	regex
+future generations	puffery	1.0	(?:for )?(?:future|the next) generations?	regex
+generations to come	puffery	1.0	generations to come	regex
+leave the world better	puffery	1.0	leave the (?:world|planet) better	regex
+people and planet	puffery	1.0	people(?:,| and)? planet(?:,? and profit)?	regex
+triple bottom line	puffery	1.0	triple bottom line	regex
+win-win	puffery	1.0	win[- ]win	regex
+low-hanging fruit	puffery	1.0	low[- ]hanging fruit	regex
+move the needle	puffery	1.0	move the needle	regex
+raise the bar	puffery	1.0	rais(?:e|ing|ed) the bar	regex
+push the envelope	puffery	1.0	push(?:ing)? the envelope	regex
+limitless	puffery	1.0	(?:boundless|limitless|endless possibilit(?:y|ies))	regex
+at the heart of	puffery	1.0	at the heart of	regex
+deeply rooted	puffery	1.0	deeply (?:rooted|embedded|ingrained)	regex
+cornerstone	puffery	1.0	cornerstone	regex
+bedrock	puffery	1.0	bedrock	regex
+lifeblood	puffery	1.0	lifeblood	regex
+beacon	puffery	1.0	beacon	regex
+catalyst for change	puffery	1.0	catalyst for change	regex
+agent of change	puffery	1.0	agents? of change	regex
+changemaker	puffery	1.0	changemakers?	regex
+trailblazing	puffery	1.0	trailblaz(?:er|ers|ing)	regex
+pioneering	puffery	1.0	pioneer(?:s|ed|ing)?	regex
+visionary	puffery	1.0	visionary	regex
+inspiring	puffery	1.0	inspiring	regex
+bold action	puffery	1.0	bold(?:ly)? (?:action|ambition|step|move|goal)	regex
+lasting change	puffery	1.0	(?:positive|lasting|real|systemic) change	regex
+tangible impact	puffery	1.0	tangible (?:impact|progress|results|outcomes)	regex
+exciting	puffery	1.0	exciting	regex
+remarkable	puffery	1.0	remarkable	regex
+incredible	puffery	1.0	incredible	regex
+proud history	puffery	1.0	proud history	regex
+only the beginning	puffery	1.0	only the beginning	regex
+more work to do	puffery	1.0	more (?:work|to do) (?:remains|ahead)	regex
+long way to go	puffery	1.0	long way to go	regex
+rome wasn't built	puffery	1.0	rome was not built	regex
 aim to	hedge	1.0	aim(?:s|ed|ing)? to	regex
 strive to	hedge	1.0	striv(?:e|es|ed|ing) to	regex
 aspire to	hedge	1.0	aspir(?:e|es|ed|ing) to	regex

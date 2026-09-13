@@ -61,8 +61,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 INDEX_DIR = os.path.join(ROOT, "data", "index")
 LEXICON = os.path.join(ROOT, "buzzword_lexicon.tsv")
 
-TIER_ORDER = ["peacock", "hedge", "corporate", "esg_jargon"]
-DEFAULT_WEIGHTS = {"peacock": 3.0, "hedge": 2.0, "corporate": 2.0, "esg_jargon": 1.0}
+TIER_ORDER = ["puffery", "hedge", "corporate", "esg_jargon"]
+DEFAULT_WEIGHTS = {"puffery": 1.0, "hedge": 1.0, "corporate": 1.0, "esg_jargon": 1.0}
 
 # A token is a maximal run of letters and digits, which is exactly what \b in a
 # regular expression treats as one word. That matters for the running headers
@@ -491,11 +491,11 @@ def build_rows(index: Index, terms: list[dict], counts: np.ndarray) -> list[dict
                 "buzzword_score_weighted": round(float(weighted[i]), 1),
                 "weighted_per_1000_words": per_thousand(float(weighted[i]), words),
                 "unique_buzzwords": int(uniques[i]),
-                "peacock_hits": int(tier_totals["peacock"][i]),
+                "puffery_hits": int(tier_totals["puffery"][i]),
                 "hedge_hits": int(tier_totals["hedge"][i]),
                 "corporate_hits": int(tier_totals["corporate"][i]),
                 "esg_jargon_hits": int(tier_totals["esg_jargon"][i]),
-                "peacock_per_1000_words": per_thousand(int(tier_totals["peacock"][i]), words),
+                "puffery_per_1000_words": per_thousand(int(tier_totals["puffery"][i]), words),
                 "hedge_per_1000_words": per_thousand(int(tier_totals["hedge"][i]), words),
                 "corporate_per_1000_words": per_thousand(int(tier_totals["corporate"][i]), words),
                 "esg_jargon_per_1000_words": per_thousand(int(tier_totals["esg_jargon"][i]), words),
@@ -643,7 +643,7 @@ def concordance(index: "Index", pattern: str, syntax: str = "regex",
 
 
 def build_terms(lexicon_path: str = LEXICON, added: list[str] | None = None,
-                only_added: bool = False, tier: str = "peacock") -> list[dict]:
+                only_added: bool = False, tier: str = "puffery") -> list[dict]:
     """The term list to score with: the saved lexicon, extra words, or both.
 
     Each extra word uses the plain syntax, so "steward*" and "net zero" work as

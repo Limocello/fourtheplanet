@@ -160,18 +160,20 @@ def main() -> None:
     payload = {
         "built": time.strftime("%Y-%m-%d"),
         "peacocks": peacocks,
-        "stages": [
-            {"name": "Tail down", "note": "plain speech"},
-            {"name": "Mild plumage", "note": "a little display"},
-            {"name": "Fanned", "note": "visibly performing"},
-            {"name": "Full display", "note": "heavy on the language"},
-            {"name": "Peak pomposity", "note": "all feathers, squawking"},
-        ],
         "companies": companies,
         "names": [names.get(s, "") for s in companies],
         "words": words,
         "substance": substance,
         "tiers": be.TIER_ORDER,
+        # One set of names, used by both the legend and the sentence, so the
+        # panel never calls the same category two different things.
+        "tierNames": {
+            "puffery": "puffery",
+            "hedge": "hedging",
+            "corporate": "corporate",
+            "esg_jargon": "ESG vocabulary",
+            "added": "words you added",
+        },
         "terms": term_out,
         "vocab": vocab_out,
         "overlap": overlap_out,

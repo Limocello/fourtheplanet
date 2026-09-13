@@ -40,7 +40,7 @@ def load(args) -> tuple[be.Index, list[dict], np.ndarray]:
         sys.exit(f"the index is missing ({exc}).\nBuild it with:  python3 build_index.py --txt-dir DIR")
     terms = be.build_terms(added=getattr(args, "add", None) or [],
                            only_added=getattr(args, "only_added", False),
-                           tier=getattr(args, "tier", "peacock"))
+                           tier=getattr(args, "tier", "puffery"))
     if not terms:
         sys.exit("no terms to score with")
     result = index.score(terms)
@@ -125,12 +125,12 @@ def cmd_board(args) -> None:
     def table(p):
         print(f"{len(rows)} companies over {args.min_words:,} words, ranked by {args.metric}\n")
         print(f"{'#':>3} {'TICKER':<7} {'COMPANY':<30} {'WORDS':>9} {'BUZZ':>7} "
-              f"{'PER 1k':>7} {'PEACOCK':>8} {'ADDED':>7}")
+              f"{'PER 1k':>7} {'PUFFERY':>8} {'ADDED':>7}")
         for i, r in enumerate(p["rows"], 1):
             extra = f"{r['extra_per_1000_words']:.2f}" if p["added"] else "–"
             print(f"{i:>3} {r['symbol']:<7} {(r['company'] or r['website'])[:30]:<30} "
                   f"{r['total_words']:>9,d} {r['buzzword_hits']:>7,d} "
-                  f"{r['buzzwords_per_1000_words']:>7.1f} {r['peacock_per_1000_words']:>8.2f} {extra:>7}")
+                  f"{r['buzzwords_per_1000_words']:>7.1f} {r['puffery_per_1000_words']:>8.2f} {extra:>7}")
         show_added(p["added"])
     emit(args, payload, table)
 
@@ -247,8 +247,8 @@ def main() -> None:
                        help="an extra buzzword, repeatable. * is any ending, | is alternatives")
         p.add_argument("--only-added", action="store_true",
                        help="score with the added words alone, ignoring the lexicon")
-        p.add_argument("--tier", default="peacock", choices=be.TIER_ORDER,
-                       help="which tier added words belong to (default peacock)")
+        p.add_argument("--tier", default="puffery", choices=be.TIER_ORDER,
+                       help="which category added words belong to (default puffery)")
         p.add_argument("--sources", default="auto", choices=["auto", "reports", "pages", "all"],
                        help="auto uses a company's report, or its captured web page when it "
                             "published no report (default)")
@@ -261,7 +261,7 @@ def main() -> None:
                    help="skip short ESG data sheets, whose density is unstable")
     b.add_argument("--metric", default="buzzwords_per_1000_words",
                    choices=["buzzwords_per_1000_words", "buzzword_hits", "weighted_per_1000_words",
-                            "peacock_per_1000_words", "extra_per_1000_words",
+                            "puffery_per_1000_words", "extra_per_1000_words",
                             "buzzwords_per_substance_hit"])
     b.set_defaults(func=cmd_board)
 

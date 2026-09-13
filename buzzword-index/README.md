@@ -19,7 +19,7 @@ That prints the leaderboard. Scoring the whole corpus takes about 0.2 seconds, s
 
 ```
 python3 buzzword.py board                          rank companies
-python3 buzzword.py board --metric peacock_per_1000_words
+python3 buzzword.py board --metric puffery_per_1000_words
 python3 buzzword.py board --add "steward*"         add a word of your own
 python3 buzzword.py board --only-added --add "future ready"
 
@@ -64,16 +64,16 @@ The default exists for a reason. Four of the page captures turned out to be the 
 
 Every term carries weight 1. The score is a straight count, and no category counts for more than another.
 
-The `tier` column still labels what kind of language a term is, and the per-tier columns still show what a company's score is made of, but it no longer changes the score.
+The `tier` column labels what kind of language a term is, and the per-category columns show what a company's score is made of, but it does not change the score.
 
-| Tier | Terms | What it catches | Examples |
+| Category | Terms | What it catches | Examples |
 |---|---|---|---|
-| `peacock` | 71 | Pure display. Says nothing at all. | journey, best-in-class, force for good, move the needle, in our DNA |
+| `puffery` | 71 | Self-praise and grand claims that cannot be checked. The advertising term for exactly this. | best-in-class, force for good, move the needle, in our DNA, a brighter future |
 | `hedge` | 39 | Commitment without commitment. | aim to, strive to, where feasible, on track to, contribute to |
 | `corporate` | 75 | Management register. | leverage, ecosystem, pillars, unlock value, empower, robust |
 | `esg_jargon` | 67 | Sustainability vocabulary. Real concepts, heavily worn. | net zero, circular economy, stewardship, materiality, impact |
 
-Weighting is still supported, so raising or lowering a tier is one column edit away. Be aware of what the tiers are actually worth before you do. The 71 peacock terms account for 10 115 hits across the corpus, while the 75 corporate terms account for 102 528 and the 67 ESG terms for 171 636. Putting peacock on 3 and corporate on 2, as an earlier version did, still left peacock at under 6 per cent of the score and generic management vocabulary at nearly 40 per cent. A tier's weight and its influence are not the same thing.
+Weighting is still supported, so raising or lowering a category is one column edit away. Be aware of what the categories are actually worth before you do. The 71 puffery terms account for 10 115 hits across the corpus, while the 75 corporate terms account for 102 528 and the 67 ESG terms for 171 636. Putting puffery on 3 and corporate on 2, as an earlier version did, still left puffery at under 6 per cent of the score and generic management vocabulary at nearly 40 per cent. A category's weight and its influence are not the same thing.
 
 Each row of the file is a label, a tier, a weight, a pattern and a syntax. Edit the file to add, drop or reweight terms. No code changes are needed. A `regex` row is a regular expression. A `plain` row uses the simple syntax below.
 
@@ -102,7 +102,7 @@ A company with both a main report and a separate ESG data sheet has them added t
 `web/ecovision.html` is the Three.js assessment page with the peacock index built into it. Open it however you already open it. It needs `web/peacock-data.js` beside it, which is why they live in the same folder.
 
 - The **Peacock Index** panel sits at the bottom right, under Assessment: density, the split across the four categories, buzzword count, report length, buzzwords per hard number, and rank among the 372 companies long enough to compare.
-- A **peacock** sits beside the number, one of five drawings from a closed tail to a full squawking fan. Which one appears depends on where the company falls among the others, in fifths, rather than on a fixed score. That is deliberate: the cut points are recomputed from whatever terms are currently active, so the picture keeps its meaning when words are added or dropped. Every term set still has a least and a most pompous fifth. A side effect worth knowing is that dropping a term can move a company up a peacock, if its peers leaned on that word more than it did.
+- A **peacock** sits above the number, one of five drawings from a closed tail to a full squawking fan. Which one appears depends on where the company falls among the others, in fifths, rather than on a fixed score. That is deliberate: the cut points are recomputed from whatever terms are currently active, so the picture keeps its meaning when words are added or dropped. Every term set still has a least and a most pompous fifth. A side effect worth knowing is that dropping a term can move a company up a peacock, if its peers leaned on that word more than it did.
 - **Buzzwords**, top right of that panel, opens the editor. Type a word to add it, untick a term to drop it, and the score, the composition bar and the rank all move immediately.
 - Companies with no report in the corpus say so rather than showing a zero. The page carries 501 companies and the corpus covers 395 of them.
 
