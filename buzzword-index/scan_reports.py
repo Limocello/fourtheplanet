@@ -9,7 +9,8 @@ The term list lives in buzzword_lexicon.tsv, one row per term:
     label    tier    weight   pattern
 
 label    the name that appears in the output
-tier     peacock (pure fluff), hedge (commitment without commitment),
+tier     puffery (unverifiable self-praise), hedge (commitment without
+         commitment),
          corporate (management speak), esg_jargon (sustainability vocabulary)
 weight   how heavily a hit of this tier counts in the weighted score
 pattern  a regular expression fragment. Word boundaries are added around it.
@@ -63,7 +64,7 @@ MASTER = os.path.join(ROOT, "data", "companies.csv")
 OUT = os.path.join(ROOT, "data", "buzzword_index_scanned.csv")
 CACHE = os.path.join(ROOT, "data", ".buzzword_cache.json")
 
-TIER_ORDER = ["peacock", "hedge", "corporate", "esg_jargon"]
+TIER_ORDER = ["puffery", "hedge", "corporate", "esg_jargon"]
 
 # All matching runs on a lower-cased copy of the text, so the patterns are
 # lower-cased too and no expression needs the IGNORECASE flag. On a corpus this
@@ -220,11 +221,11 @@ def _score_file(filename: str) -> dict:
         "buzzword_score_weighted": round(weighted, 1),
         "weighted_per_1000_words": per_thousand(weighted, words),
         "unique_buzzwords": len(counts),
-        "peacock_hits": tier_hits["peacock"],
+        "puffery_hits": tier_hits["puffery"],
         "hedge_hits": tier_hits["hedge"],
         "corporate_hits": tier_hits["corporate"],
         "esg_jargon_hits": tier_hits["esg_jargon"],
-        "peacock_per_1000_words": per_thousand(tier_hits["peacock"], words),
+        "puffery_per_1000_words": per_thousand(tier_hits["puffery"], words),
         "hedge_per_1000_words": per_thousand(tier_hits["hedge"], words),
         "corporate_per_1000_words": per_thousand(tier_hits["corporate"], words),
         "esg_jargon_per_1000_words": per_thousand(tier_hits["esg_jargon"], words),

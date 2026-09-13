@@ -61,14 +61,14 @@ doc_id,file,symbol,company,doc_kind,doc_num,token_offset,n_tokens,n_words,quanti
 59,BLK__main_62.txt,BLK,BlackRock,main,62,1569792,26226,21038,61,202
 60,BMY__main_69.txt,BMY,Bristol Myers Squibb,main,69,1596018,55607,46321,38,600
 61,BNY__main_65.txt,BNY,BNY Mellon,main,65,1651625,9443,7862,16,78
-62,BRO__main_441.txt,BRO,,main,441,1661068,65654,50352,800,1045
+62,BRO__main_441.txt,BRO,Brown & Brown,main,441,1661068,65654,50352,800,1045
 63,BR__main_70.txt,BR,Broadridge Financial Solutions,main,70,1726722,4255,3175,6,86
 64,BSX__data_68.txt,BSX,Boston Scientific,data,68,1730977,59729,35332,53,252
 65,BXP__main_72.txt,BXP,"BXP, Inc.",main,72,1790706,37328,28674,114,594
 66,CAH__main_442.txt,CAH,Cardinal Health,main,442,1828034,59646,49027,72,426
 67,CARR__main_443.txt,CARR,Carrier Global,main,443,1887680,38728,30504,55,419
 68,CAT__main_75.txt,CAT,Caterpillar Inc.,main,75,1926408,31390,25365,55,415
-69,CB__main_85.txt,CB,,main,85,1957798,11852,10004,13,61
+69,CB__main_85.txt,CB,Chubb Limited,main,85,1957798,11852,10004,13,61
 70,CCI__main_444.txt,CCI,Crown Castle,main,444,1969650,8784,7003,18,138
 71,CDW__main_446.txt,CDW,CDW Corporation,main,446,1978434,22908,19456,22,240
 72,CEG__main_110.txt,CEG,Constellation Energy,main,110,2001342,24887,21007,149,253
@@ -97,15 +97,15 @@ doc_id,file,symbol,company,doc_kind,doc_num,token_offset,n_tokens,n_words,quanti
 95,CPRT__main_451.txt,CPRT,Copart,main,451,2540558,8566,6830,9,90
 96,CPT__main_73.txt,CPT,Camden Property Trust,main,73,2549124,27264,21603,18,337
 97,CRH__main_114.txt,CRH,CRH plc,main,114,2576388,59557,46058,122,576
-98,CRL__page_0.txt,CRL,,page,0,2635945,1247,650,0,60
+98,CRL__page_0.txt,CRL,Charles River Laboratories,page,0,2635945,1247,650,0,60
 99,CRM__main_325.txt,CRM,Salesforce,main,325,2637192,21462,17076,62,22
 100,CRWD__main_115.txt,CRWD,CrowdStrike,main,115,2658654,24226,20224,9,84
 101,CSCO__data_94.txt,CSCO,Cisco,data,94,2682880,2612,1910,0,66
 102,CSCO__main_93.txt,CSCO,Cisco,main,93,2685492,22527,18665,62,125
 103,CSGP__main_113.txt,CSGP,CoStar Group,main,113,2708019,22879,17804,60,227
 104,CSX__main_116.txt,CSX,CSX Corporation,main,116,2730898,23040,16424,99,325
-105,CTAS__data_92.txt,CTAS,,data,92,2753938,353,237,17,3
-106,CTAS__main_91.txt,CTAS,,main,91,2754291,7162,6064,44,44
+105,CTAS__data_92.txt,CTAS,Cintas,data,92,2753938,353,237,17,3
+106,CTAS__main_91.txt,CTAS,Cintas,main,91,2754291,7162,6064,44,44
 107,CTSH__data_103.txt,CTSH,Cognizant,data,103,2761453,2452,1430,13,17
 108,CTSH__main_102.txt,CTSH,Cognizant,main,102,2763905,26600,21536,6,249
 109,CTVA__main_452.txt,CTVA,Corteva,main,452,2790505,34392,27375,85,361
@@ -113,7 +113,7 @@ doc_id,file,symbol,company,doc_kind,doc_num,token_offset,n_tokens,n_words,quanti
 111,CVX__main_453.txt,CVX,Chevron Corporation,main,453,2851441,53938,42306,210,701
 112,C__main_95.txt,C,Citigroup,main,95,2905379,37748,31165,182,298
 113,DAL__main_454.txt,DAL,Delta Air Lines,main,454,2943127,20132,16782,35,238
-114,DASH__main_136.txt,DASH,,main,136,2963259,398,316,0,4
+114,DASH__main_136.txt,DASH,DoorDash,main,136,2963259,398,316,0,4
 115,DD__main_143.txt,DD,DuPont,main,143,2963657,50601,39741,27,676
 116,DECK__main_123.txt,DECK,Deckers Brands,main,123,3014258,99897,71947,126,629
 117,DELL__data_125.txt,DELL,Dell Technologies,data,125,3114155,4105,2779,0,7
@@ -151,7 +151,7 @@ doc_id,file,symbol,company,doc_kind,doc_num,token_offset,n_tokens,n_words,quanti
 149,EL__main_162.txt,EL,Estée Lauder Companies (The),main,162,3868388,64611,51092,108,610
 150,EME__main_152.txt,EME,Emcor,main,152,3932999,14274,11465,48,164
 151,EMR__main_153.txt,EMR,Emerson Electric,main,153,3947273,53884,43347,48,647
-152,EOG__page_0.txt,EOG,,page,0,4001157,252,192,0,14
+152,EOG__page_0.txt,EOG,EOG Resources,page,0,4001157,252,192,0,14
 153,EQIX__data_161.txt,EQIX,Equinix,data,161,4001409,8433,5638,10,174
 154,EQIX__main_160.txt,EQIX,Equinix,main,160,4009842,29088,24190,71,387
 155,EQT__data_157.txt,EQT,EQT Corporation,data,157,4038930,4332,2588,16,103
@@ -167,12 +167,12 @@ doc_id,file,symbol,company,doc_kind,doc_num,token_offset,n_tokens,n_words,quanti
 165,EXPE__main_168.txt,EXPE,Expedia Group,main,168,4275024,26872,22393,37,136
 166,EXR__main_170.txt,EXR,Extra Space Storage,main,170,4301896,8571,5861,10,173
 167,FCX__main_184.txt,FCX,Freeport-McMoRan,main,184,4310467,84718,64887,199,702
-168,FDS__page_0.txt,FDS,,page,0,4395185,174,153,0,1
+168,FDS__page_0.txt,FDS,FactSet,page,0,4395185,174,153,0,1
 169,FDX__data_173.txt,FDX,FedEx,data,173,4395359,9342,6497,1,241
 170,FDX__main_172.txt,FDX,FedEx,main,172,4404701,23460,18223,40,128
 171,FERG__main_174.txt,FERG,Ferguson Enterprises,main,174,4428161,18881,15565,30,79
 172,FE__main_177.txt,FE,FirstEnergy,main,177,4447042,23957,20026,80,125
-173,FICO__page_0.txt,FICO,,page,0,4470999,1448,1305,0,1
+173,FICO__page_0.txt,FICO,Fair Isaac,page,0,4470999,1448,1305,0,1
 174,FISV__data_179.txt,FISV,Fiserv,data,179,4472447,6396,5018,11,64
 175,FISV__main_178.txt,FISV,Fiserv,main,178,4478843,27991,23294,16,171
 176,FIS__main_175.txt,FIS,Fidelity National Information Services,main,175,4506834,31608,25654,26,531
@@ -189,298 +189,299 @@ doc_id,file,symbol,company,doc_kind,doc_num,token_offset,n_tokens,n_words,quanti
 187,GE__main_187.txt,GE,GE Aerospace,main,187,4892119,28310,23708,36,229
 188,GILD__main_197.txt,GILD,Gilead Sciences,main,197,4920429,31180,26940,40,204
 189,GLW__main_112.txt,GLW,Corning Inc.,main,112,4951609,16224,13077,70,201
-190,GNRC__main_192.txt,GNRC,Generac,main,192,4967833,35378,28243,90,297
-191,GOOGL__main_22.txt,GOOGL,Alphabet Inc. (Class A),main,22,5003211,72666,57424,180,871
-192,GPC__main_196.txt,GPC,Genuine Parts Company,main,196,5075877,20258,16815,44,122
-193,GRMN__data_185.txt,GRMN,Garmin,data,185,5096135,2677,2140,2,14
-194,GRMN__main_462.txt,GRMN,Garmin,main,462,5098812,4110,3486,0,21
-195,GRMN__page_0.txt,GRMN,Garmin,page,0,5102922,431,367,0,3
-196,GS__page_0.txt,GS,,page,0,5103353,772,680,0,6
-197,GWW__main_463.txt,GWW,W. W. Grainger,main,463,5104125,15730,12224,51,204
-198,HAL__main_199.txt,HAL,Halliburton,main,199,5119855,14533,10969,38,155
-199,HBAN__main_209.txt,HBAN,Huntington Bancshares,main,209,5134388,29692,23567,163,272
-200,HCA__main_201.txt,HCA,,main,201,5164080,23248,19982,54,169
-201,HD__main_203.txt,HD,Home Depot (The),main,203,5187328,43892,36088,168,375
-202,HIG__main_200.txt,HIG,Hartford (The),main,200,5231220,23959,20434,58,191
-203,HII__main_210.txt,HII,Huntington Ingalls Industries,main,210,5255179,26095,20809,27,216
-204,HII__page_0.txt,HII,Huntington Ingalls Industries,page,0,5281274,23150,18456,27,152
-205,HLT__main_464.txt,HLT,Hilton Worldwide,main,464,5304424,45505,36268,111,622
-206,HON__main_204.txt,HON,Honeywell Technologies,main,204,5349929,27068,22000,51,176
-207,HPQ__main_207.txt,HPQ,HP Inc.,main,207,5376997,84400,65882,134,818
-208,HRL__main_205.txt,HRL,Hormel Foods,main,205,5461397,19702,16623,40,160
-209,HST__main_466.txt,HST,Host Hotels & Resorts,main,466,5481099,34214,27479,56,503
-210,HSY__main_467.txt,HSY,Hershey Company (The),main,467,5515313,41947,31040,98,644
-211,HUBB__main_208.txt,HUBB,Hubbell Incorporated,main,208,5557260,52389,43143,44,443
-212,HUM__page_0.txt,HUM,,page,0,5609649,551,462,7,7
-213,HWM__main_206.txt,HWM,Howmet Aerospace,main,206,5610200,32698,25096,43,442
-214,IBKR__main_468.txt,IBKR,Interactive Brokers,main,468,5642898,22486,16847,30,222
-215,IBM__page_0.txt,IBM,,page,0,5665384,397,358,0,8
-216,ICE__page_0.txt,ICE,,page,0,5665781,625,557,0,1
-217,IDXX__main_212.txt,IDXX,Idexx Laboratories,main,212,5666406,20716,17109,25,216
-218,IEX__main_211.txt,IEX,IDEX Corporation,main,211,5687122,34353,28167,63,357
-219,IFF__main_216.txt,IFF,International Flavors & Fragrances,main,216,5721475,67012,53228,19,684
-220,INTC__main_215.txt,INTC,Intel,main,215,5788487,40605,32515,77,388
-221,INTU__main_218.txt,INTU,Intuit,main,218,5829092,29858,23905,91,109
-222,INVH__main_221.txt,INVH,Invitation Homes,main,221,5858950,18560,15644,11,111
-223,IP__main_217.txt,IP,International Paper,main,217,5877510,24155,19240,25,218
-224,IQV__main_222.txt,IQV,IQVIA,main,222,5901665,40089,32270,18,355
-225,IRM__main_223.txt,IRM,Iron Mountain,main,223,5941754,25453,18551,46,489
-226,ISRG__main_219.txt,ISRG,Intuitive Surgical,main,219,5967207,12817,10312,13,132
-227,ITW__data_214.txt,ITW,Illinois Tool Works,data,214,5980024,1128,522,13,22
-228,ITW__main_213.txt,ITW,Illinois Tool Works,main,213,5981152,10083,7951,21,106
-229,IT__main_186.txt,IT,Gartner,main,186,5991235,23666,19706,15,210
-230,JBHT__main_224.txt,JBHT,J.B. Hunt,main,224,6014901,20492,15043,64,262
-231,JBL__data_226.txt,JBL,Jabil,data,226,6035393,768,638,0,9
-232,JBL__main_225.txt,JBL,Jabil,main,225,6036161,42410,33031,86,272
-233,JCI__main_230.txt,JCI,Johnson Controls,main,230,6078571,38620,30481,60,388
-234,JKHY__main_227.txt,JKHY,Jack Henry & Associates,main,227,6117191,15178,12725,16,101
-235,JNJ__main_229.txt,JNJ,Johnson & Johnson,main,229,6132369,25412,19377,138,368
-236,JPM__main_470.txt,JPM,JPMorgan Chase,main,470,6157781,26080,21453,58,214
-237,J__main_228.txt,J,Jacobs Solutions,main,228,6183861,57369,46431,43,188
-238,KDP__main_231.txt,KDP,Keurig Dr Pepper,main,231,6241230,22637,17604,30,327
-239,KEY__main_232.txt,KEY,KeyCorp,main,232,6263867,44119,36484,179,395
-240,KHC__main_471.txt,KHC,Kraft Heinz,main,471,6307986,39473,32476,110,562
-241,KHC__page_0.txt,KHC,Kraft Heinz,page,0,6347459,977,862,0,4
-242,KKR__main_238.txt,KKR,KKR & Co.,main,238,6348436,17865,14829,13,114
-243,KLAC__data_472.txt,KLAC,KLA Corporation,data,472,6366301,23388,18013,29,114
-244,KLAC__page_0.txt,KLAC,KLA Corporation,page,0,6389689,838,715,2,13
-245,KMB__data_235.txt,KMB,Kimberly-Clark,data,235,6390527,24098,18441,19,249
-246,KMB__main_234.txt,KMB,Kimberly-Clark,main,234,6414625,12905,10900,9,97
-247,KMI__main_237.txt,KMI,Kinder Morgan,main,237,6427530,45592,36151,126,496
-248,KO__main_101.txt,KO,Coca-Cola Company (The),main,101,6473122,2023,1589,6,47
-249,KR__main_473.txt,KR,Kroger,main,473,6475145,47334,38815,183,546
-250,KVUE__page_0.txt,KVUE,,page,0,6522479,46786,37649,61,299
-251,LDOS__page_0.txt,LDOS,,page,0,6569265,1638,1386,1,22
-252,LEN__main_475.txt,LEN,Lennar,main,475,6570903,7353,6345,11,21
-253,LHX__main_239.txt,LHX,L3Harris,main,239,6578256,17699,14239,4,188
-254,LH__main_240.txt,LH,Labcorp,main,240,6595955,19506,15102,17,229
-255,LII__main_243.txt,LII,Lennox International,main,243,6615461,18308,14931,44,135
-256,LIN__main_245.txt,LIN,Linde plc,main,245,6633769,56288,42967,263,640
-257,LLY__main_244.txt,LLY,Lilly (Eli),main,244,6690057,16910,14281,45,139
-258,LMT__main_246.txt,LMT,Lockheed Martin,main,246,6706967,19496,13285,12,678
-259,LNT__data_21.txt,LNT,Alliant Energy,data,21,6726463,1786,1192,11,20
-260,LNT__main_20.txt,LNT,Alliant Energy,main,20,6728249,22735,17570,51,275
-261,LOW__main_247.txt,LOW,Lowe's,main,247,6750984,30967,24624,117,404
-262,LOW__main_248.txt,LOW,Lowe's,main,248,6781951,8450,6892,34,134
-263,LRCX__main_241.txt,LRCX,Lam Research,main,241,6790401,35805,28621,78,461
-264,LULU__data_250.txt,LULU,Lululemon Athletica,data,250,6826206,10693,7881,1,209
-265,LULU__main_249.txt,LULU,Lululemon Athletica,main,249,6836899,24302,19496,104,491
-266,LUV__main_342.txt,LUV,Southwest Airlines,main,342,6861201,66792,52698,242,784
-267,LVS__main_242.txt,LVS,Las Vegas Sands,main,242,6927993,59432,48169,114,941
-268,LYB__main_251.txt,LYB,LyondellBasell,main,251,6987425,76111,61934,100,698
-269,L__main_474.txt,L,Loews Corporation,main,474,7063536,2113,1854,1,1
-270,MAA__main_476.txt,MAA,Mid-America Apartment Communities,main,476,7065649,27916,21247,69,315
-271,MAR__main_477.txt,MAR,Marriott International,main,477,7093565,9574,7648,23,111
-272,MAR__page_0.txt,MAR,Marriott International,page,0,7103139,947,584,0,108
-273,MAS__main_256.txt,MAS,Masco,main,256,7104086,9859,7652,33,189
-274,MA__main_257.txt,MA,Mastercard,main,257,7113945,40861,33562,87,400
-275,MCD__data_260.txt,MCD,McDonald's,data,260,7154806,5971,4643,1,62
-276,MCD__main_259.txt,MCD,McDonald's,main,259,7160777,29546,24051,44,359
-277,MCHP__main_478.txt,MCHP,Microchip Technology,main,478,7190323,28730,22472,29,398
-278,MCO__data_479.txt,MCO,Moody's Corporation,data,479,7219053,3170,2571,1,24
-279,MDLZ__data_271.txt,MDLZ,Mondelez International,data,271,7222223,2403,1368,0,112
-280,MDLZ__main_270.txt,MDLZ,Mondelez International,main,270,7224626,54306,45410,34,535
-281,MDT__main_262.txt,MDT,Medtronic,main,262,7278932,32341,27187,47,78
-282,META__data_265.txt,META,Meta Platforms,data,265,7311273,7389,4120,9,298
-283,META__main_264.txt,META,Meta Platforms,main,264,7318662,18723,16019,53,184
-284,META__page_0.txt,META,Meta Platforms,page,0,7337385,18502,16040,57,116
-285,MET__data_267.txt,MET,MetLife,data,267,7355887,4178,2541,31,92
-286,MET__main_266.txt,MET,MetLife,main,266,7360065,46255,37633,96,287
-287,MKC__page_0.txt,MKC,,page,0,7406320,213,179,0,5
-288,MLM__main_254.txt,MLM,Martin Marietta Materials,main,254,7406533,45799,37949,109,596
-289,MMM__main_0.txt,MMM,3M,main,0,7452332,28162,23490,27,254
-290,MNST__main_272.txt,MNST,Monster Beverage,main,272,7480494,10400,8216,19,112
-291,MOS__data_480.txt,MOS,Mosaic Company (The),data,480,7490894,116486,71715,297,540
-292,MO__page_0.txt,MO,,page,0,7607380,1359,1106,1,20
-293,MRK__main_263.txt,MRK,Merck & Co.,main,263,7608739,71082,57162,111,984
-294,MRNA__main_269.txt,MRNA,Moderna,main,269,7679821,31491,25809,56,416
-295,MRSH__main_481.txt,MRSH,Marsh McLennan,main,481,7711312,26611,22052,20,279
-296,MRVL__main_255.txt,MRVL,Marvell Technology,main,255,7737923,29166,24194,19,166
-297,MSCI__data_482.txt,MSCI,,data,482,7767089,2685,1968,0,20
-298,MSCI__page_0.txt,MSCI,,page,0,7769774,578,514,0,0
-299,MSFT__main_268.txt,MSFT,Microsoft,main,268,7770352,26700,22096,68,179
-300,MSI__main_274.txt,MSI,Motorola Solutions,main,274,7797052,22945,18075,50,384
-301,MS__main_273.txt,MS,Morgan Stanley,main,273,7819997,32641,26737,105,372
-302,MTB__main_252.txt,MTB,M&T Bank,main,252,7852638,51517,42247,173,409
-303,NCLH__main_286.txt,NCLH,Norwegian Cruise Line Holdings,main,286,7904155,29298,24680,28,205
-304,NDAQ__page_0.txt,NDAQ,,page,0,7933453,42725,33502,19,361
-305,NDSN__main_282.txt,NDSN,Nordson Corporation,main,282,7976178,4428,3330,27,83
-306,NEE__data_279.txt,NEE,NextEra Energy,data,279,7980606,6725,4799,24,63
-307,NEE__main_278.txt,NEE,NextEra Energy,main,278,7987331,2127,1790,10,37
-308,NEM__main_277.txt,NEM,Newmont,main,277,7989458,46363,38140,266,607
-309,NFLX__main_276.txt,NFLX,Netflix,main,276,8035821,21324,16388,46,205
-310,NI__main_281.txt,NI,NiSource,main,281,8057145,32845,23096,122,506
-311,NKE__main_280.txt,NKE,"Nike, Inc.",main,280,8089990,25305,16568,9,97
-312,NOC__data_285.txt,NOC,Northrop Grumman,data,285,8115295,2682,2014,2,36
-313,NOC__main_284.txt,NOC,Northrop Grumman,main,284,8117977,13607,10922,53,128
-314,NOW__data_484.txt,NOW,ServiceNow,data,484,8131584,2430,2031,1,22
-315,NOW__page_0.txt,NOW,ServiceNow,page,0,8134014,450,348,0,5
-316,NRG__main_485.txt,NRG,NRG Energy,main,485,8134464,23279,18457,42,302
-317,NSC__main_283.txt,NSC,,main,283,8157743,1811,1422,16,42
-318,NSC__page_0.txt,NSC,,page,0,8159554,201,159,0,2
-319,NUE__page_0.txt,NUE,,page,0,8159755,418,348,0,5
-320,NVDA__main_486.txt,NVDA,Nvidia,main,486,8160173,19419,15394,16,48
-321,NWSA__main_487.txt,NWSA,News Corp (Class A),main,487,8179592,24222,20114,30,257
-322,ODFL__main_488.txt,ODFL,Old Dominion,main,488,8203814,12961,10173,12,161
-323,OKE__main_489.txt,OKE,Oneok,main,489,8216775,39604,30631,172,514
-324,OKE__page_0.txt,OKE,Oneok,page,0,8256379,349,291,0,24
-325,ORCL__data_490.txt,ORCL,Oracle Corporation,data,490,8256728,61350,33759,5,402
-326,OTIS__main_491.txt,OTIS,Otis Worldwide,main,491,8318078,35489,28557,12,389
-327,OTIS__page_0.txt,OTIS,Otis Worldwide,page,0,8353567,34108,27486,12,295
-328,OXY__main_492.txt,OXY,Occidental Petroleum,main,492,8387675,40005,32234,96,675
-329,O__main_311.txt,O,Realty Income,main,311,8427680,48206,38712,25,488
-330,PANW__main_290.txt,PANW,Palo Alto Networks,main,290,8475886,24356,19871,13,180
-331,PAYX__main_293.txt,PAYX,Paychex,main,293,8500242,13405,10373,30,51
-332,PCAR__main_493.txt,PCAR,Paccar,main,493,8513647,9357,7624,41,97
-333,PCG__main_299.txt,PCG,PG&E Corporation,main,299,8523004,57049,44207,282,752
-334,PEG__data_494.txt,PEG,Public Service Enterprise Group,data,494,8580053,30123,20246,20,96
-335,PEP__data_297.txt,PEP,PepsiCo,data,297,8610176,2835,2271,9,26
-336,PEP__main_296.txt,PEP,PepsiCo,main,296,8613011,3691,2977,9,69
-337,PFE__main_298.txt,PFE,Pfizer,main,298,8616702,39296,31854,22,392
-338,PFG__main_495.txt,PFG,Principal Financial Group,main,495,8655998,37780,30300,36,512
-339,PFG__page_0.txt,PFG,Principal Financial Group,page,0,8693778,596,418,0,50
-340,PG__data_305.txt,PG,Procter & Gamble,data,305,8694374,3970,2843,12,61
-341,PG__main_304.txt,PG,Procter & Gamble,main,304,8698344,7842,6777,17,67
-342,PHM__main_496.txt,PHM,PulteGroup,main,496,8706186,15222,11949,58,128
-343,PH__main_292.txt,PH,Parker Hannifin,main,292,8721408,16406,13521,18,33
-344,PLD__main_497.txt,PLD,Prologis,main,497,8737814,22294,16857,94,286
-345,PLTR__data_289.txt,PLTR,Palantir Technologies,data,289,8760108,5432,3853,12,124
-346,PM__main_300.txt,PM,Philip Morris International,main,300,8765540,114270,92987,338,1504
-347,PNC__main_301.txt,PNC,PNC Financial Services,main,301,8879810,47755,37750,236,429
-348,PNR__main_295.txt,PNR,Pentair,main,295,8927565,22095,15170,19,274
-349,PPG__main_302.txt,PPG,PPG Industries,main,302,8949660,33897,27908,58,493
-350,PPL__main_303.txt,PPL,PPL Corporation,main,303,8983557,26675,20130,83,240
-351,PRU__page_0.txt,PRU,,page,0,9010232,466,380,2,6
-352,PSA__main_498.txt,PSA,Public Storage,main,498,9010698,27659,21731,37,219
-353,PSKY__main_291.txt,PSKY,Paramount Skydance Corporation,main,291,9038357,40719,33011,23,392
-354,PSX__page_0.txt,PSX,,page,0,9079076,733,599,0,15
-355,PTC__main_306.txt,PTC,PTC Inc.,main,306,9079809,21041,17513,25,134
-356,PWR__main_499.txt,PWR,Quanta Services,main,499,9100850,42526,34553,96,389
-357,PYPL__main_294.txt,PYPL,PayPal,main,294,9143376,19372,15371,40,162
-358,QCOM__main_307.txt,QCOM,Qualcomm,main,307,9162748,27611,22410,52,286
-359,RCL__main_500.txt,RCL,Royal Caribbean Group,main,500,9190359,41763,32781,30,554
-360,REGN__data_314.txt,REGN,Regeneron Pharmaceuticals,data,314,9232122,2031,612,22,74
-361,REGN__main_313.txt,REGN,Regeneron Pharmaceuticals,main,313,9234153,34765,27833,108,491
-362,REG__main_312.txt,REG,Regency Centers,main,312,9268918,21995,16071,56,404
-363,RF__main_315.txt,RF,Regions Financial Corporation,main,315,9290913,46041,38212,89,459
-364,RF__page_0.txt,RF,Regions Financial Corporation,page,0,9336954,43734,36740,85,369
-365,RL__main_309.txt,RL,Ralph Lauren Corporation,main,309,9380688,24560,19917,10,244
-366,RMD__main_318.txt,RMD,ResMed|,main,318,9405248,37864,30816,30,295
-367,ROK__main_320.txt,ROK,Rockwell Automation,main,320,9443112,26463,22086,19,110
-368,ROL__main_321.txt,ROL,,main,321,9469575,4800,3966,6,40
-369,ROST__main_323.txt,ROST,Ross Stores,main,323,9474375,21164,17554,107,233
-370,ROST__page_0.txt,ROST,Ross Stores,page,0,9495539,1041,897,2,10
-371,RSG__data_317.txt,RSG,Republic Services,data,317,9496580,3661,2536,2,74
-372,RSG__main_316.txt,RSG,Republic Services,main,316,9500241,12390,10522,26,145
-373,RTX__main_310.txt,RTX,RTX Corporation,main,310,9512631,11620,9317,37,101
-374,SBAC__main_327.txt,SBAC,SBA Communications,main,327,9524251,56932,46026,49,486
-375,SHW__data_334.txt,SHW,Sherwin-Williams,data,334,9581183,1538,1164,0,24
-376,SHW__main_333.txt,SHW,Sherwin-Williams,main,333,9582721,20140,15748,76,286
-377,SJM__main_336.txt,SJM,J.M. Smucker Company (The),main,336,9602861,18847,15124,34,187
-378,SLB__data_329.txt,SLB,Schlumberger,data,329,9621708,2134,1388,1,122
-379,SLB__main_328.txt,SLB,Schlumberger,main,328,9623842,27665,21874,25,398
-380,SMCI__main_352.txt,SMCI,Supermicro,main,352,9651507,14623,12165,3,76
-381,SNA__main_339.txt,SNA,Snap-on,main,339,9666130,838,629,3,11
-382,SNDK__main_326.txt,SNDK,Sandisk,main,326,9666968,43221,31474,19,223
-383,SNPS__main_354.txt,SNPS,Synopsys,main,354,9710189,24518,20500,42,151
-384,SOLV__main_340.txt,SOLV,Solventum,main,340,9734707,38596,31051,19,363
-385,SO__main_341.txt,SO,Southern Company,main,341,9773303,15226,12959,27,127
-386,SPGI__main_324.txt,SPGI,S&P Global,main,324,9788529,27155,22110,37,284
-387,STE__data_349.txt,STE,Steris,data,349,9815684,545,456,0,7
-388,STE__main_348.txt,STE,Steris,main,348,9816229,8340,6891,3,54
-389,STLD__main_347.txt,STLD,Steel Dynamics,main,347,9824569,22528,17297,5,318
-390,STT__main_346.txt,STT,State Street Corporation,main,346,9847097,34699,28148,55,353
-391,STX__main_330.txt,STX,Seagate Technology,main,330,9881796,26377,20258,24,95
-392,STZ__main_109.txt,STZ,Constellation Brands,main,109,9908173,22094,17595,56,229
-393,SWKS__main_335.txt,SWKS,Skyworks Solutions,main,335,9930267,11794,9540,46,126
-394,SWK__main_343.txt,SWK,Stanley Black & Decker,main,343,9942061,14912,12089,40,192
-395,SW__data_338.txt,SW,Smurfit Westrock,data,338,9956973,5227,4476,22,38
-396,SW__main_337.txt,SW,Smurfit Westrock,main,337,9962200,72156,58596,94,466
-397,SYF__main_353.txt,SYF,Synchrony Financial,main,353,10034356,5359,4528,7,24
-398,SYK__data_351.txt,SYK,Stryker Corporation,data,351,10039715,666,505,0,20
-399,SYK__main_350.txt,SYK,Stryker Corporation,main,350,10040381,18394,14543,59,314
-400,SYY__data_356.txt,SYY,Sysco,data,356,10058775,1701,1374,1,10
-401,SYY__main_355.txt,SYY,Sysco,main,355,10060476,25292,21072,57,116
-402,TAP__main_503.txt,TAP,Molson Coors Beverage Company,main,503,10085768,13669,11430,25,154
-403,TDG__main_377.txt,TDG,TransDigm Group,main,377,10099437,17092,13693,153,201
-404,TDY__data_366.txt,TDY,Teledyne Technologies,data,366,10116529,2845,1952,9,80
-405,TDY__main_365.txt,TDY,Teledyne Technologies,main,365,10119374,8990,7216,12,120
-406,TECH__data_59.txt,TECH,Bio-Techne,data,59,10128364,332,252,2,4
-407,TECH__main_58.txt,TECH,Bio-Techne,main,58,10128696,27430,22904,27,220
-408,TEL__main_364.txt,TEL,TE Connectivity,main,364,10156126,20031,15694,54,288
-409,TER__data_368.txt,TER,Teradyne,data,368,10176157,570,292,50,3
-410,TER__main_367.txt,TER,Teradyne,main,367,10176727,25805,21355,57,140
-411,TFC__data_382.txt,TFC,Truist Financial,data,382,10202532,5272,3599,5,141
-412,TFC__main_381.txt,TFC,Truist Financial,main,381,10207804,24895,20143,122,150
-413,TGT__data_363.txt,TGT,Target Corporation,data,363,10232699,40297,28377,88,633
-414,TGT__main_362.txt,TGT,Target Corporation,main,362,10272996,32164,27140,56,305
-415,TPL__page_0.txt,TPL,,page,0,10305160,2241,1945,0,3
-416,TPR__main_359.txt,TPR,"Tapestry, Inc.",main,359,10307401,28966,24088,27,195
-417,TRMB__main_380.txt,TRMB,Trimble Inc.,main,380,10336367,20658,16699,12,239
-418,TRV__data_379.txt,TRV,Travelers Companies (The),data,379,10357025,11688,9273,21,85
-419,TRV__main_378.txt,TRV,Travelers Companies (The),main,378,10368713,86210,73336,310,730
-420,TSLA__data_370.txt,TSLA,"Tesla, Inc.",data,370,10454923,1117,875,10,32
-421,TSLA__main_369.txt,TSLA,"Tesla, Inc.",main,369,10456040,7981,6035,35,269
-422,TSN__main_383.txt,TSN,Tyson Foods,main,383,10464021,19958,16314,53,42
-423,TTWO__data_358.txt,TTWO,Take-Two Interactive,data,358,10483979,4357,3633,1,25
-424,TTWO__main_357.txt,TTWO,Take-Two Interactive,main,357,10488336,16884,13822,9,109
-425,TT__data_376.txt,TT,Trane Technologies,data,376,10505220,806,627,3,22
-426,TT__main_375.txt,TT,Trane Technologies,main,375,10506026,55083,44245,90,803
-427,TXN__data_372.txt,TXN,Texas Instruments,data,372,10561109,3946,3317,16,37
-428,TXN__main_371.txt,TXN,Texas Instruments,main,371,10565055,42006,32496,111,557
-429,TXT__main_373.txt,TXT,Textron,main,373,10607061,14050,10834,37,209
-430,T__main_44.txt,T,AT&T,main,44,10621111,9450,7654,49,135
-431,UAL__main_388.txt,UAL,United Airlines Holdings,main,388,10630561,42623,35102,73,469
-432,UAL__page_0.txt,UAL,United Airlines Holdings,page,0,10673184,668,564,1,8
-433,UDR__main_384.txt,UDR,"UDR, Inc.",main,384,10673852,32390,24461,30,348
-434,ULTA__main_385.txt,ULTA,Ulta Beauty,main,385,10706242,21817,17580,29,224
-435,UNH__main_391.txt,UNH,UnitedHealth Group,main,391,10728059,30882,25292,78,358
-436,UPS__data_389.txt,UPS,United Parcel Service,data,389,10758941,22315,17076,50,264
-437,URI__main_390.txt,URI,United Rentals,main,390,10781256,26446,21234,53,345
-438,VEEV__main_394.txt,VEEV,,main,394,10807702,4261,3645,1,23
-439,VICI__main_405.txt,VICI,Vici Properties,main,405,10811963,26597,21711,35,214
-440,VLO__main_393.txt,VLO,Valero Energy,main,393,10838560,40620,31822,263,479
-441,VLTO__main_396.txt,VLTO,Veralto,main,396,10879180,40716,32861,33,342
-442,VMRK__main_506.txt,VMRK,Vivmark Residential,main,506,10919896,42967,34018,66,486
-443,VRSK__data_398.txt,VRSK,Verisk Analytics,data,398,10962863,6364,5059,0,66
-444,VRSK__main_397.txt,VRSK,Verisk Analytics,main,397,10969227,15289,12411,15,145
-445,VRTX__data_402.txt,VRTX,Vertex Pharmaceuticals,data,402,10984516,959,505,10,28
-446,VRTX__main_401.txt,VRTX,Vertex Pharmaceuticals,main,401,10985475,16965,14047,39,167
-447,VRT__main_403.txt,VRT,Vertiv,main,403,11002440,20705,17433,6,157
-448,VST__main_407.txt,VST,Vistra Corp.,main,407,11023145,30667,26117,68,271
-449,VTRS__main_404.txt,VTRS,Viatris,main,404,11053812,63717,53013,57,464
-450,VTR__main_395.txt,VTR,Ventas,main,395,11117529,18743,14767,13,393
-451,VZ__data_400.txt,VZ,Verizon,data,400,11136272,6229,5364,0,34
-452,VZ__main_399.txt,VZ,Verizon,main,399,11142501,14504,12411,11,87
-453,V__main_406.txt,V,Visa Inc.,main,406,11157005,24810,20234,16,125
-454,WAB__data_410.txt,WAB,Wabtec,data,410,11181815,7552,6399,3,33
-455,WAB__main_409.txt,WAB,Wabtec,main,409,11189367,8505,6695,16,99
-456,WAT__main_508.txt,WAT,Waters Corporation,main,508,11197872,20674,16515,8,326
-457,WBD__data_413.txt,WBD,Warner Bros. Discovery,data,413,11218546,334,243,0,3
-458,WBD__main_412.txt,WBD,Warner Bros. Discovery,main,412,11218880,19262,16258,8,81
-459,WDAY__main_428.txt,WDAY,"Workday, Inc.",main,428,11238142,53980,43628,61,300
-460,WDC__main_420.txt,WDC,Western Digital,main,420,11292122,38017,30440,28,111
-461,WEC__main_416.txt,WEC,WEC Energy Group,main,416,11330139,41054,33825,153,386
-462,WELL__main_419.txt,WELL,Welltower,main,419,11371193,17205,12909,26,137
-463,WFC__data_418.txt,WFC,Wells Fargo,data,418,11388398,1386,932,4,27
-464,WFC__main_417.txt,WFC,Wells Fargo,main,417,11389784,756,567,0,24
-465,WMB__data_425.txt,WMB,Williams Companies,data,425,11390540,9475,5605,77,120
-466,WMB__main_424.txt,WMB,Williams Companies,main,424,11400015,70077,56202,151,775
-467,WMT__main_411.txt,WMT,Walmart,main,411,11470092,96462,76301,329,259
-468,WM__data_415.txt,WM,Waste Management,data,415,11566554,9106,4799,103,247
-469,WM__main_414.txt,WM,Waste Management,main,414,11575660,17289,14273,50,288
-470,WRB__main_408.txt,WRB,W. R. Berkley Corporation,main,408,11592949,27312,23038,30,165
-471,WSM__main_423.txt,WSM,"Williams-Sonoma, Inc.",main,423,11620261,18792,14860,42,270
-472,WTW__data_427.txt,WTW,Willis Towers Watson,data,427,11639053,10357,8226,8,225
-473,WTW__main_426.txt,WTW,Willis Towers Watson,main,426,11649410,26919,22029,17,381
-474,WYNN__main_429.txt,WYNN,Wynn Resorts,main,429,11676329,21071,16921,61,207
-475,WY__data_421.txt,WY,Weyerhaeuser,data,421,11697400,3850,2007,51,79
-476,WY__data_422.txt,WY,Weyerhaeuser,data,422,11701250,17274,13554,54,163
-477,XEL__main_509.txt,XEL,Xcel Energy,main,509,11718524,42202,32150,167,551
-478,XOM__main_171.txt,XOM,ExxonMobil,main,171,11760726,43759,35802,54,336
-479,XYL__main_430.txt,XYL,Xylem Inc.,main,430,11804485,77993,60781,87,796
-480,XYZ__data_64.txt,XYZ,"Block, Inc.",data,64,11882478,35761,21018,6,110
-481,XYZ__main_63.txt,XYZ,"Block, Inc.",main,63,11918239,1318,874,7,10
-482,YUM__main_431.txt,YUM,Yum! Brands,main,431,11919557,14954,11882,27,222
-483,ZBH__main_432.txt,ZBH,Zimmer Biomet,main,432,11934511,21007,17718,18,180
-484,ZTS__main_433.txt,ZTS,Zoetis,main,433,11955518,18056,14457,40,216
+190,GM__main_510.txt,GM,General Motors,main,510,4967833,13315,10627,9,110
+191,GNRC__main_192.txt,GNRC,Generac,main,192,4981148,35378,28243,90,297
+192,GOOGL__main_22.txt,GOOGL,Alphabet Inc. (Class A),main,22,5016526,72666,57424,180,871
+193,GPC__main_196.txt,GPC,Genuine Parts Company,main,196,5089192,20258,16815,44,122
+194,GRMN__data_185.txt,GRMN,Garmin,data,185,5109450,2677,2140,2,14
+195,GRMN__main_462.txt,GRMN,Garmin,main,462,5112127,4110,3486,0,21
+196,GRMN__page_0.txt,GRMN,Garmin,page,0,5116237,431,367,0,3
+197,GS__page_0.txt,GS,Goldman Sachs,page,0,5116668,772,680,0,6
+198,GWW__main_463.txt,GWW,W. W. Grainger,main,463,5117440,15730,12224,51,204
+199,HAL__main_199.txt,HAL,Halliburton,main,199,5133170,14533,10969,38,155
+200,HBAN__main_209.txt,HBAN,Huntington Bancshares,main,209,5147703,29692,23567,163,272
+201,HCA__main_201.txt,HCA,HCA Healthcare,main,201,5177395,23248,19982,54,169
+202,HD__main_203.txt,HD,Home Depot (The),main,203,5200643,43892,36088,168,375
+203,HIG__main_200.txt,HIG,Hartford (The),main,200,5244535,23959,20434,58,191
+204,HII__main_210.txt,HII,Huntington Ingalls Industries,main,210,5268494,26095,20809,27,216
+205,HII__page_0.txt,HII,Huntington Ingalls Industries,page,0,5294589,23150,18456,27,152
+206,HLT__main_464.txt,HLT,Hilton Worldwide,main,464,5317739,45505,36268,111,622
+207,HON__main_204.txt,HON,Honeywell Technologies,main,204,5363244,27068,22000,51,176
+208,HPQ__main_207.txt,HPQ,HP Inc.,main,207,5390312,84400,65882,134,818
+209,HRL__main_205.txt,HRL,Hormel Foods,main,205,5474712,19702,16623,40,160
+210,HST__main_466.txt,HST,Host Hotels & Resorts,main,466,5494414,34214,27479,56,503
+211,HSY__main_467.txt,HSY,Hershey Company (The),main,467,5528628,41947,31040,98,644
+212,HUBB__main_208.txt,HUBB,Hubbell Incorporated,main,208,5570575,52389,43143,44,443
+213,HUM__page_0.txt,HUM,Humana,page,0,5622964,551,462,7,7
+214,HWM__main_206.txt,HWM,Howmet Aerospace,main,206,5623515,32698,25096,43,442
+215,IBKR__main_468.txt,IBKR,Interactive Brokers,main,468,5656213,22486,16847,30,222
+216,IBM__page_0.txt,IBM,IBM,page,0,5678699,397,358,0,8
+217,ICE__page_0.txt,ICE,Intercontinental Exchange,page,0,5679096,625,557,0,1
+218,IDXX__main_212.txt,IDXX,Idexx Laboratories,main,212,5679721,20716,17109,25,216
+219,IEX__main_211.txt,IEX,IDEX Corporation,main,211,5700437,34353,28167,63,357
+220,IFF__main_216.txt,IFF,International Flavors & Fragrances,main,216,5734790,67012,53228,19,684
+221,INTC__main_215.txt,INTC,Intel,main,215,5801802,40605,32515,77,388
+222,INTU__main_218.txt,INTU,Intuit,main,218,5842407,29858,23905,91,109
+223,INVH__main_221.txt,INVH,Invitation Homes,main,221,5872265,18560,15644,11,111
+224,IP__main_217.txt,IP,International Paper,main,217,5890825,24155,19240,25,218
+225,IQV__main_222.txt,IQV,IQVIA,main,222,5914980,40089,32270,18,355
+226,IRM__main_223.txt,IRM,Iron Mountain,main,223,5955069,25453,18551,46,489
+227,ISRG__main_219.txt,ISRG,Intuitive Surgical,main,219,5980522,12817,10312,13,132
+228,ITW__data_214.txt,ITW,Illinois Tool Works,data,214,5993339,1128,522,13,22
+229,ITW__main_213.txt,ITW,Illinois Tool Works,main,213,5994467,10083,7951,21,106
+230,IT__main_186.txt,IT,Gartner,main,186,6004550,23666,19706,15,210
+231,JBHT__main_224.txt,JBHT,J.B. Hunt,main,224,6028216,20492,15043,64,262
+232,JBL__data_226.txt,JBL,Jabil,data,226,6048708,768,638,0,9
+233,JBL__main_225.txt,JBL,Jabil,main,225,6049476,42410,33031,86,272
+234,JCI__main_230.txt,JCI,Johnson Controls,main,230,6091886,38620,30481,60,388
+235,JKHY__main_227.txt,JKHY,Jack Henry & Associates,main,227,6130506,15178,12725,16,101
+236,JNJ__main_229.txt,JNJ,Johnson & Johnson,main,229,6145684,25412,19377,138,368
+237,JPM__main_470.txt,JPM,JPMorgan Chase,main,470,6171096,26080,21453,58,214
+238,J__main_228.txt,J,Jacobs Solutions,main,228,6197176,57369,46431,43,188
+239,KDP__main_231.txt,KDP,Keurig Dr Pepper,main,231,6254545,22637,17604,30,327
+240,KEY__main_232.txt,KEY,KeyCorp,main,232,6277182,44119,36484,179,395
+241,KHC__main_471.txt,KHC,Kraft Heinz,main,471,6321301,39473,32476,110,562
+242,KHC__page_0.txt,KHC,Kraft Heinz,page,0,6360774,977,862,0,4
+243,KKR__main_238.txt,KKR,KKR & Co.,main,238,6361751,17865,14829,13,114
+244,KLAC__data_472.txt,KLAC,KLA Corporation,data,472,6379616,23388,18013,29,114
+245,KLAC__page_0.txt,KLAC,KLA Corporation,page,0,6403004,838,715,2,13
+246,KMB__data_235.txt,KMB,Kimberly-Clark,data,235,6403842,24098,18441,19,249
+247,KMB__main_234.txt,KMB,Kimberly-Clark,main,234,6427940,12905,10900,9,97
+248,KMI__main_237.txt,KMI,Kinder Morgan,main,237,6440845,45592,36151,126,496
+249,KO__main_101.txt,KO,Coca-Cola Company (The),main,101,6486437,2023,1589,6,47
+250,KR__main_473.txt,KR,Kroger,main,473,6488460,47334,38815,183,546
+251,KVUE__page_0.txt,KVUE,Kenvue,page,0,6535794,46786,37649,61,299
+252,LDOS__page_0.txt,LDOS,Leidos,page,0,6582580,1638,1386,1,22
+253,LEN__main_475.txt,LEN,Lennar,main,475,6584218,7353,6345,11,21
+254,LHX__main_239.txt,LHX,L3Harris,main,239,6591571,17699,14239,4,188
+255,LH__main_240.txt,LH,Labcorp,main,240,6609270,19506,15102,17,229
+256,LII__main_243.txt,LII,Lennox International,main,243,6628776,18308,14931,44,135
+257,LIN__main_245.txt,LIN,Linde plc,main,245,6647084,56288,42967,263,640
+258,LLY__main_244.txt,LLY,Lilly (Eli),main,244,6703372,16910,14281,45,139
+259,LMT__main_246.txt,LMT,Lockheed Martin,main,246,6720282,19496,13285,12,678
+260,LNT__data_21.txt,LNT,Alliant Energy,data,21,6739778,1786,1192,11,20
+261,LNT__main_20.txt,LNT,Alliant Energy,main,20,6741564,22735,17570,51,275
+262,LOW__main_247.txt,LOW,Lowe's,main,247,6764299,30967,24624,117,404
+263,LOW__main_248.txt,LOW,Lowe's,main,248,6795266,8450,6892,34,134
+264,LRCX__main_241.txt,LRCX,Lam Research,main,241,6803716,35805,28621,78,461
+265,LULU__data_250.txt,LULU,Lululemon Athletica,data,250,6839521,10693,7881,1,209
+266,LULU__main_249.txt,LULU,Lululemon Athletica,main,249,6850214,24302,19496,104,491
+267,LUV__main_342.txt,LUV,Southwest Airlines,main,342,6874516,66792,52698,242,784
+268,LVS__main_242.txt,LVS,Las Vegas Sands,main,242,6941308,59432,48169,114,941
+269,LYB__main_251.txt,LYB,LyondellBasell,main,251,7000740,76111,61934,100,698
+270,L__main_474.txt,L,Loews Corporation,main,474,7076851,2113,1854,1,1
+271,MAA__main_476.txt,MAA,Mid-America Apartment Communities,main,476,7078964,27916,21247,69,315
+272,MAR__main_477.txt,MAR,Marriott International,main,477,7106880,9574,7648,23,111
+273,MAR__page_0.txt,MAR,Marriott International,page,0,7116454,947,584,0,108
+274,MAS__main_256.txt,MAS,Masco,main,256,7117401,9859,7652,33,189
+275,MA__main_257.txt,MA,Mastercard,main,257,7127260,40861,33562,87,400
+276,MCD__data_260.txt,MCD,McDonald's,data,260,7168121,5971,4643,1,62
+277,MCD__main_259.txt,MCD,McDonald's,main,259,7174092,29546,24051,44,359
+278,MCHP__main_478.txt,MCHP,Microchip Technology,main,478,7203638,28730,22472,29,398
+279,MCO__data_479.txt,MCO,Moody's Corporation,data,479,7232368,3170,2571,1,24
+280,MDLZ__data_271.txt,MDLZ,Mondelez International,data,271,7235538,2403,1368,0,112
+281,MDLZ__main_270.txt,MDLZ,Mondelez International,main,270,7237941,54306,45410,34,535
+282,MDT__main_262.txt,MDT,Medtronic,main,262,7292247,32341,27187,47,78
+283,META__data_265.txt,META,Meta Platforms,data,265,7324588,7389,4120,9,298
+284,META__main_264.txt,META,Meta Platforms,main,264,7331977,18723,16019,53,184
+285,META__page_0.txt,META,Meta Platforms,page,0,7350700,18502,16040,57,116
+286,MET__data_267.txt,MET,MetLife,data,267,7369202,4178,2541,31,92
+287,MET__main_266.txt,MET,MetLife,main,266,7373380,46255,37633,96,287
+288,MKC__page_0.txt,MKC,McCormick & Company,page,0,7419635,213,179,0,5
+289,MLM__main_254.txt,MLM,Martin Marietta Materials,main,254,7419848,45799,37949,109,596
+290,MMM__main_0.txt,MMM,3M,main,0,7465647,28162,23490,27,254
+291,MNST__main_272.txt,MNST,Monster Beverage,main,272,7493809,10400,8216,19,112
+292,MOS__data_480.txt,MOS,Mosaic Company (The),data,480,7504209,116486,71715,297,540
+293,MO__page_0.txt,MO,Altria,page,0,7620695,1359,1106,1,20
+294,MRK__main_263.txt,MRK,Merck & Co.,main,263,7622054,71082,57162,111,984
+295,MRNA__main_269.txt,MRNA,Moderna,main,269,7693136,31491,25809,56,416
+296,MRSH__main_481.txt,MRSH,Marsh McLennan,main,481,7724627,26611,22052,20,279
+297,MRVL__main_255.txt,MRVL,Marvell Technology,main,255,7751238,29166,24194,19,166
+298,MSCI__data_482.txt,MSCI,MSCI,data,482,7780404,2685,1968,0,20
+299,MSCI__page_0.txt,MSCI,MSCI,page,0,7783089,578,514,0,0
+300,MSFT__main_268.txt,MSFT,Microsoft,main,268,7783667,26700,22096,68,179
+301,MSI__main_274.txt,MSI,Motorola Solutions,main,274,7810367,22945,18075,50,384
+302,MS__main_273.txt,MS,Morgan Stanley,main,273,7833312,32641,26737,105,372
+303,MTB__main_252.txt,MTB,M&T Bank,main,252,7865953,51517,42247,173,409
+304,NCLH__main_286.txt,NCLH,Norwegian Cruise Line Holdings,main,286,7917470,29298,24680,28,205
+305,NDAQ__page_0.txt,NDAQ,"Nasdaq, Inc.",page,0,7946768,42725,33502,19,361
+306,NDSN__main_282.txt,NDSN,Nordson Corporation,main,282,7989493,4428,3330,27,83
+307,NEE__data_279.txt,NEE,NextEra Energy,data,279,7993921,6725,4799,24,63
+308,NEE__main_278.txt,NEE,NextEra Energy,main,278,8000646,2127,1790,10,37
+309,NEM__main_277.txt,NEM,Newmont,main,277,8002773,46363,38140,266,607
+310,NFLX__main_276.txt,NFLX,Netflix,main,276,8049136,21324,16388,46,205
+311,NI__main_281.txt,NI,NiSource,main,281,8070460,32845,23096,122,506
+312,NKE__main_280.txt,NKE,"Nike, Inc.",main,280,8103305,25305,16568,9,97
+313,NOC__data_285.txt,NOC,Northrop Grumman,data,285,8128610,2682,2014,2,36
+314,NOC__main_284.txt,NOC,Northrop Grumman,main,284,8131292,13607,10922,53,128
+315,NOW__data_484.txt,NOW,ServiceNow,data,484,8144899,2430,2031,1,22
+316,NOW__page_0.txt,NOW,ServiceNow,page,0,8147329,450,348,0,5
+317,NRG__main_485.txt,NRG,NRG Energy,main,485,8147779,23279,18457,42,302
+318,NSC__main_283.txt,NSC,Norfolk Southern,main,283,8171058,1811,1422,16,42
+319,NSC__page_0.txt,NSC,Norfolk Southern,page,0,8172869,201,159,0,2
+320,NUE__page_0.txt,NUE,Nucor,page,0,8173070,418,348,0,5
+321,NVDA__main_486.txt,NVDA,Nvidia,main,486,8173488,19419,15394,16,48
+322,NWSA__main_487.txt,NWSA,News Corp (Class A),main,487,8192907,24222,20114,30,257
+323,ODFL__main_488.txt,ODFL,Old Dominion,main,488,8217129,12961,10173,12,161
+324,OKE__main_489.txt,OKE,Oneok,main,489,8230090,39604,30631,172,514
+325,OKE__page_0.txt,OKE,Oneok,page,0,8269694,349,291,0,24
+326,ORCL__data_490.txt,ORCL,Oracle Corporation,data,490,8270043,61350,33759,5,402
+327,OTIS__main_491.txt,OTIS,Otis Worldwide,main,491,8331393,35489,28557,12,389
+328,OTIS__page_0.txt,OTIS,Otis Worldwide,page,0,8366882,34108,27486,12,295
+329,OXY__main_492.txt,OXY,Occidental Petroleum,main,492,8400990,40005,32234,96,675
+330,O__main_311.txt,O,Realty Income,main,311,8440995,48206,38712,25,488
+331,PANW__main_290.txt,PANW,Palo Alto Networks,main,290,8489201,24356,19871,13,180
+332,PAYX__main_293.txt,PAYX,Paychex,main,293,8513557,13405,10373,30,51
+333,PCAR__main_493.txt,PCAR,Paccar,main,493,8526962,9357,7624,41,97
+334,PCG__main_299.txt,PCG,PG&E Corporation,main,299,8536319,57049,44207,282,752
+335,PEG__data_494.txt,PEG,Public Service Enterprise Group,data,494,8593368,30123,20246,20,96
+336,PEP__data_297.txt,PEP,PepsiCo,data,297,8623491,2835,2271,9,26
+337,PEP__main_296.txt,PEP,PepsiCo,main,296,8626326,3691,2977,9,69
+338,PFE__main_298.txt,PFE,Pfizer,main,298,8630017,39296,31854,22,392
+339,PFG__main_495.txt,PFG,Principal Financial Group,main,495,8669313,37780,30300,36,512
+340,PFG__page_0.txt,PFG,Principal Financial Group,page,0,8707093,596,418,0,50
+341,PG__data_305.txt,PG,Procter & Gamble,data,305,8707689,3970,2843,12,61
+342,PG__main_304.txt,PG,Procter & Gamble,main,304,8711659,7842,6777,17,67
+343,PHM__main_496.txt,PHM,PulteGroup,main,496,8719501,15222,11949,58,128
+344,PH__main_292.txt,PH,Parker Hannifin,main,292,8734723,16406,13521,18,33
+345,PLD__main_497.txt,PLD,Prologis,main,497,8751129,22294,16857,94,286
+346,PLTR__data_289.txt,PLTR,Palantir Technologies,data,289,8773423,5432,3853,12,124
+347,PM__main_300.txt,PM,Philip Morris International,main,300,8778855,114270,92987,338,1504
+348,PNC__main_301.txt,PNC,PNC Financial Services,main,301,8893125,47755,37750,236,429
+349,PNR__main_295.txt,PNR,Pentair,main,295,8940880,22095,15170,19,274
+350,PPG__main_302.txt,PPG,PPG Industries,main,302,8962975,33897,27908,58,493
+351,PPL__main_303.txt,PPL,PPL Corporation,main,303,8996872,26675,20130,83,240
+352,PRU__page_0.txt,PRU,Prudential Financial,page,0,9023547,466,380,2,6
+353,PSA__main_498.txt,PSA,Public Storage,main,498,9024013,27659,21731,37,219
+354,PSKY__main_291.txt,PSKY,Paramount Skydance Corporation,main,291,9051672,40719,33011,23,392
+355,PSX__page_0.txt,PSX,Phillips 66,page,0,9092391,733,599,0,15
+356,PTC__main_306.txt,PTC,PTC Inc.,main,306,9093124,21041,17513,25,134
+357,PWR__main_499.txt,PWR,Quanta Services,main,499,9114165,42526,34553,96,389
+358,PYPL__main_294.txt,PYPL,PayPal,main,294,9156691,19372,15371,40,162
+359,QCOM__main_307.txt,QCOM,Qualcomm,main,307,9176063,27611,22410,52,286
+360,RCL__main_500.txt,RCL,Royal Caribbean Group,main,500,9203674,41763,32781,30,554
+361,REGN__data_314.txt,REGN,Regeneron Pharmaceuticals,data,314,9245437,2031,612,22,74
+362,REGN__main_313.txt,REGN,Regeneron Pharmaceuticals,main,313,9247468,34765,27833,108,491
+363,REG__main_312.txt,REG,Regency Centers,main,312,9282233,21995,16071,56,404
+364,RF__main_315.txt,RF,Regions Financial Corporation,main,315,9304228,46041,38212,89,459
+365,RF__page_0.txt,RF,Regions Financial Corporation,page,0,9350269,43734,36740,85,369
+366,RL__main_309.txt,RL,Ralph Lauren Corporation,main,309,9394003,24560,19917,10,244
+367,RMD__main_318.txt,RMD,ResMed|,main,318,9418563,37864,30816,30,295
+368,ROK__main_320.txt,ROK,Rockwell Automation,main,320,9456427,26463,22086,19,110
+369,ROL__main_321.txt,ROL,"Rollins, Inc.",main,321,9482890,4800,3966,6,40
+370,ROST__main_323.txt,ROST,Ross Stores,main,323,9487690,21164,17554,107,233
+371,ROST__page_0.txt,ROST,Ross Stores,page,0,9508854,1041,897,2,10
+372,RSG__data_317.txt,RSG,Republic Services,data,317,9509895,3661,2536,2,74
+373,RSG__main_316.txt,RSG,Republic Services,main,316,9513556,12390,10522,26,145
+374,RTX__main_310.txt,RTX,RTX Corporation,main,310,9525946,11620,9317,37,101
+375,SBAC__main_327.txt,SBAC,SBA Communications,main,327,9537566,56932,46026,49,486
+376,SHW__data_334.txt,SHW,Sherwin-Williams,data,334,9594498,1538,1164,0,24
+377,SHW__main_333.txt,SHW,Sherwin-Williams,main,333,9596036,20140,15748,76,286
+378,SJM__main_336.txt,SJM,J.M. Smucker Company (The),main,336,9616176,18847,15124,34,187
+379,SLB__data_329.txt,SLB,Schlumberger,data,329,9635023,2134,1388,1,122
+380,SLB__main_328.txt,SLB,Schlumberger,main,328,9637157,27665,21874,25,398
+381,SMCI__main_352.txt,SMCI,Supermicro,main,352,9664822,14623,12165,3,76
+382,SNA__main_339.txt,SNA,Snap-on,main,339,9679445,838,629,3,11
+383,SNDK__main_326.txt,SNDK,Sandisk,main,326,9680283,43221,31474,19,223
+384,SNPS__main_354.txt,SNPS,Synopsys,main,354,9723504,24518,20500,42,151
+385,SOLV__main_340.txt,SOLV,Solventum,main,340,9748022,38596,31051,19,363
+386,SO__main_341.txt,SO,Southern Company,main,341,9786618,15226,12959,27,127
+387,SPGI__main_324.txt,SPGI,S&P Global,main,324,9801844,27155,22110,37,284
+388,STE__data_349.txt,STE,Steris,data,349,9828999,545,456,0,7
+389,STE__main_348.txt,STE,Steris,main,348,9829544,8340,6891,3,54
+390,STLD__main_347.txt,STLD,Steel Dynamics,main,347,9837884,22528,17297,5,318
+391,STT__main_346.txt,STT,State Street Corporation,main,346,9860412,34699,28148,55,353
+392,STX__main_330.txt,STX,Seagate Technology,main,330,9895111,26377,20258,24,95
+393,STZ__main_109.txt,STZ,Constellation Brands,main,109,9921488,22094,17595,56,229
+394,SWKS__main_335.txt,SWKS,Skyworks Solutions,main,335,9943582,11794,9540,46,126
+395,SWK__main_343.txt,SWK,Stanley Black & Decker,main,343,9955376,14912,12089,40,192
+396,SW__data_338.txt,SW,Smurfit Westrock,data,338,9970288,5227,4476,22,38
+397,SW__main_337.txt,SW,Smurfit Westrock,main,337,9975515,72156,58596,94,466
+398,SYF__main_353.txt,SYF,Synchrony Financial,main,353,10047671,5359,4528,7,24
+399,SYK__data_351.txt,SYK,Stryker Corporation,data,351,10053030,666,505,0,20
+400,SYK__main_350.txt,SYK,Stryker Corporation,main,350,10053696,18394,14543,59,314
+401,SYY__data_356.txt,SYY,Sysco,data,356,10072090,1701,1374,1,10
+402,SYY__main_355.txt,SYY,Sysco,main,355,10073791,25292,21072,57,116
+403,TAP__main_503.txt,TAP,Molson Coors Beverage Company,main,503,10099083,13669,11430,25,154
+404,TDG__main_377.txt,TDG,TransDigm Group,main,377,10112752,17092,13693,153,201
+405,TDY__data_366.txt,TDY,Teledyne Technologies,data,366,10129844,2845,1952,9,80
+406,TDY__main_365.txt,TDY,Teledyne Technologies,main,365,10132689,8990,7216,12,120
+407,TECH__data_59.txt,TECH,Bio-Techne,data,59,10141679,332,252,2,4
+408,TECH__main_58.txt,TECH,Bio-Techne,main,58,10142011,27430,22904,27,220
+409,TEL__main_364.txt,TEL,TE Connectivity,main,364,10169441,20031,15694,54,288
+410,TER__data_368.txt,TER,Teradyne,data,368,10189472,570,292,50,3
+411,TER__main_367.txt,TER,Teradyne,main,367,10190042,25805,21355,57,140
+412,TFC__data_382.txt,TFC,Truist Financial,data,382,10215847,5272,3599,5,141
+413,TFC__main_381.txt,TFC,Truist Financial,main,381,10221119,24895,20143,122,150
+414,TGT__data_363.txt,TGT,Target Corporation,data,363,10246014,40297,28377,88,633
+415,TGT__main_362.txt,TGT,Target Corporation,main,362,10286311,32164,27140,56,305
+416,TPL__page_0.txt,TPL,Texas Pacific Land Corporation,page,0,10318475,2241,1945,0,3
+417,TPR__main_359.txt,TPR,"Tapestry, Inc.",main,359,10320716,28966,24088,27,195
+418,TRMB__main_380.txt,TRMB,Trimble Inc.,main,380,10349682,20658,16699,12,239
+419,TRV__data_379.txt,TRV,Travelers Companies (The),data,379,10370340,11688,9273,21,85
+420,TRV__main_378.txt,TRV,Travelers Companies (The),main,378,10382028,86210,73336,310,730
+421,TSLA__data_370.txt,TSLA,"Tesla, Inc.",data,370,10468238,1117,875,10,32
+422,TSLA__main_369.txt,TSLA,"Tesla, Inc.",main,369,10469355,7981,6035,35,269
+423,TSN__main_383.txt,TSN,Tyson Foods,main,383,10477336,19958,16314,53,42
+424,TTWO__data_358.txt,TTWO,Take-Two Interactive,data,358,10497294,4357,3633,1,25
+425,TTWO__main_357.txt,TTWO,Take-Two Interactive,main,357,10501651,16884,13822,9,109
+426,TT__data_376.txt,TT,Trane Technologies,data,376,10518535,806,627,3,22
+427,TT__main_375.txt,TT,Trane Technologies,main,375,10519341,55083,44245,90,803
+428,TXN__data_372.txt,TXN,Texas Instruments,data,372,10574424,3946,3317,16,37
+429,TXN__main_371.txt,TXN,Texas Instruments,main,371,10578370,42006,32496,111,557
+430,TXT__main_373.txt,TXT,Textron,main,373,10620376,14050,10834,37,209
+431,T__main_44.txt,T,AT&T,main,44,10634426,9450,7654,49,135
+432,UAL__main_388.txt,UAL,United Airlines Holdings,main,388,10643876,42623,35102,73,469
+433,UAL__page_0.txt,UAL,United Airlines Holdings,page,0,10686499,668,564,1,8
+434,UDR__main_384.txt,UDR,"UDR, Inc.",main,384,10687167,32390,24461,30,348
+435,ULTA__main_385.txt,ULTA,Ulta Beauty,main,385,10719557,21817,17580,29,224
+436,UNH__main_391.txt,UNH,UnitedHealth Group,main,391,10741374,30882,25292,78,358
+437,UPS__data_389.txt,UPS,United Parcel Service,data,389,10772256,22315,17076,50,264
+438,URI__main_390.txt,URI,United Rentals,main,390,10794571,26446,21234,53,345
+439,VEEV__main_394.txt,VEEV,Veeva Systems,main,394,10821017,4261,3645,1,23
+440,VICI__main_405.txt,VICI,Vici Properties,main,405,10825278,26597,21711,35,214
+441,VLO__main_393.txt,VLO,Valero Energy,main,393,10851875,40620,31822,263,479
+442,VLTO__main_396.txt,VLTO,Veralto,main,396,10892495,40716,32861,33,342
+443,VMRK__main_506.txt,VMRK,Vivmark Residential,main,506,10933211,42967,34018,66,486
+444,VRSK__data_398.txt,VRSK,Verisk Analytics,data,398,10976178,6364,5059,0,66
+445,VRSK__main_397.txt,VRSK,Verisk Analytics,main,397,10982542,15289,12411,15,145
+446,VRTX__data_402.txt,VRTX,Vertex Pharmaceuticals,data,402,10997831,959,505,10,28
+447,VRTX__main_401.txt,VRTX,Vertex Pharmaceuticals,main,401,10998790,16965,14047,39,167
+448,VRT__main_403.txt,VRT,Vertiv,main,403,11015755,20705,17433,6,157
+449,VST__main_407.txt,VST,Vistra Corp.,main,407,11036460,30667,26117,68,271
+450,VTRS__main_404.txt,VTRS,Viatris,main,404,11067127,63717,53013,57,464
+451,VTR__main_395.txt,VTR,Ventas,main,395,11130844,18743,14767,13,393
+452,VZ__data_400.txt,VZ,Verizon,data,400,11149587,6229,5364,0,34
+453,VZ__main_399.txt,VZ,Verizon,main,399,11155816,14504,12411,11,87
+454,V__main_406.txt,V,Visa Inc.,main,406,11170320,24810,20234,16,125
+455,WAB__data_410.txt,WAB,Wabtec,data,410,11195130,7552,6399,3,33
+456,WAB__main_409.txt,WAB,Wabtec,main,409,11202682,8505,6695,16,99
+457,WAT__main_508.txt,WAT,Waters Corporation,main,508,11211187,20674,16515,8,326
+458,WBD__data_413.txt,WBD,Warner Bros. Discovery,data,413,11231861,334,243,0,3
+459,WBD__main_412.txt,WBD,Warner Bros. Discovery,main,412,11232195,19262,16258,8,81
+460,WDAY__main_428.txt,WDAY,"Workday, Inc.",main,428,11251457,53980,43628,61,300
+461,WDC__main_420.txt,WDC,Western Digital,main,420,11305437,38017,30440,28,111
+462,WEC__main_416.txt,WEC,WEC Energy Group,main,416,11343454,41054,33825,153,386
+463,WELL__main_419.txt,WELL,Welltower,main,419,11384508,17205,12909,26,137
+464,WFC__data_418.txt,WFC,Wells Fargo,data,418,11401713,1386,932,4,27
+465,WFC__main_417.txt,WFC,Wells Fargo,main,417,11403099,756,567,0,24
+466,WMB__data_425.txt,WMB,Williams Companies,data,425,11403855,9475,5605,77,120
+467,WMB__main_424.txt,WMB,Williams Companies,main,424,11413330,70077,56202,151,775
+468,WMT__main_411.txt,WMT,Walmart,main,411,11483407,96462,76301,329,259
+469,WM__data_415.txt,WM,Waste Management,data,415,11579869,9106,4799,103,247
+470,WM__main_414.txt,WM,Waste Management,main,414,11588975,17289,14273,50,288
+471,WRB__main_408.txt,WRB,W. R. Berkley Corporation,main,408,11606264,27312,23038,30,165
+472,WSM__main_423.txt,WSM,"Williams-Sonoma, Inc.",main,423,11633576,18792,14860,42,270
+473,WTW__data_427.txt,WTW,Willis Towers Watson,data,427,11652368,10357,8226,8,225
+474,WTW__main_426.txt,WTW,Willis Towers Watson,main,426,11662725,26919,22029,17,381
+475,WYNN__main_429.txt,WYNN,Wynn Resorts,main,429,11689644,21071,16921,61,207
+476,WY__data_421.txt,WY,Weyerhaeuser,data,421,11710715,3850,2007,51,79
+477,WY__data_422.txt,WY,Weyerhaeuser,data,422,11714565,17274,13554,54,163
+478,XEL__main_509.txt,XEL,Xcel Energy,main,509,11731839,42202,32150,167,551
+479,XOM__main_171.txt,XOM,ExxonMobil,main,171,11774041,43759,35802,54,336
+480,XYL__main_430.txt,XYL,Xylem Inc.,main,430,11817800,77993,60781,87,796
+481,XYZ__data_64.txt,XYZ,"Block, Inc.",data,64,11895793,35761,21018,6,110
+482,XYZ__main_63.txt,XYZ,"Block, Inc.",main,63,11931554,1318,874,7,10
+483,YUM__main_431.txt,YUM,Yum! Brands,main,431,11932872,14954,11882,27,222
+484,ZBH__main_432.txt,ZBH,Zimmer Biomet,main,432,11947826,21007,17718,18,180
+485,ZTS__main_433.txt,ZTS,Zoetis,main,433,11968833,18056,14457,40,216

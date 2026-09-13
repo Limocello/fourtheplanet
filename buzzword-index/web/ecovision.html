@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&P 500 Sustainability Assessment</title>
+    <title>Eco-Lifespan — S&P 500 Sustainability Assessment</title>
     <style>
         :root {
             /* Natural, Muted Palette */
@@ -134,6 +134,11 @@
             background: linear-gradient(to bottom, #e2e8f0, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .stat-note {
+            font-size: 0.58rem; color: var(--accent-danger); letter-spacing: 0.5px;
+            margin-top: 4px; min-height: 0.8em;
         }
 
         .stat-label { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
@@ -370,7 +375,7 @@
     <div id="loader"><div class="loader-text">LOADING DATASET...</div></div>
 
     <header>
-        <h1>Eco-Vision <span style="color:var(--accent-green)">AI</span></h1>
+        <h1>Eco-<span style="color:var(--accent-green)">Lifespan</span></h1>
         <div class="subtitle">S&P 500 Sustainability Assessment</div>
     </header>
 
@@ -413,6 +418,11 @@
                         <p style="margin-top:8px;">
                             The calculation is made for each resource separately. <b>140+</b> means the company does
                             not reach zero profit within the available 2026&ndash;2100 projections.
+                        </p>
+                        <p style="margin-top:8px;">
+                            The projection sliders set a resource cost growth rate <em>g</em>. On a straight price
+                            path the cost at any year scales with <em>g</em>, so the horizon scales with
+                            1/(1+<em>g</em>). That is an extrapolation on top of the table, not a figure from it.
                         </p>
                     </div>
                 </div>
@@ -482,15 +492,12 @@
                     <span class="assessment-label">Water Usage</span>
                     <span class="assessment-value" id="ass-water">--</span>
                 </div>
-                <div class="assessment-item">
-                    <span class="assessment-label">Waste Recycle</span>
-                    <span class="assessment-value" id="ass-waste">--</span>
-                </div>
             </div>
 
             <div class="big-stat">
                 <div class="stat-label">Predicted Survival</div>
                 <div class="stat-value"><span id="years-display">0</span> <span style="font-size: 0.8rem;">YRS</span></div>
+                <div class="stat-note" id="years-note"></div>
             </div>
         </div>
 
@@ -587,7 +594,6 @@
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
         // --- 1. DATASET PARSED FROM USER INPUT ---
-        // Note: 'waste' is mocked (randomized 10-95%) as it was not in the source data.
         const rawData = `Ticker,Company Name,Electricity Usage (MWh),CO2 Emissions (Metric Tons),Water Usage (Cubic Meters),Revenue (USD),Profit (USD)
 MMM,3M,3500000,2500000,30000000,24948000000,3250000000
 AOS,A. O. Smith,179316,143109,1356134,3830200000,546200000
@@ -1619,9 +1625,7 @@ ZTS,>140,>140,>140,>140`;
                     co2: parseFloat(cols[3].replace(/,/g, '')),
                     water: parseFloat(cols[4].replace(/,/g, '')),
                     revenue: parseFloat(cols[5].replace(/,/g, '')),
-                    profit: parseFloat(cols[6].replace(/,/g, '')),
-                    // Simulate waste recycle rate since it wasn't in the list
-                    wasteRecycle: Math.floor(Math.random() * (95 - 20 + 1)) + 20
+                    profit: parseFloat(cols[6].replace(/,/g, ''))
                 });
             }
         }
@@ -1789,7 +1793,6 @@ ZTS,>140,>140,>140,>140`;
                 document.getElementById('ass-energy').innerText = "--";
                 document.getElementById('ass-co2').innerText = "--";
                 document.getElementById('ass-water').innerText = "--";
-                document.getElementById('ass-waste').innerText = "--";
                 document.getElementById('years-display').innerText = "0";
                 return;
             }
@@ -1802,10 +1805,6 @@ ZTS,>140,>140,>140,>140`;
             document.getElementById('ass-energy').innerText = formatNumber(c.electricity) + " MWh";
             document.getElementById('ass-co2').innerText = formatNumber(c.co2) + " Tons";
             document.getElementById('ass-water').innerText = formatNumber(c.water) + " m³";
-
-            const elWaste = document.getElementById('ass-waste');
-            elWaste.innerText = c.wasteRecycle + "%";
-            elWaste.className = "assessment-value " + (c.wasteRecycle > 70 ? 'good' : 'bad');
         }
 
         function calculatePrediction() {
@@ -1813,38 +1812,23 @@ ZTS,>140,>140,>140,>140`;
 
             const c = companies[state.selectedCompanyIndex];
 
-            // NORMALIZATION LOGIC FOR RAW DATA
-            // We define arbitrary maxima based on the dataset to create a score 0-1
+            // Years to zero profit, read from the table rather than modelled
+            // here. A ">140" entry means the horizon ran out before profit
+            // reached zero, so it is shown as a floor: "140+".
+            //
+            // The two sliders move that horizon. The model behind the table is
+            // that the extra annual cost is usage times the rise in resource
+            // price, so on a straight price path the cost at any year scales
+            // with the growth rate and the year at which it overtakes profit
+            // scales with 1/(1+g). The sliders set g, averaged across the two.
+            //
+            // A floor stays a floor under this: if the true horizon is beyond
+            // 140 years, the adjusted one is beyond 140/(1+g), so "140+" at
+            // +10% energy and +5% CO2 becomes "130+" and is still true.
+            const HORIZON = 140;
+            const growth = (state.projEnergy + state.projCO2) / 200;
+            const factor = 1 / (1 + growth);
 
-            // Electricity: Max ~200,000,000 (AEP). Min ~5000.
-            const maxElec = 200000000;
-            const scoreElec = 1 - Math.min(1, (c.electricity + (state.projEnergy * 100000)) / maxElec);
-
-            // CO2: Max ~120,000,000. Min ~2000.
-            const maxCO2 = 120000000;
-            const scoreCO2 = 1 - Math.min(1, (c.co2 + (state.projCO2 * 1000000)) / maxCO2);
-
-            // Water: Max ~18,000,000,000. Min ~15,000.
-            const maxWater = 18000000000;
-            const scoreWater = 1 - Math.min(1, c.water / maxWater);
-
-            // Waste Recycle: Max 100.
-            const scoreWaste = c.wasteRecycle / 100;
-
-            // Weights
-            const wE = 0.25, wC = 0.25, wW = 0.25, wR = 0.25;
-
-            const compositeScore = (scoreElec * wE) + (scoreCO2 * wC) + (scoreWater * wW) + (scoreWaste * wR);
-
-            // Nothing numeric is derived here any more. The survival figure
-            // comes straight from the table above, and the S&P 500 rank bar it
-            // used to feed has been removed for being made up. The composite
-            // score is now only a visual input: it tints the tree and the
-            // particles in the scene behind the panels.
-
-            // Years to zero profit, read from the table rather than modelled here.
-            // A ">140" entry means the horizon ran out before profit reached
-            // zero, so it is shown as a floor: "140+".
             const row = yearsToZero[c.ticker];
             const display = document.getElementById("years-display");
             if (animationTimers["years-display"]) {
@@ -1852,24 +1836,46 @@ ZTS,>140,>140,>140,>140`;
                 delete animationTimers["years-display"];
             }
             const raw = row ? row.All : "";
-            if (!raw) {
+            const capped = raw.startsWith(">");
+            const base = raw ? (capped ? HORIZON : parseInt(raw, 10)) : null;
+            const adjusted = base === null ? null : Math.max(0, Math.round(base * factor));
+
+            if (adjusted === null) {
                 display.innerText = "--";
                 state.predictedYears = null;
-            } else if (raw.startsWith(">")) {
-                display.innerText = raw.slice(1) + "+";
+            } else if (capped) {
+                display.innerText = adjusted + "+";
                 state.predictedYears = null;
             } else {
-                const target = parseInt(raw, 10);
                 const from = parseInt(display.innerText, 10);
-                display.innerText = target;
-                if (!Number.isNaN(from) && from !== target) {
+                display.innerText = adjusted;
+                if (!Number.isNaN(from) && from !== adjusted) {
                     display.innerText = from;
-                    animateValue("years-display", from, target, 800);
+                    animateValue("years-display", from, adjusted, 800);
                 }
-                state.predictedYears = target;
+                state.predictedYears = adjusted;
             }
 
-            update3DScene(compositeScore);
+            // Say so when the figure is no longer the table's own number.
+            const note = document.getElementById("years-note");
+            note.innerText = growth === 0 ? ""
+                : `at ${growth > 0 ? "+" : ""}${(growth * 100).toFixed(1)}% resource cost growth`;
+
+            // The tree reads the same number the panel shows. It used to read a
+            // composite of electricity, CO2, water and the random recycling
+            // rate, divided by maxima picked by eye. Across these 501 companies
+            // that composite only ever moved between 0.70 and 0.75, so every
+            // tree looked the same and the only thing that visibly changed it
+            // was the random quarter.
+            //
+            // Years are mapped through a square root because the data is
+            // lopsided: 116 of the 175 companies that do reach zero profit get
+            // there within five years. A straight ratio would leave all of them
+            // on top of each other at the dead end of the scale.
+            const health = adjusted === null ? 0
+                         : Math.sqrt(Math.min(HORIZON, adjusted) / HORIZON);
+
+            update3DScene(health);
         }
 
         function update3DScene(score) {
