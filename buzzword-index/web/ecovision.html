@@ -408,8 +408,11 @@
                             not reach zero profit within the available 2026&ndash;2100 projections.
                         </p>
                         <p style="margin-top:8px;">
-                            The projection sliders are a visual what-if. They shade the tree toward a harsher or
-                            kinder cost outlook. The horizon above stays the computed figure.
+                            The sliders add annual growth <em>g</em> to a resource's cost, so the cost at year
+                            <em>t</em> carries a factor (1+<em>g</em>)<sup>t</sup> and the crossing moves earlier.
+                            The price path <em>c<sub>r</sub>(t)</em> is recovered from the per-resource columns of
+                            the table itself: a company's single-resource horizon fixes the price rise at that
+                            year as P<sub>i</sub>/u<sub>i,r</sub>. At <em>g</em> = 0 the figure is the table's own.
                         </p>
                     </div>
                 </div>
@@ -426,7 +429,7 @@
 
             <div class="projection-section">
                 <h2>Projections</h2>
-                <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends. Shifts the outlook shown by the tree, not the computed horizon.</p>
+                <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends. Extra annual growth in resource cost, compounded over the horizon.</p>
 
                 <div class="slider-group">
                     <div class="slider-label">
@@ -1585,6 +1588,49 @@ ZBH,>140,>140,>140,>140
 ZION,>140,>140,>140,>140
 ZTS,>140,>140,>140,>140`;
 
+        const priceRise = {"elec":[[2,1.35],[4,6.240649],[6,11.687636],[15,160.643094],[16,17.9],[17,18.445901],[18,18.798362],[20,20.685553],[21,21.091287],[74,23.208249],[96,24.449878],[114,25.456044]],"co2":[[4,137.511111],[8,391.69687],[11,405.0],[14,418.367157],[16,427.494091],[19,444.0],[36,518.118553],[48,561.810945],[50,570.245353],[53,583.240319],[58,603.799467],[59,607.153056],[61,616.111943],[64,629.791212],[65,634.798842],[66,638.774866],[68,6478.432888],[69,652.533333],[71,6600.0],[73,670.026273],[77,689.482638],[78,693.944146],[92,768.660035],[94,778.554747],[96,785.92538],[97,795.405016],[98,802.266667],[109,864.766669],[112,879.421523],[114,896.489692],[124,960.074166],[135,1033.94235],[137,1053.899428],[139,1066.905734]],"water":[[2,0.162],[3,0.263521],[4,0.364],[6,0.603326],[7,0.659563],[8,0.879934],[9,0.970667],[11,1.230972],[14,1.687662],[16,19.555556],[20,2.758785],[21,2.883756],[22,3.144944],[23,3.38],[25,3.607983],[31,52.265299],[37,7.2],[38,7.4],[39,7.678152],[40,8.044199],[43,9.445522],[45,10.168814],[47,11.172986],[53,14.183992],[54,14.652267],[56,16.242814],[57,17.066655],[59,18.043026],[65,23.048274],[67,24.789125],[69,27.19346],[70,27.619048],[72,29.73362],[74,31.941408]]};
+
+        function priceAt(res, t) {
+            const c = priceRise[res];
+            if (t <= c[0][0]) return c[0][1] * t / c[0][0];
+            if (t >= c[c.length - 1][0]) return c[c.length - 1][1] * t / c[c.length - 1][0];
+            for (let i = 0; i < c.length - 1; i++) {
+                if (t >= c[i][0] && t <= c[i + 1][0]) {
+                    const [t0, v0] = c[i], [t1, v1] = c[i + 1];
+                    return t1 === t0 ? v0 : v0 + (v1 - v0) * (t - t0) / (t1 - t0);
+                }
+            }
+            return c[c.length - 1][1];
+        }
+
+        function crossing(res, ratio, g) {
+            const f = t => priceAt(res, t) * Math.pow(1 + g, t);
+            let lo = 0.01, hi = 300;
+            if (g < 0) {
+                let peak = 1;
+                for (let t = 1; t <= 300; t += 1) if (f(t) > f(peak)) peak = t;
+                if (f(peak) < ratio) return Infinity;
+                hi = peak;
+            }
+            if (f(hi) < ratio) return Infinity;
+            for (let i = 0; i < 60; i++) {
+                const m = (lo + hi) / 2;
+                if (f(m) < ratio) lo = m; else hi = m;
+            }
+            return (lo + hi) / 2;
+        }
+
+        function combinedHorizon(c, ge, gc) {
+            let inv = 0;
+            const drivers = [["elec", c.electricity, ge], ["co2", c.co2, gc], ["water", c.water, 0]];
+            for (const [res, u, g] of drivers) {
+                if (!(u > 0) || !(c.profit > 0)) continue;
+                const t = crossing(res, c.profit / u, g);
+                if (t > 0 && Number.isFinite(t)) inv += 1 / t;
+            }
+            return inv > 0 ? 1 / inv : Infinity;
+        }
+
         const yearsToZero = {};
         profitImpactYears.split('\n').slice(1).forEach(line => {
             const c = line.split(',');
@@ -1795,6 +1841,7 @@ ZTS,>140,>140,>140,>140`;
 
             const HORIZON = 140;
             const row = yearsToZero[c.ticker];
+            const ge = state.projEnergy / 100, gc = state.projCO2 / 100;
             const display = document.getElementById("years-display");
             if (animationTimers["years-display"]) {
                 cancelAnimationFrame(animationTimers["years-display"]);
@@ -1803,12 +1850,23 @@ ZTS,>140,>140,>140,>140`;
             const raw = row ? row.All : "";
             const capped = raw.startsWith(">");
             const base = raw ? (capped ? HORIZON : parseInt(raw, 10)) : null;
-            const adjusted = base;
+            let adjusted = base;
+            let beyond = capped;
+            if (base !== null && (ge !== 0 || gc !== 0)) {
+                const h0 = combinedHorizon(c, 0, 0);
+                const h1 = combinedHorizon(c, ge, gc);
+                if (Number.isFinite(h0) && h0 > 0) {
+                    const moved = Number.isFinite(h1) ? base * h1 / h0 : Infinity;
+                    beyond = capped || !Number.isFinite(moved) || moved > HORIZON;
+                    adjusted = Math.max(0, Math.min(HORIZON, Math.round(
+                        Number.isFinite(moved) ? moved : HORIZON)));
+                }
+            }
 
             if (adjusted === null) {
                 display.innerText = "--";
                 state.predictedYears = null;
-            } else if (capped) {
+            } else if (beyond) {
                 display.innerText = adjusted + "+";
                 state.predictedYears = null;
             } else {
@@ -1823,8 +1881,7 @@ ZTS,>140,>140,>140,>140`;
 
             const outlook = adjusted === null ? 0
                           : Math.sqrt(Math.min(HORIZON, adjusted) / HORIZON);
-            const stress = (state.projEnergy + state.projCO2) / 200;
-            const health = Math.max(0, Math.min(1, outlook * (1 - 6 * stress)));
+            const health = outlook;
 
             update3DScene(health);
         }
