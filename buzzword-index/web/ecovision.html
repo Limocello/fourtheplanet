@@ -107,7 +107,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.75rem;
+            font-size: 0.82rem;
         }
 
         .assessment-label { color: var(--text-muted); }
@@ -132,7 +132,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .stat-label { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+        .stat-label { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
 
         .projection-section {
             margin-top: auto;
@@ -141,7 +141,7 @@
         }
 
         .slider-group { margin-bottom: 0.5rem; }
-        .slider-label { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 2px; }
+        .slider-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px; }
 
         input[type="range"] {
             width: 100%;
@@ -169,7 +169,7 @@
         }
 
         .methodology-title {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: var(--accent-blue);
             font-weight: 600;
             padding: 5px 0;
@@ -177,7 +177,7 @@
 
         .methodology-content {
             padding: 8px 0;
-            font-size: 0.7rem; /* Slightly smaller to fit more content */
+            font-size: 0.8rem; /* Slightly smaller to fit more content */
             color: var(--text-muted);
             line-height: 1.4;
         }
@@ -188,11 +188,11 @@
             margin: 8px 0;
             border-left: 2px solid var(--accent-blue);
             font-family: 'Courier New', monospace;
-            font-size: 0.65rem;
+            font-size: 0.76rem;
         }
 
-        sub { font-size: 0.7em; vertical-align: sub; }
-        sup { font-size: 0.7em; vertical-align: super; }
+        sub { font-size: 0.78em; vertical-align: sub; }
+        sup { font-size: 0.78em; vertical-align: super; }
 
         .search-container {
             position: relative;
@@ -236,7 +236,7 @@
 
         .result-item {
             padding: 8px 10px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #cbd5e1;
             cursor: pointer;
             border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -244,7 +244,7 @@
             justify-content: space-between;
         }
 
-        .result-item span.ticker { color: var(--text-muted); font-size: 0.7em; }
+        .result-item span.ticker { color: var(--text-muted); font-size: 0.78em; }
         .result-item:hover { background: rgba(255,255,255,0.08); color: #fff; }
 
         header {
@@ -252,7 +252,7 @@
             text-align: center; pointer-events: none; z-index: 5;
         }
         h1 { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; }
-        .subtitle { font-size: 0.65rem; color: var(--accent-green); letter-spacing: 2px; }
+        .subtitle { font-size: 0.76rem; color: var(--accent-green); letter-spacing: 2px; }
 
         #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; z-index: 100; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 0.8s; }
         .loader-text { font-size: 1.2rem; letter-spacing: 3px; animation: pulse 1.5s infinite; color: var(--accent-green); }
@@ -264,7 +264,7 @@
         .peacock-head { display: flex; align-items: baseline; justify-content: space-between; }
         .peacock-head .edit {
             pointer-events: auto; background: none; border: none; cursor: pointer;
-            color: var(--text-muted); font: inherit; font-size: 0.6rem;
+            color: var(--text-muted); font: inherit; font-size: 0.72rem;
             letter-spacing: 1px; text-transform: uppercase; padding: 0;
             border-bottom: 1px solid rgba(255,255,255,0.25);
         }
@@ -276,15 +276,15 @@
             /* As large as the window allows, so the bird stays the hero on a
                big screen without pushing the numbers out of the panel on a
                small one. */
-            width: 100%; max-width: clamp(110px, 21vh, 215px);
+            width: 100%; max-width: clamp(96px, 17vh, 205px);
             height: auto; display: block; margin: 0 auto;
             filter: drop-shadow(0 6px 18px rgba(0,0,0,0.7));
             transition: opacity 0.35s, transform 0.5s cubic-bezier(0.22,1,0.36,1);
         }
         .peacock-figure.swap img { opacity: 0; transform: scale(0.88) translateY(6px); }
-        @media (max-height: 870px) { .peacock-caption { display: none; } }
-        @media (max-height: 840px) { #pk-terms { display: none; } }
-        .peacock-caption { font-size: 0.62rem; color: var(--text-muted); line-height: 1.5; }
+        @media (max-height: 960px) { #pk-terms { display: none; } }
+        @media (max-height: 880px) { .peacock-caption { display: none; } }
+        .peacock-caption { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
         .peacock-caption b { color: var(--text-main); font-weight: 600; }
         .peacock-score {
             font-size: 2.2rem; font-weight: 700; line-height: 1;
@@ -293,23 +293,23 @@
         }
         .peacock-score.mid { color: #d4b483; }
         .peacock-score.high { color: var(--accent-danger); }
-        .peacock-sub { font-size: 0.6rem; color: var(--text-muted);
+        .peacock-sub { font-size: 0.72rem; color: var(--text-muted);
                        letter-spacing: 1px; text-transform: uppercase; padding-bottom: 3px; }
 
         .tier-bar { display: flex; height: 6px; width: 100%; overflow: hidden; background: rgba(255,255,255,0.08); }
         .tier-bar span { display: block; transition: width 0.5s cubic-bezier(0.22,1,0.36,1); }
-        .tier-key { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.6rem; color: var(--text-muted); }
+        .tier-key { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.76rem; color: var(--text-muted); }
         .tier-key i { display: inline-block; width: 6px; height: 6px; margin-right: 4px; }
 
         .term-chips { display: flex; flex-wrap: wrap; gap: 4px; }
         .term-chips span {
-            font-size: 0.62rem; padding: 1px 6px; color: var(--text-muted);
+            font-size: 0.78rem; padding: 1px 6px; color: var(--text-muted);
             border: 1px solid rgba(255,255,255,0.12);
         }
         .term-chips span b { color: var(--text-main); font-weight: 600; margin-left: 4px; }
         .term-chips span.added { border-color: var(--accent-green); color: var(--accent-green); }
 
-        .peacock-empty { font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; }
+        .peacock-empty { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
 
         /* ---- buzzword editor ---- */
         #bw-modal {
@@ -328,15 +328,15 @@
         .bw-btn {
             pointer-events: auto; background: rgba(255,255,255,0.06); color: var(--text-main);
             border: 1px solid rgba(255,255,255,0.15); padding: 8px 12px;
-            font: inherit; font-size: 0.75rem; cursor: pointer;
+            font: inherit; font-size: 0.82rem; cursor: pointer;
         }
         .bw-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
-        .bw-note { font-size: 0.62rem; color: var(--text-muted); line-height: 1.6; }
+        .bw-note { font-size: 0.74rem; color: var(--text-muted); line-height: 1.6; }
         .bw-note b { color: #d4b483; font-weight: 600; }
         .bw-list { overflow-y: auto; display: flex; flex-direction: column; gap: 1px; }
         .bw-term {
             display: grid; grid-template-columns: 16px 1fr 64px 20px;
-            gap: 8px; align-items: center; font-size: 0.72rem;
+            gap: 8px; align-items: center; font-size: 0.8rem;
             padding: 3px 2px; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         .bw-term.off label { opacity: 0.35; text-decoration: line-through; }
@@ -345,7 +345,7 @@
         .bw-term .x { cursor: pointer; color: var(--text-muted); text-align: center; }
         .bw-term .x:hover { color: var(--accent-danger); }
         .bw-term.added label { color: var(--accent-green); }
-        .bw-tabs { display: flex; gap: 0.5rem; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1px; }
+        .bw-tabs { display: flex; gap: 0.5rem; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 1px; }
         .bw-tabs button {
             pointer-events: auto; background: none; border: none; border-bottom: 1px solid transparent;
             color: var(--text-muted); font: inherit; cursor: pointer; padding: 2px 0;
@@ -429,7 +429,7 @@
 
             <div class="projection-section">
                 <h2>Projections</h2>
-                <p style="font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends. Extra annual growth in resource cost, compounded over the horizon.</p>
+                <p style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.6rem;">Simulate future trends. Extra annual growth in resource cost, compounded over the horizon.</p>
 
                 <div class="slider-group">
                     <div class="slider-label">
@@ -486,7 +486,7 @@
 
             <div class="big-stat">
                 <div class="stat-label">Predicted Survival</div>
-                <div class="stat-value"><span id="years-display">0</span> <span style="font-size: 0.8rem;">YRS</span></div>
+                <div class="stat-value"><span id="years-display">0</span> <span style="font-size: 0.85rem;">YRS</span></div>
             </div>
         </div>
 
